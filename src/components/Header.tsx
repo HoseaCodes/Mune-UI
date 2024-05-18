@@ -1,6 +1,8 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 import {
   HeaderWrapper,
+  Logo,
   Nav,
   NavLink,
   Button,
@@ -9,6 +11,7 @@ import {
 const Header: React.FC = () => {
   return (
     <HeaderWrapper>
+      <Logo src={logo} alt="Logo" />
       <Nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>

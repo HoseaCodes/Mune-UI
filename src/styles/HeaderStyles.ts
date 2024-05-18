@@ -10,6 +10,10 @@ export const HeaderWrapper = styled.header`
   background-color: white;
 `;
 
+export const Logo = styled.img`
+  height: 40px; /* Adjust the height as needed */
+`;
+
 export const Nav = styled.nav`
   display: flex;
   @media (max-width: 768px) {
