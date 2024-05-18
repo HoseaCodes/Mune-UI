@@ -6,9 +6,11 @@ export const FooterWrapper = styled.footer`
   color: white;
   padding: ${spacing.large};
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* align-items: flex-start; */
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: relative;
@@ -34,11 +36,12 @@ export const FooterSectionContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  padding-right: ${spacing.large};
 `;
 
 export const FooterSection = styled.div`
   flex: 1;
-  margin: ${spacing.medium};
+  margin: 0 ${spacing.medium};
 `;
 
 export const FooterTitle = styled.h4`
@@ -80,10 +83,11 @@ export const SubscribeLink = styled.a`
 export const Form = styled.form`
   display: flex;
   align-items: center;
-  border: 6px solid black; /* Thin black border */
-  border-radius: 20px;
+  border: 3px solid black; /* Thin black border */
+  border-radius: 30px; /* Adjusted for a smoother corner */
   overflow: hidden;
   margin-bottom: ${spacing.large};
+  background-color: white;
 `;
 
 export const Input = styled.input`
@@ -92,6 +96,8 @@ export const Input = styled.input`
   outline: none;
   font-size: ${typography.fontSize};
   width: 300px; /* Adjust width as needed */
+  border-radius: 30px 0 0 30px; /* Match the left side with the form's border-radius */
+  margin: ${spacing.small}; /* Added margin for some spacing */
 `;
 
 export const SubmitButton = styled.button`
@@ -99,11 +105,8 @@ export const SubmitButton = styled.button`
   background-color: ${colors.secondary};
   color: white;
   border: none;
-  border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
   cursor: pointer;
-
-  &:hover {
-    background-color: darken(${colors.secondary}, 10%);
-  }
+  border-radius: 13px; /* Match the right side with the form's border-radius */
+  margin-right: ${spacing.small}; /* Added margin for some spacing */
 `;
