@@ -4,22 +4,31 @@ import { colors, spacing, typography } from './';
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: ${spacing.large};
+  padding: ${spacing.small} ${spacing.large};
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const Logo = styled.img`
   height: 40px; /* Adjust the height as needed */
+  margin-right: ${spacing.large};
+  width: 131px;
+  radius: 4px;
+  padding; 4px, 24px, 4px, 24px;
+  gap; 10px;
 `;
 
 export const Nav = styled.nav`
   display: flex;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  align-items: center;
+`;
+
+export const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: ${spacing.large};
 `;
 
 export const NavLink = styled(Link)`
