@@ -146,6 +146,7 @@ export const MissionText = styled.div`
   border-radius: 10px;
   gap: 32px;
   background-color: ${colors.primary};
+  color:  white;
 `;
 
 export const MissionTitle = styled.h2`
