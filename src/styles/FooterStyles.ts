@@ -109,6 +109,15 @@ export const Logo = styled.img`
   gap; 13.5px;
 `;
 
+export const Logo = styled.img`
+  height: 90px; /* Adjust the height as needed */
+  margin-right: ${spacing.large};
+  width: 191.25px;
+  radius: 4px;
+  padding; 4px, 24px, 4px, 24px;
+  gap; 13.5px;
+`;
+
 export const FooterLink = styled.a`
   color: white;
   text-decoration: none;
