@@ -24,8 +24,8 @@ import {
 } from '../styles/AboutStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-// import aboutImage from '../assets/about-image.png'; // Replace with actual image path
-// import missionImage from '../assets/mission-image.png'; // Replace with actual image path
+import aboutImage from '../assets/about-image.png'; // Replace with actual image path
+import missionImage from '../assets/mission-image.png'; // Replace with actual image path
 // import teamMember1 from '../assets/team-member1.png'; // Replace with actual image path
 // import teamMember2 from '../assets/team-member2.png'; // Replace with actual image path
 // import teamMember3 from '../assets/team-member3.png'; // Replace with actual image path
@@ -45,7 +45,7 @@ const About: React.FC = () => {
             </Paragraph>
             <GetStartedButton>Get Started</GetStartedButton>
           </TextContent>
-          <Image /*src={aboutImage} */ alt="About Us" />
+          <Image src={aboutImage} alt="About Us" />
         </Section>
 
         <TeamSection>
@@ -80,7 +80,7 @@ const About: React.FC = () => {
         </TeamSection>
 
         <MissionSection>
-          <MissionImage /*src={missionImage}*/ alt="Our Mission" />
+          <MissionImage src={missionImage} alt="Our Mission" />
           <MissionText>
             <MissionTitle>Our Mission: Elevate Your Finances</MissionTitle>
             <MissionParagraph>

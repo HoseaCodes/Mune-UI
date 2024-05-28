@@ -5,6 +5,7 @@ export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  justify-content: center;
 `;
 
 export const MainContent = styled.main`
@@ -16,13 +17,9 @@ export const MainContent = styled.main`
 export const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 `;
 
 export const TextContent = styled.div`
@@ -122,23 +119,33 @@ export const Bio = styled.div`
 `;
 
 export const MissionSection = styled.section`
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: left;
+  position: relative;
+  padding: 20px;
 `;
 
 export const MissionImage = styled.img`
-  width: 100%;
+  max-width: 100%;
+  width: 90%;
   height: auto;
-  border-radius: 10px;
+  max-height: 600px;
+  border-radius: 24px;
 `;
 
 export const MissionText = styled.div`
   position: absolute;
-  top: 20%;
-  left: 10%;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  width: 435px;
+  height: 370px;
+  top: 115px;
+  left: 255px;
+  radius: 24px;
+  padding: 24px;
   border-radius: 10px;
+  gap: 32px;
+  background-color: ${colors.primary};
 `;
 
 export const MissionTitle = styled.h2`
