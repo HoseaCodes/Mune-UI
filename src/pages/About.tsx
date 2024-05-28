@@ -24,11 +24,11 @@ import {
 } from '../styles/AboutStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import aboutImage from '../assets/about-image.png'; // Replace with actual image path
-import missionImage from '../assets/mission-image.png'; // Replace with actual image path
-// import teamMember1 from '../assets/team-member1.png'; // Replace with actual image path
-// import teamMember2 from '../assets/team-member2.png'; // Replace with actual image path
-// import teamMember3 from '../assets/team-member3.png'; // Replace with actual image path
+import aboutImage from '../assets/about-image.png';
+import missionImage from '../assets/mission-image.png';
+import MarquesZahir from '../assets/Marques-Zahir.png';
+import CaseyBass from '../assets/Casey-Bass.png';
+import AshleyLewis from '../assets/Ashley-Lewis.png';
 // import teamMember4 from '../assets/team-member4.png'; // Replace with actual image path
 // import teamMember5 from '../assets/team-member5.png'; // Replace with actual image path
 
@@ -52,17 +52,17 @@ const About: React.FC = () => {
           <TeamTitle>Meet the Team</TeamTitle>
           <TeamGrid>
             <TeamMember>
-              <TeamImage /*src={teamMember1} */ alt="Marques Zahir" />
+              <TeamImage src={MarquesZahir} alt="Marques Zahir" />
               <TeamName>Marques Zahir</TeamName>
               <Bio className="bio">Marques Zahir, CEO. School: Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.</Bio>
             </TeamMember>
             <TeamMember>
-              <TeamImage /*src={teamMember2}*/ alt="Casey Bass" />
+              <TeamImage src={CaseyBass} alt="Casey Bass" />
               <TeamName>Casey Bass</TeamName>
               <Bio className="bio">Casey Bass, CTO. School: Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.</Bio>
             </TeamMember>
             <TeamMember>
-              <TeamImage /*src={teamMember3}*/ alt="Ashley Lewis" />
+              <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
               <TeamName>Ashley Lewis</TeamName>
               <Bio className="bio">Ashley Lewis, CFO. School: Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.</Bio>
             </TeamMember>

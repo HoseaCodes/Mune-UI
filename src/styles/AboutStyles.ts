@@ -129,18 +129,20 @@ export const MissionSection = styled.section`
 
 export const MissionImage = styled.img`
   max-width: 100%;
-  width: 90%;
+  width: 1184px;
   height: auto;
   max-height: 600px;
   border-radius: 24px;
 `;
 
 export const MissionText = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 435px;
   height: 370px;
   top: 115px;
-  left: 255px;
+  left: 355px;
   radius: 24px;
   padding: 24px;
   border-radius: 10px;
