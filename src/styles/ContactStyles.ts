@@ -15,6 +15,9 @@ export const MainContent = styled.main`
 
 export const Section = styled.section`
   max-width: 1200px;
+  max-height: 832px;
+  top: 501px;
+  left: 100;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -31,19 +34,24 @@ export const Title = styled.h1`
 
 export const FormWrapper = styled.div`
   background-color: ${colors.primary};
-  padding: 20px;
-  border-radius: 20px;
+  padding: 24px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  max-width: 521px;
+  height: 389px;
+  gap: 8px;
 `;
 
 export const Input = styled.input`
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  width: 489px;
+  height: 34px;
+  padding: 4px 24px;
+  margin-bottom: 8px;
+  margin-left: -8px;
+  border-radius: 16px;
   border: none;
   font-size: 1rem;
   background-color: white;
@@ -51,15 +59,16 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
+  width: 489px;
+  height: 203px;
+  padding: 4px 24px;
+  margin-bottom: 8px;
+  margin-left: -8px;
+  border-radius: 16px;
   border: none;
   font-size: 1rem;
   background-color: white;
   color: grey;
-  height: 100px;
 `;
 
 export const SubmitButton = styled.button`
