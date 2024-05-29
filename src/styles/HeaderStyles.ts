@@ -7,17 +7,16 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: ${spacing.small} ${spacing.large};
-  background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const Logo = styled.img`
-  height: 40px; /* Adjust the height as needed */
+  height: 40px;
   margin-right: ${spacing.large};
-  width: 131px;
+  width: 85px;
   radius: 4px;
   padding; 4px, 24px, 4px, 24px;
-  gap; 10px;
+  gap; 6px;
 `;
 
 export const Nav = styled.nav`
