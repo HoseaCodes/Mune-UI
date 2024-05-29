@@ -51,7 +51,8 @@ export const GetStartedButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: darken(${colors.secondary}, 10%);
+    background-color: ${colors.secondary};
+    color: white;
   }
 `;
 
@@ -170,6 +171,7 @@ export const MissionButton = styled.button`
   border: 2px solid ${colors.secondary};
   border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
+  width: 133px;
   cursor: pointer;
 
   &:hover {
