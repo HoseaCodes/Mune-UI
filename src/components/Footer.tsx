@@ -10,6 +10,7 @@ import {
   AppComingSoon,
   PhoneIcon,
   FooterInput,
+  FooterFormContainer,
   FooterForm,
   FooterFormWrapper,
   FooterSubmitButton,
@@ -28,16 +29,18 @@ const Footer = () => (
   <FooterWrapper>
     <FooterLogo src={logo} alt="Logo" />
     <FooterTitle>Don't Sleep! Sign Up Now.</FooterTitle>
-    <FooterFormWrapper>
-      <PhoneIcon src={phoneIcon} alt="Phone" />
-      <FooterForm>
-        <FooterInput
-          type="text"
-          placeholder="Enter your mobile number"
-        />
-        <FooterSubmitButton>CTA</FooterSubmitButton>
-      </FooterForm>
-    </FooterFormWrapper>
+    <FooterFormContainer>
+      <FooterFormWrapper>
+        <PhoneIcon src={phoneIcon} alt="Phone" />
+        <FooterForm>
+          <FooterInput
+            type="text"
+            placeholder="Enter your mobile number"
+          />
+          <FooterSubmitButton>CTA</FooterSubmitButton>
+        </FooterForm>
+      </FooterFormWrapper>
+    </FooterFormContainer>
     <AppComingSoon>App Coming Soon!</AppComingSoon>
     <NavLinks>
       <FooterLink href="/">Home</FooterLink>

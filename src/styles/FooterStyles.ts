@@ -26,16 +26,28 @@ export const FooterTitle = styled.h4`
   margin-bottom: ${spacing.medium};
 `;
 
-export const FooterFormWrapper = styled.div`
-  display: flex;
-  align-items: center;
+export const FooterFormContainer = styled.div`
   background-color: white;
-  border-radius: 30px;
-  padding: ${spacing.small};
+  border-radius: 80px;
+  padding: 20px;
   margin-bottom: ${spacing.large};
   width: 100%;
-  max-width: 500px;
-  box-shadow: 0 0 0 5px black;
+  max-width: 559px;
+  max-height: 92px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 10px;
+`;
+
+export const FooterFormWrapper = styled.div`
+  padding: 4px;
+  box-shadow: 0 0 0 2px black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 479px;
+  max-height: 37px;
 `;
 
 export const FooterForm = styled.form`
