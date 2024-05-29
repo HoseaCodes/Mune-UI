@@ -51,8 +51,8 @@ export const GetStartedButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${colors.secondary};
-    color: white;
+    background-color: white;
+    color: ${colors.primary};
   }
 `;
 
@@ -82,11 +82,10 @@ export const TeamGrid = styled.div`
 `;
 
 export const TeamMember = styled.div`
-  text-align: center;
+  text-align: left;
   margin: 10px;
   cursor: pointer;
   position: relative;
-
   &:hover .bio {
     display: block;
   }
@@ -109,10 +108,10 @@ export const Bio = styled.div`
   position: absolute;
   background: white;
   color: black;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  width: 200px;
+  width: 300px;
   z-index: 1;
   top: 100%;
   left: 50%;
@@ -123,45 +122,62 @@ export const MissionSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
   position: relative;
+  width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 `;
 
 export const MissionImage = styled.img`
-  max-width: 100%;
-  width: 1184px;
+  width: 100%;
+  max-width: 1184px;
   height: auto;
-  max-height: 600px;
   border-radius: 24px;
 `;
 
 export const MissionText = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   position: absolute;
-  width: 435px;
-  height: 370px;
-  top: 115px;
-  left: 355px;
-  radius: 24px;
   padding: 24px;
-  border-radius: 10px;
-  gap: 32px;
   background-color: ${colors.primary};
-  color:  white;
+  color: white;
+  border-radius: 10px;
+  max-width: 435px;
+  max-height: hug(370px);
+  top: 50%;
+  left: 320px;
+  transform: translateY(-50%);
+  @media (max-width: 768px) {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 export const MissionTitle = styled.h2`
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const MissionParagraph = styled.p`
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.26px;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const MissionButton = styled.button`
@@ -171,11 +187,12 @@ export const MissionButton = styled.button`
   border: 2px solid ${colors.secondary};
   border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
-  width: 133px;
   cursor: pointer;
-
   &:hover {
     background-color: ${colors.secondary};
     color: white;
+  }
+  @media (max-width: 768px) {
+    padding: ${spacing.small} ${spacing.medium};
   }
 `;
