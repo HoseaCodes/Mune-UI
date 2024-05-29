@@ -6,48 +6,85 @@ export const FooterWrapper = styled.footer`
   color: white;
   padding: ${spacing.large};
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
-  /* flex-wrap: wrap; */
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   position: relative;
-  min-height: 300px; /* Adjust height as needed */
+  min-height: 300px;
 `;
 
-export const FooterContent = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: ${spacing.large};
-`;
-
-export const FooterTopText = styled.h3`
-  font-size: 2rem; /* Adjust size as needed */
-  font-weight: ${typography.fontWeight.bold};
-  text-align: center;
+export const FooterLogo = styled.img`
+  width: 100px;
   margin-bottom: ${spacing.medium};
 `;
 
-export const FooterSectionContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding-right: ${spacing.large};
-`;
-
-export const FooterSection = styled.div`
-  flex: 1;
-  margin: 0 ${spacing.medium};
-`;
-
 export const FooterTitle = styled.h4`
-  font-size: ${typography.fontSize};
+  font-size: 2rem;
   font-weight: ${typography.fontWeight.bold};
-  margin-bottom: ${spacing.small};
+  text-align: left;
+  margin-bottom: ${spacing.medium};
+`;
+
+export const FooterFormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: ${spacing.small};
+  margin-bottom: ${spacing.large};
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 0 5px black;
+`;
+
+export const FooterForm = styled.form`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 30px;
+`;
+
+export const FooterInput = styled.input`
+  padding: ${spacing.small};
+  border: none;
+  outline: none;
+  font-size: ${typography.fontSize};
+  flex: 1;
+  border-radius: 30px 0 0 30px;
+  margin: 0 ${spacing.small};
+  &::placeholder {
+    color: black;
+  }
+`;
+
+export const FooterSubmitButton = styled.button`
+  padding: ${spacing.small} ${spacing.large};
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: ${typography.fontWeight.bold};
+  cursor: pointer;
+  border-radius: 30px;
+`;
+
+export const PhoneIcon = styled.img`
+  width: 24px;
+  margin-right: ${spacing.small};
+`;
+
+export const AppComingSoon = styled.p`
+  font-size: 1.2rem;
+  font-weight: ${typography.fontWeight.bold};
+  text-align: left;
+  margin-bottom: ${spacing.medium};
+`;
+
+export const NavLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: ${spacing.large};
 `;
 
 export const FooterLink = styled.a`
@@ -61,52 +98,20 @@ export const FooterLink = styled.a`
   }
 `;
 
-export const DownloadButtons = styled.div`
+export const SubscribeIcons = styled.div`
   display: flex;
   gap: ${spacing.small};
+  position: absolute;
+  bottom: ${spacing.small};
+  right: ${spacing.small};
 `;
 
-export const DownloadButton = styled.img`
-  height: 40px; /* Adjust the height as needed */
-`;
-
-export const SubscribeLinks = styled.div`
-  display: flex;
-  gap: ${spacing.small};
+export const SubscribeIcon = styled.a`
+  color: white;
+  font-size: 1.5rem;
 `;
 
 export const SubscribeLink = styled.a`
   color: white;
-  font-size: 1.5rem; /* Adjust the font size as needed */
-`;
-
-export const Form = styled.form`
-  display: flex;
-  align-items: center;
-  border: 3px solid black; /* Thin black border */
-  border-radius: 30px; /* Adjusted for a smoother corner */
-  overflow: hidden;
-  margin-bottom: ${spacing.large};
-  background-color: white;
-`;
-
-export const Input = styled.input`
-  padding: ${spacing.small};
-  border: none;
-  outline: none;
-  font-size: ${typography.fontSize};
-  width: 300px; /* Adjust width as needed */
-  border-radius: 30px 0 0 30px; /* Match the left side with the form's border-radius */
-  margin: ${spacing.small}; /* Added margin for some spacing */
-`;
-
-export const SubmitButton = styled.button`
-  padding: ${spacing.small} ${spacing.large};
-  background-color: ${colors.secondary};
-  color: white;
-  border: none;
-  font-weight: ${typography.fontWeight.bold};
-  cursor: pointer;
-  border-radius: 13px; /* Match the right side with the form's border-radius */
-  margin-right: ${spacing.small}; /* Added margin for some spacing */
+  font-size: 1.5rem;
 `;
