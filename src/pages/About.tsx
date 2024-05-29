@@ -29,8 +29,8 @@ import missionImage from '../assets/mission-image.png';
 import MarquesZahir from '../assets/Marques-Zahir.png';
 import CaseyBass from '../assets/Casey-Bass.png';
 import AshleyLewis from '../assets/Ashley-Lewis.png';
-// import teamMember4 from '../assets/team-member4.png'; // Replace with actual image path
-// import teamMember5 from '../assets/team-member5.png'; // Replace with actual image path
+import teamMember4 from '../assets/team-member4.png'; // Replace with actual image path
+import teamMember5 from '../assets/team-member5.png'; // Replace with actual image path
 
 const About: React.FC = () => {
   return (
@@ -79,12 +79,12 @@ const About: React.FC = () => {
               </Bio>
             </TeamMember>
             <TeamMember>
-              <TeamImage /*src={teamMember4}*/ alt="First Last" />
+              <TeamImage src={teamMember4} alt="First Last" />
               <TeamName>First Last</TeamName>
               <Bio className="bio">First Last, COO. School: Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.</Bio>
             </TeamMember>
             <TeamMember>
-              <TeamImage /*src={teamMember5}*/ alt="First Last" />
+              <TeamImage src={teamMember5} alt="First Last" />
               <TeamName>First Last</TeamName>
               <Bio className="bio">First Last, CMO. School: Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.</Bio>
             </TeamMember>
