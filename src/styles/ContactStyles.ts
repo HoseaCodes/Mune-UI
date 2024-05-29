@@ -90,19 +90,27 @@ export const TeamImages = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
+  margin-left: 880px;
+  align-self: flex-end;
 `;
 
 export const TeamImage = styled.img`
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 67.5px;
+  height: 67.5px;
+  border-radius: 33.75px;
+  border: 2.25px;
+  margin-right: -20px;
+  position: relative;
 `;
 
 export const ReplyText = styled.p`
   font-size: 1rem;
   color: black;
   font-weight: ${typography.fontWeight.bold};
+  width: 334px;
+  height: 25px;
+  margin-left: 20px;
+  gap: 0px;
 `;
 
 export const FAQSection = styled.section`

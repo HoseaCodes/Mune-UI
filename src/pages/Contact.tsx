@@ -45,9 +45,9 @@ const Contact: React.FC = () => {
           </FormWrapper>
         </Section>
         <TeamImages>
-          <TeamImage /*src={teamMember1}*/ alt="Team Member 1" />
-          <TeamImage /*src={teamMember2}*/ alt="Team Member 2" />
-          <TeamImage /*src={teamMember3}*/ alt="Team Member 3" />
+          <TeamImage /*src={teamMember1}*/ alt="Team Member 1"/>
+          <TeamImage /*src={teamMember2}*/ alt="Team Member 2"/>
+          <TeamImage /*src={teamMember3}*/ alt="Team Member 3"/>
           <ReplyText>Hang Tight, We'll Reply Soon</ReplyText>
         </TeamImages>
         <FAQSection>
