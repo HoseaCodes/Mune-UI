@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import GlobalStyles from './styles/GlobalStyles';
+import Subscribe from './pages/Subscribe';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/subscribe" element={<Subscribe />} />
         {/* Add other routes here */}
       </Routes>
     </Router>
