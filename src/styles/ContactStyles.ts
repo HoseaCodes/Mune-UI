@@ -130,6 +130,8 @@ export const FAQGrid = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 421px;
+  gap: 10px;
 `;
 
 export const FAQItem = styled.div`
@@ -139,23 +141,42 @@ export const FAQItem = styled.div`
   border-radius: 20px;
   margin: 10px;
   flex: 1;
-  max-width: 300px;
+  max-width: 245px;
+  font-family: sf-pro;
+  height: 350px;
 `;
 
 export const Question = styled.div`
-  font-size: 1rem;
+  font-size: 17px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
+  width: 240px;
+  height: 32px;
+  line-height: 22px;
+  letter: -0.43px;
 `;
 
 export const Answer = styled.div`
   font-size: 0.9rem;
+  width: 240px;
+  height: 95px;
+  weight: 400;
+  size: 13px;
+  line-height: 18px;
+  letter: -0.08px;
   display: none;
   &.active {
     display: block;
   }
+`;
+
+export const Separator = styled.div`
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+  width: 80%;
 `;
