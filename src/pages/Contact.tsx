@@ -20,6 +20,8 @@ import {
 } from '../styles/ContactStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import teamMember1 from '../assets/team-member1.png'; // Replace with actual image path
 import teamMember2 from '../assets/team-member2.png'; // Replace with actual image path
 import teamMember3 from '../assets/team-member3.png'; // Replace with actual image path
@@ -56,14 +58,16 @@ const Contact: React.FC = () => {
             {[1, 2, 3].map((item, index) => (
               <FAQItem key={index}>
                 <Question onClick={() => handleToggle(index)}>
-                  Lorem ipsum dolor sit amet <span>{activeIndex === index ? '▲' : '▼'}</span>
+                  Lorem ipsum dolor sit amet
+                  <FontAwesomeIcon icon={activeIndex === index ? faChevronUp : faChevronRight} />
                 </Question>
                 <Answer className={activeIndex === index ? 'active' : ''}>
                   Lorem ipsum dolor sit amet consectetur. Pellentesque lectus lorem enim lacinia non ipsum.
                 </Answer>
                 {[1, 2, 3].map((subitem) => (
                   <Question key={subitem} onClick={() => handleToggle(index)}>
-                    Lorem ipsum dolor sit amet <span>{activeIndex === index ? '▲' : '▼'}</span>
+                    Lorem ipsum dolor sit amet
+                    <FontAwesomeIcon icon={activeIndex === index ? faChevronUp : faChevronRight} />
                   </Question>
                 ))}
               </FAQItem>
