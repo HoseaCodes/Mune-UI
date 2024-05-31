@@ -42,12 +42,12 @@ export const NavLinks = styled.div`
   @media (max-width: 768px) {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    width: 600px;
-    position: relative;
+    align-items: flex-end;
+    width: auto;
+    position: absolute;
     top: 60px;
-    right: -220px;
-    padding: 20px;
+    right: -10px;
+    padding: 10px;
   }
 
   &.open {
@@ -77,13 +77,15 @@ export const Button = styled(Link)`
   text-decoration: none;
   border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
-  margin-left: ${spacing.medium};
+  margin-left: ${spacing.large};
   display: flex;
   align-items: center;
   height: 100%;
 
   @media (max-width: 768px) {
-    margin: ${spacing.small} 0;
+    margin: ${spacing.small} 0 0 0;
+    align-self: flex-end;
+    margin-left: 550px; /* Add margin-right to push the button to the right */
   }
 `;
 
@@ -101,5 +103,5 @@ export const Bar = styled.div`
   width: 25px;
   height: 3px;
   background-color: black;
-  margin: 4px 0;
+  margin: 1px 0;
 `;

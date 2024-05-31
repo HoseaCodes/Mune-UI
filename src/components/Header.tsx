@@ -30,7 +30,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-    handleResize(); // Check initial screen size
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -45,7 +45,6 @@ const Header: React.FC = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/subscribe">Subscribe</NavLink>
           <Button to="/get-started">Get Mun-E</Button>
         </NavLinks>
       </Nav>
@@ -56,11 +55,13 @@ const Header: React.FC = () => {
             <Bar />
             <Bar />
           </HamburgerMenu>
-          <NavLinks className={`nav-links ${isOpen ? 'open' : ''}`}>
+          <NavLinks
+            className={`nav-links ${isOpen ? 'open' : ''}`}
+          >
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>
-            <Button to="/subscribe">Subscribe</Button>
+            <Button to="/get-started">Get Mun-E</Button>
           </NavLinks>
         </>
       )}
