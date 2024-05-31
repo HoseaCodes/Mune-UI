@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, spacing, typography } from './';
+import { colors, typography, spacing } from './';
 
 export const SubscribeWrapper = styled.div`
   display: flex;
@@ -11,57 +11,72 @@ export const SubscribeWrapper = styled.div`
 `;
 
 export const TitleSection = styled.section`
-  width: 534.96px;
-  height: 262px;
-  padding: 24px 0 0 0;
-  border-radius: 16px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 24px 0;
+`;
+
+export const TextWrapper = styled.div`
+  flex: 1;
   text-align: left;
+  margin-right: 20px;
 `;
 
 export const Title = styled.h1`
   width: 486.96px;
   height: 46px;
-  font-family: 'SF-Pro';
+  font: sf-pro;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
   text-align: left;
   color: black;
+  margin-bottom: 24px;
 `;
 
 export const Paragraph = styled.p`
   width: 486.96px;
   height: 84px;
-  font-family: 'SF-Pro';
+  font: sf-pro;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.26px;
   text-align: left;
   color: black;
+  margin-bottom: 24px;
 `;
 
 export const FormWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 432px;
-  height: 36px;
-  padding: 4px 0 0 0;
+  height: 25px;
+  padding: 6px;
   border-radius: 30px;
   border: 2px solid black;
   background-color: white;
-  margin: 20px 0;
+  margin-bottom: 20px;
 `;
 
 export const Input = styled.input`
-  padding: 10px;
+  padding: 9px;
   margin-right: 10px;
   border-radius: 20px;
   border: none;
   flex: 1;
-  font-size: 1rem;
-  color: grey;
+  font-size: 12px;
+  outline: none;
+  color: black;
+`;
+
+export const PhoneIcon2 = styled.img`
+  width: 24px;
+  margin-right: ${spacing.small};
 `;
 
 export const SubmitButton = styled.button`
@@ -76,7 +91,8 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: darken(${colors.secondary}, 10%);
+    background-color: white;
+    color: ${colors.secondary};
   }
 `;
 
@@ -101,7 +117,7 @@ export const LessonCard = styled.div`
 export const LessonTitle = styled.h2`
   width: 240px;
   height: 84px;
-  font-family: 'Poppins';
+  font: poppins;
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
@@ -147,45 +163,82 @@ export const LessonImage = styled.img`
   margin-top: 16px;
 `;
 
+export const SubscribeImage = styled.img`
+  width: 50%;
+  height: auto;
+  border-radius: 16px;
+`;
+
 export const StayTunedSection = styled.section`
   text-align: center;
-  margin: 40px 0;
+  margin: 40px;
 `;
 
 export const StayTunedTitle = styled.h2`
-  width: 297px;
+  width: 397px;
   height: 28px;
-  font-family: 'SF Pro';
+  font: sf-pro;
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.26px;
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
+  margin-left: 28px;
 `;
 
 export const StayTunedText = styled.p`
   width: 476px;
   height: 21px;
-  font-family: 'SF Pro';
+  font: sf-pro;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   letter-spacing: -0.31px;
   color: black;
   margin-bottom: 20px;
+  text-align: justified-center;
+  padding: 0px, 10px, 0px, 10px;
+`;
+
+export const StayTunedFormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 240px;
+  height: 26px;
+  padding: 6px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-left: 105px;
+  margin-top: -10px;
+`;
+
+export const StayTunedInput = styled.input`
+  padding: 9px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+  font-size: 12px;
+  outline: none;
+  color: black;
 `;
 
 export const TrendingSection = styled.section`
-  width: 100%;
+  width: 1256px;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 5px;
+  padding: 0px, 24px, 0px, 24px
 `;
 
 export const TrendingTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 34px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-left: 30px;
 `;
 
 export const TrendingWrapper = styled.div`
@@ -195,5 +248,14 @@ export const TrendingWrapper = styled.div`
 `;
 
 export const TrendingCard = styled(LessonCard)`
-  max-width: 220px;
+  max-width: 246px;
+  height: 300px;
+`;
+
+export const TrendingImage = styled.img`
+  width: 238px;
+  height: 128px;
+  border-radius: 24px;
+  margin-top: -30px;
+  margin-bottom: 30px;
 `;
