@@ -41,13 +41,14 @@ export const FooterFormContainer = styled.div`
 `;
 
 export const FooterFormWrapper = styled.div`
-  padding: 4px;
+  padding: 7px;
   box-shadow: 0 0 0 2px black;
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 479px;
   max-height: 37px;
+  border-radius: 24px;
 `;
 
 export const FooterForm = styled.form`
