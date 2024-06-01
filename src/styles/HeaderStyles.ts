@@ -25,6 +25,10 @@ export const HeaderLogo = styled.img`
   }
 `;
 
+export const Logo = styled.img`
+  height: 40px; /* Adjust the height as needed */
+`;
+
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
