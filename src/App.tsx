@@ -7,8 +7,8 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import GlobalStyles from './styles/GlobalStyles';
 import Subscribe from './pages/Subscribe';
+import GlobalStyles from './styles/GlobalStyles';
 
 const App: React.FC = () => {
   return (
