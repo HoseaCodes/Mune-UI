@@ -83,53 +83,55 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <ContactWrapper>
+    <>
       <Header />
-      <MainContent>
-        <Section>
-          <Title>Connect with Our Team</Title>
-          <FormWrapper>
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
-            <TextArea placeholder="Message" />
-            <SubmitButton>Submit</SubmitButton>
-          </FormWrapper>
-        </Section>
-        <TeamImages>
-          <TeamImage src={MarquesZahir} alt="Marques Zahir" />
-          <TeamImage src={CaseyBass} alt="Casey Bass" />
-          <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
-          <ReplyText>Hang Tight, We'll Reply Soon</ReplyText>
-        </TeamImages>
-        <FAQSection>
-          <FAQTitle>FAQ</FAQTitle>
-          <FAQGrid>
-            {faqData.map((item, itemIndex) => (
-              <FAQItem key={itemIndex}>
-                {item.questions.map((question, questionIndex) => (
-                  <div key={questionIndex}>
-                    <Question
-                      className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}
-                      onClick={() => handleToggle(itemIndex, questionIndex)}
-                    >
-                      {question}{' '}
-                      <FontAwesomeIcon
-                        icon={activeIndexes[itemIndex] === questionIndex ? faChevronUp : faChevronRight}
-                      />
-                    </Question>
-                    <Answer className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}>
-                      {item.answers[questionIndex]}
-                    </Answer>
-                    {activeIndexes[itemIndex] !== questionIndex && <Separator />}
-                  </div>
-                ))}
-              </FAQItem>
-            ))}
-          </FAQGrid>
-        </FAQSection>
-      </MainContent>
+      <ContactWrapper>
+        <MainContent>
+          <Section>
+            <Title>Connect with Our Team</Title>
+            <FormWrapper>
+              <Input type="text" placeholder="Name" />
+              <Input type="email" placeholder="Email" />
+              <TextArea placeholder="Message" />
+              <SubmitButton>Submit</SubmitButton>
+            </FormWrapper>
+          </Section>
+          <TeamImages>
+            <TeamImage src={MarquesZahir} alt="Marques Zahir" />
+            <TeamImage src={CaseyBass} alt="Casey Bass" />
+            <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
+            <ReplyText>Hang Tight, We'll Reply Soon</ReplyText>
+          </TeamImages>
+          <FAQSection>
+            <FAQTitle>FAQ</FAQTitle>
+            <FAQGrid>
+              {faqData.map((item, itemIndex) => (
+                <FAQItem key={itemIndex}>
+                  {item.questions.map((question, questionIndex) => (
+                    <div key={questionIndex}>
+                      <Question
+                        className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}
+                        onClick={() => handleToggle(itemIndex, questionIndex)}
+                      >
+                        {question}{' '}
+                        <FontAwesomeIcon
+                          icon={activeIndexes[itemIndex] === questionIndex ? faChevronUp : faChevronRight}
+                        />
+                      </Question>
+                      <Answer className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}>
+                        {item.answers[questionIndex]}
+                      </Answer>
+                      {activeIndexes[itemIndex] !== questionIndex && <Separator />}
+                    </div>
+                  ))}
+                </FAQItem>
+              ))}
+            </FAQGrid>
+          </FAQSection>
+        </MainContent>
+      </ContactWrapper>
       <Footer />
-    </ContactWrapper>
+    </>
   );
 };
 

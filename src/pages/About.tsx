@@ -34,125 +34,127 @@ import teamMember5 from '../assets/team-member5.png'; // Replace with actual ima
 
 const About: React.FC = () => {
   return (
-    <AboutWrapper>
+    <>
       <Header />
-      <MainContent>
-        <Section>
-          <TextContent>
-            <Title>
-              Send It. Save It. Earn It. Learn It.
-            </Title>
-            <Paragraph>
-              Experience the ultimate blend of convenience
-              and knowledge. Our app lets you send money
-              effortlessly, save smartly, and learn
-              essential financial skills along the way.
-              Simplify your financial life while boosting
-              your money know-how with every transaction.
-            </Paragraph>
-            <GetStartedButton>Get Started</GetStartedButton>
-          </TextContent>
-          <Image src={aboutImage} alt="About Us" />
-        </Section>
+      <AboutWrapper>
+        <MainContent>
+          <Section>
+            <TextContent>
+              <Title>
+                Send It. Save It. Earn It. Learn It.
+              </Title>
+              <Paragraph>
+                Experience the ultimate blend of convenience
+                and knowledge. Our app lets you send money
+                effortlessly, save smartly, and learn
+                essential financial skills along the way.
+                Simplify your financial life while boosting
+                your money know-how with every transaction.
+              </Paragraph>
+              <GetStartedButton>Get Started</GetStartedButton>
+            </TextContent>
+            <Image src={aboutImage} alt="About Us" />
+          </Section>
 
-        <TeamSection>
-          <TeamTitle>Meet the Team</TeamTitle>
-          <TeamGrid>
-            <TeamMember>
-              <TeamImage
-                src={MarquesZahir}
-                alt="Marques Zahir"
-              />
-              <TeamName>Marques Zahir</TeamName>
-              <Bio className="bio">
-                <strong>Marques Zahir, CEO</strong>
-                <br />
-                <em>School</em>
-                <br />
-                Lorem ipsum dolor sit amet consectetur.
-                Pellentesque lectus lorem enim lacinia non
-                ipsum.
-              </Bio>
-            </TeamMember>
-            <TeamMember>
-              <TeamImage src={CaseyBass} alt="Casey Bass" />
-              <TeamName>Casey Bass</TeamName>
-              <Bio className="bio">
-                <strong>Casey Bass, CTO</strong>
-                <br />
-                <em>School</em>
-                <br />
-                Lorem ipsum dolor sit amet consectetur.
-                Pellentesque lectus lorem enim lacinia non
-                ipsum.
-              </Bio>
-            </TeamMember>
-            <TeamMember>
-              <TeamImage
-                src={AshleyLewis}
-                alt="Ashley Lewis"
-              />
-              <TeamName>Ashley Lewis</TeamName>
-              <Bio className="bio">
-                <strong>Ashley Lewis, CFO</strong>
-                <br />
-                <em>School</em>
-                <br />
-                Lorem ipsum dolor sit amet consectetur.
-                Pellentesque lectus lorem enim lacinia non
-                ipsum.
-              </Bio>
-            </TeamMember>
-            <TeamMember>
-              <TeamImage
-                src={teamMember4}
-                alt="First Last"
-              />
-              <TeamName>First Last</TeamName>
-              <Bio className="bio">
-                First Last, COO. School: Lorem ipsum dolor
-                sit amet consectetur. Pellentesque lectus
-                lorem enim lacinia non ipsum.
-              </Bio>
-            </TeamMember>
-            <TeamMember>
-              <TeamImage
-                src={teamMember5}
-                alt="First Last"
-              />
-              <TeamName>First Last</TeamName>
-              <Bio className="bio">
-                First Last, CMO. School: Lorem ipsum dolor
-                sit amet consectetur. Pellentesque lectus
-                lorem enim lacinia non ipsum.
-              </Bio>
-            </TeamMember>
-          </TeamGrid>
-        </TeamSection>
+          <TeamSection>
+            <TeamTitle>Meet the Team</TeamTitle>
+            <TeamGrid>
+              <TeamMember>
+                <TeamImage
+                  src={MarquesZahir}
+                  alt="Marques Zahir"
+                />
+                <TeamName>Marques Zahir</TeamName>
+                <Bio className="bio">
+                  <strong>Marques Zahir, CEO</strong>
+                  <br />
+                  <em>School</em>
+                  <br />
+                  Lorem ipsum dolor sit amet consectetur.
+                  Pellentesque lectus lorem enim lacinia non
+                  ipsum.
+                </Bio>
+              </TeamMember>
+              <TeamMember>
+                <TeamImage src={CaseyBass} alt="Casey Bass" />
+                <TeamName>Casey Bass</TeamName>
+                <Bio className="bio">
+                  <strong>Casey Bass, CTO</strong>
+                  <br />
+                  <em>School</em>
+                  <br />
+                  Lorem ipsum dolor sit amet consectetur.
+                  Pellentesque lectus lorem enim lacinia non
+                  ipsum.
+                </Bio>
+              </TeamMember>
+              <TeamMember>
+                <TeamImage
+                  src={AshleyLewis}
+                  alt="Ashley Lewis"
+                />
+                <TeamName>Ashley Lewis</TeamName>
+                <Bio className="bio">
+                  <strong>Ashley Lewis, CFO</strong>
+                  <br />
+                  <em>School</em>
+                  <br />
+                  Lorem ipsum dolor sit amet consectetur.
+                  Pellentesque lectus lorem enim lacinia non
+                  ipsum.
+                </Bio>
+              </TeamMember>
+              <TeamMember>
+                <TeamImage
+                  src={teamMember4}
+                  alt="First Last"
+                />
+                <TeamName>First Last</TeamName>
+                <Bio className="bio">
+                  First Last, COO. School: Lorem ipsum dolor
+                  sit amet consectetur. Pellentesque lectus
+                  lorem enim lacinia non ipsum.
+                </Bio>
+              </TeamMember>
+              <TeamMember>
+                <TeamImage
+                  src={teamMember5}
+                  alt="First Last"
+                />
+                <TeamName>First Last</TeamName>
+                <Bio className="bio">
+                  First Last, CMO. School: Lorem ipsum dolor
+                  sit amet consectetur. Pellentesque lectus
+                  lorem enim lacinia non ipsum.
+                </Bio>
+              </TeamMember>
+            </TeamGrid>
+          </TeamSection>
 
-        <MissionSection>
-          <MissionImage
-            src={missionImage}
-            alt="Our Mission"
-          />
-          <MissionText>
-            <MissionTitle>
-              Our Mission: Elevate Your Finances
-            </MissionTitle>
-            <MissionParagraph>
-              Our mission is simple: help you get your money
-              right and your knowledge tight. We're here to
-              make financial literacy easy and accessible,
-              so you can flex your financial skills and
-              secure your bag for the{' '}
-              <strong>future</strong>.
-            </MissionParagraph>
-            <MissionButton>Get Started</MissionButton>
-          </MissionText>
-        </MissionSection>
-      </MainContent>
+          <MissionSection>
+            <MissionImage
+              src={missionImage}
+              alt="Our Mission"
+            />
+            <MissionText>
+              <MissionTitle>
+                Our Mission: Elevate Your Finances
+              </MissionTitle>
+              <MissionParagraph>
+                Our mission is simple: help you get your money
+                right and your knowledge tight. We're here to
+                make financial literacy easy and accessible,
+                so you can flex your financial skills and
+                secure your bag for the{' '}
+                <strong>future</strong>.
+              </MissionParagraph>
+              <MissionButton>Get Started</MissionButton>
+            </MissionText>
+          </MissionSection>
+        </MainContent>
+      </AboutWrapper>
       <Footer />
-    </AboutWrapper>
+    </>
   );
 };
 
