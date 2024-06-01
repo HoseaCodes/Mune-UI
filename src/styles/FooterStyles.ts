@@ -41,13 +41,14 @@ export const FooterFormContainer = styled.div`
 `;
 
 export const FooterFormWrapper = styled.div`
-  padding: 4px;
+  padding: 7px;
   box-shadow: 0 0 0 2px black;
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 479px;
   max-height: 37px;
+  border-radius: 24px;
 `;
 
 export const FooterForm = styled.form`
@@ -97,15 +98,6 @@ export const NavLinks = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: ${spacing.large};
-`;
-
-export const Logo = styled.img`
-  height: 90px; /* Adjust the height as needed */
-  margin-right: ${spacing.large};
-  width: 191.25px;
-  radius: 4px;
-  padding; 4px, 24px, 4px, 24px;
-  gap; 13.5px;
 `;
 
 export const FooterLink = styled.a`
