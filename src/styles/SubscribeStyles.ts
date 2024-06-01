@@ -7,7 +7,6 @@ export const SubscribeWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: white;
 `;
 
 export const TitleSection = styled.section`
@@ -17,6 +16,7 @@ export const TitleSection = styled.section`
   width: 100%;
   max-width: 1200px;
   padding: 24px 0;
+  
 `;
 
 export const TextWrapper = styled.div`
