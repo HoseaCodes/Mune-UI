@@ -10,27 +10,27 @@ export const HomeWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  width: 549px;
-  height: 112px;
+  max-width: 37vw; /* Adjusted for better wrapping */
   font-family: Poppins, sans-serif;
-  font-size: 48px;
+  font-size: 3.8vw; /* Using vw for responsive font size */
   font-weight: 700;
-  line-height: 56px;
+  line-height: 4.8vw; /* Adjusted line height for better spacing */
   text-align: left;
   letter-spacing: -0.02em;
-  color: #010a03;
+  color: #F2F7F4;
   margin: 0;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 40.8vh; /* Adjusted for better vertical alignment */
+  left: 16.2vw; /* Adjusted for better horizontal alignment */
+  z-index: 1;
+  white-space: normal; /* Allow text to wrap */
 
   @media (max-width: 768px) {
-    width: 250px;
-    font-size: 25px;
-    line-height: 29px;
-    position: absolute;
-    top: 38px;
-    left: 16px;
+    max-width: 45vw; /* Adjust for smaller screens */
+    font-size: 4.9vw; /* Using vw for responsive font size */
+    line-height: 7vw; /* Using vw for responsive line height */
+    top: 5vh; /* Adjusted for smaller screens */
+    left: 25vw; /* Adjusted for smaller screens */
     color: #f2f7f4;
   }
 `;
@@ -38,9 +38,10 @@ export const Title = styled.h1`
 export const VideoClip = styled.img`
   width: 1232px;
   height: 705px;
-  border-radius: 48px 0px 0px 0px;
+  border-radius: 48px;
   background: linear-gradient(180deg, rgba(1, 10, 3, 0.75) 61.5%, #010a03 100%);
   margin-top: 140px;
+  position: relative;
 
   @media (max-width: 768px) {
     width: 288px;
@@ -52,58 +53,73 @@ export const VideoClip = styled.img`
 `;
 
 export const FormWrapper = styled.div`
-  width: 412px;
-  height: 60px;
+  position: relative;
+  max-width: 37vw;
+  height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 14px;
   border: 2px solid #cee0d0;
-  margin-top: 20px;
+  padding: 30px;
+
+
+  @media (max-width: 1024px) {
+    max-width: 50vw;
+  }
 
   @media (max-width: 768px) {
-    width: 240px;
-    height: 44px;
+    width: 90%;
+    height: auto;
     padding: 4px 8px;
     border-radius: 12px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  }
+
+  @media (max-width: 480px) {
+    width: 95%;
   }
 `;
 
 export const Input = styled.input`
-  width: 208px;
-  height: 16px;
+  position: absolute;
+  top: -234%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  max-width: 37vw;
   font-family: Poppins, sans-serif;
-  font-size: 14px;
+  font-size: 1.5vw;
   font-weight: 400;
-  line-height: 16px;
+  color: #F2F7F4;
+  line-height: 1;
   text-align: left;
-  color: #010a03;
-  border: none;
-  padding: 8px;
-  flex-grow: 1;
+  padding: 1vw;
+  margin-bottom: 20px;
+  // background: #010A0340;
+  border-radius: 14px;
+  border: 4px solid #CEE0D0;
+
+  ::placeholder {
+    color: #F2F7F4;
+  }
 
   @media (max-width: 768px) {
-    width: 173px;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 3vw;
+    padding: 1vw;
   }
 `;
 
 export const Button = styled.button`
-  width: 131px;
-  height: 44px;
-  padding: 4px 24px;
+  width: 12vw;
+  height: 4vw;
+  padding: 1vw 2vw;
   font-family: Poppins, sans-serif;
-  font-size: 14px;
+  font-size: 1.5vw;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1;
   text-align: center;
   color: #f2f7f4;
   background: #1dbf38;
-  border-radius: 12px;
+  border-radius: 1.5vw;
   box-shadow: 1px 2px 6px rgba(64, 213, 88, 0.26),
     3px 10px 10px rgba(64, 213, 88, 0.21),
     6px 22px 14px rgba(64, 213, 88, 0.14),
@@ -113,42 +129,42 @@ export const Button = styled.button`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 131px;
-    height: 44px;
-    font-size: 14px;
-    padding: 4px 24px;
+    width: 20vw;
+    height: 6vw;
+    font-size: 3vw;
+    padding: 1vw 2vw;
   }
 `;
 
 export const StoreLinks = styled.div`
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1vw;
+  margin-top: 2vw;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 3vw;
   }
 `;
 
 export const StoreButton = styled.a`
   display: flex;
   align-items: center;
-  padding: 7.21px 14.43px;
-  border: 2px solid #cee0d0;
-  border-radius: 60.12px;
+  padding: 0.5vw 1.5vw;
+  border: 0.2vw solid #cee0d0;
+  border-radius: 5vw;
   text-decoration: none;
   color: #010a03;
   background-color: #f2f7f4;
 
   img {
-    width: 16px;
-    margin-right: 10px;
+    width: 2vw;
+    margin-right: 1vw;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90%;
     justify-content: center;
   }
 `;
@@ -156,36 +172,36 @@ export const StoreButton = styled.a`
 export const PlayButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 240px;
-  height: 44px;
-  padding: 4px 24px;
-  border-radius: 12px;
-  border: 1px solid #cee0d0;
+  width: 20vw;
+  height: 4vw;
+  padding: 1vw 2vw;
+  border-radius: 1.5vw;
+  border: 0.2vw solid #cee0d0;
   background: #ffffff33;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2vw;
+  right: 2vw;
 
   @media (max-width: 768px) {
-    width: 64px;
-    height: 44px;
+    width: 15vw;
+    height: 6vw;
     justify-content: center;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1vw;
+    right: 1vw;
   }
 `;
 
 export const PlayButtonIcon = styled.img`
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
+  width: 2vw;
+  height: 2vw;
+  margin-right: 1vw;
 `;
 
 export const PlayButtonText = styled.span`
   font-family: Poppins, sans-serif;
-  font-size: 15px;
+  font-size: 1.5vw;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1;
   color: #f2f7f4;
 
   @media (max-width: 768px) {
