@@ -1,36 +1,37 @@
 import React from 'react';
 import {
   HomeWrapper,
-  TitleSection,
   Title,
   FormWrapper,
   Input,
-  PhoneIcon,
-  GetStartedButton,
-  StoreButtonWrapper,
   StoreButton,
-  StoreLogo,
-  StoreTextWrapper,
-  StoreText,
-  StoreTitle,
-  EasyPaymentsImage,
   SectionWrapper,
-  SectionTitle,
-  SectionParagraph,
-  SectionButton,
   ImageWrapper,
-  Image,
-  GridWrapper,
-  GridItem,
-  GridItemTitle,
   // GridItemParagraph,
-  GridItemButton,
   VideoClip,
   Button,
   StoreLinks,
   PlayButtonWrapper,
   PlayButtonIcon,
   PlayButtonText,
+  PhoneImage,
+  FloatingImage,
+  FeatureList,
+  FeatureItem,
+  FeatureIcon,
+  FeatureText,
+  Title2,
+  Description,
+  GetMunEButton,
+  ContentWrapper,
+  LearnTogetherSection,
+  LearnTogetherContent,
+  LearnTogetherTitle,
+  LearnTogetherDescription,
+  ButtonContainer,
+  StartLessonButton,
+  LearnMoreButton,
+  LearnTogetherImage,
 } from '../styles/HomeStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -43,79 +44,13 @@ import gridImage1 from '../assets/ion-card.png'; // Replace with actual image pa
 import gridImage2 from '../assets/graduation-hat.png'; // Replace with actual image path
 import playButtonIcon from '../assets/playButtonIcon.png';
 import videoClip from '../assets/videoClip.png';
-
-// const Home: React.FC = () => {
-//   return (
-//     <>
-//       <Header />
-//       <HomeWrapper>
-//         <TitleSection>
-//           <div>
-//             <Title>Easy Payments. Make Mun-e Moves.</Title>
-//             <FormWrapper>
-//               <PhoneIcon src={phoneIcon} alt="Phone" />
-//               <Input type="text" placeholder="Enter your mobile number" />
-//               <GetStartedButton>Get Started</GetStartedButton>
-//             </FormWrapper>
-//             <StoreButtonWrapper>
-//               <StoreButton href="https://play.google.com/store">
-//                 <StoreLogo src={googlePlayLogo} alt="Google Play" />
-//                 <StoreTextWrapper>
-//                   <StoreText>GET IT ON</StoreText>
-//                   <StoreTitle>Google Play</StoreTitle>
-//                 </StoreTextWrapper>
-//               </StoreButton>
-//               <StoreButton href="https://www.apple.com/app-store">
-//                 <StoreLogo src={appStoreLogo} alt="App Store" />
-//                 <StoreTextWrapper>
-//                   <StoreText>Download on the</StoreText>
-//                   <StoreTitle>App Store</StoreTitle>
-//                 </StoreTextWrapper>
-//               </StoreButton>
-//             </StoreButtonWrapper>
-//           </div>
-//           <EasyPaymentsImage src={easyPaymentsImage} alt="Easy Payments!!" />
-//         </TitleSection>
-//         <SectionWrapper>
-//           <SectionTitle>Pay Friends, Learn Together</SectionTitle>
-//           <SectionParagraph>
-//             Seamless payments that keep you connected. Share money effortlessly and boost your financial knowledge with friends by your side.
-//           </SectionParagraph>
-//           <SectionButton>Get Mun-E</SectionButton>
-//           <ImageWrapper>
-//             <Image src={sectionImage} alt="Pay Friends, Learn Together" />
-//           </ImageWrapper>
-//         </SectionWrapper>
-//         <GridWrapper>
-//           <GridItem>
-//             <GridItemTitle>Exclusive Early Access</GridItemTitle>
-//             <GridItemParagraph>
-//               Get early access to cutting-edge financial tools and features designed just for you.
-//             </GridItemParagraph>
-//             <GridItemButton>Get Started</GridItemButton>
-//             <ImageWrapper>
-//               <Image src={gridImage1} alt="Exclusive Early Access" />
-//             </ImageWrapper>
-//           </GridItem>
-//           <GridItem>
-//             <GridItemTitle>Unlock Special Perks</GridItemTitle>
-//             <GridItemParagraph>
-//               Enjoy exclusive perks and rewards as a thank you for being an early supporter.
-//             </GridItemParagraph>
-//             <GridItemButton>Get Started</GridItemButton>
-//             <ImageWrapper>
-//               <Image src={gridImage2} alt="Unlock Special Perks" />
-//             </ImageWrapper>
-//           </GridItem>
-//         </GridWrapper>
-//       </HomeWrapper>
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default Home;
-
+import iPhoneImage from '../assets/iPhone-image.png';
+import payGirls from '../assets/pay-Girls.png';
+import payMan from '../assets/pay-man.png';
+import quickSignUp from '../assets/quick-signup.png';
+import enterPayment from '../assets/enter-payment.png';
+import sendMoney from '../assets/send-money.png';
+import learnTogetherImage from '../assets/learn-together.png'
 
 const Home: React.FC = () => {
   return (
@@ -148,6 +83,62 @@ const Home: React.FC = () => {
           <PlayButtonIcon src={playButtonIcon} alt="Play" />
           <PlayButtonText>Watch the Mun-e story</PlayButtonText>
         </PlayButtonWrapper>
+        <SectionWrapper>
+          <ImageWrapper>
+            <PhoneImage src={iPhoneImage} alt="Phone" />
+            <FloatingImage src={payGirls} alt="Image 1" className="image1" />
+            <FloatingImage src={payMan} alt="Image 2" className="image2" />
+          </ImageWrapper>
+          <ContentWrapper>
+            <Title2>Pay Friends</Title2>
+            <Description>
+              Split bills and share costs effortlessly. Mun-e lets you settle up instantly, keeping group expenses simple and stress-free.
+            </Description>
+            <GetMunEButton>Get Mun-e</GetMunEButton>
+            <FeatureList>
+              <FeatureItem>
+                <FeatureIcon bgColor='#B0DFF9'>
+                  <img src={quickSignUp} alt="Quick SignUp" />
+                </FeatureIcon>
+                <FeatureText>
+                  <span className="feature-title">Quick Sign-Up, Zero Cost</span><br />
+                  Sign up on our app for free
+                </FeatureText>
+              </FeatureItem>
+              <FeatureItem>
+                <FeatureIcon bgColor='#CEB0FA'>
+                  <img src={enterPayment} alt="Enter Payment" />
+                </FeatureIcon>
+                <FeatureText>
+                  <span className="feature-title">Enter Payment Details</span><br />
+                  Just add the amount and friend
+                </FeatureText>
+              </FeatureItem>
+              <FeatureItem>
+                <FeatureIcon bgColor='#B9EBC1'>
+                  <img src={sendMoney} alt="Send Money" />
+                </FeatureIcon>
+                <FeatureText>
+                  <span className="feature-title">Send Money Fast</span><br />
+                  Tap send and transfers complete
+                </FeatureText>
+              </FeatureItem>
+            </FeatureList>
+          </ContentWrapper>
+        </SectionWrapper>
+        <LearnTogetherSection>
+          <LearnTogetherContent>
+            <LearnTogetherTitle>Learn Together</LearnTogetherTitle>
+            <LearnTogetherDescription>
+              Grow with friends using Mun-e’s lessons on budgeting, investing, and saving. Our app makes elevating your financial IQ together fun.
+            </LearnTogetherDescription>
+            <ButtonContainer>
+              <StartLessonButton>Start a Lesson</StartLessonButton>
+              <LearnMoreButton>Learn More</LearnMoreButton>
+            </ButtonContainer>
+          </LearnTogetherContent>
+            <LearnTogetherImage src={learnTogetherImage} alt="Learn Together" />
+        </LearnTogetherSection>
       </HomeWrapper>
       <Footer />
     </>
