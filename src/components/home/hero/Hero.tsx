@@ -5,11 +5,11 @@ import {
   FaPlay,
 } from 'react-icons/fa';
 import { FiPhone } from 'react-icons/fi';
-import '../../styles/Hero.css';
+import '../../../styles/Hero.css';
 
 export default function Hero() {
   return (
-    <div className="hero-container">
+    <section className="hero-container">
       <div className="overlay"></div>
       <div className="hero-content">
         <div>
@@ -71,6 +71,6 @@ export default function Hero() {
         <div className="overlay"></div>
         <FaPlay />
       </div>
-    </div>
+    </section>
   );
 }

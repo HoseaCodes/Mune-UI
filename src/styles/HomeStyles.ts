@@ -17,7 +17,7 @@ export const Title = styled.h1`
   line-height: 4.8vw; /* Adjusted line height for better spacing */
   text-align: left;
   letter-spacing: -0.02em;
-  color: #F2F7F4;
+  color: #f2f7f4;
   margin: 0;
   position: absolute;
   top: 40.8vh; /* Adjusted for better vertical alignment */
@@ -39,7 +39,11 @@ export const VideoClip = styled.img`
   width: 1584px;
   height: 836px;
   border-radius: 48px;
-  background: linear-gradient(180deg, rgba(1, 10, 3, 0.75) 61.5%, #010a03 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 10, 3, 0.75) 61.5%,
+    #010a03 100%
+  );
   margin-top: 140px;
   position: relative;
 
@@ -65,7 +69,7 @@ export const FormWrapper = styled.div`
   max-width: 28vw;
   width: 28vw;
   height: 44px;
-  color: #F2F7F4;
+  color: #f2f7f4;
   padding: 05px;
 
   @media (max-width: 903px) {
@@ -73,7 +77,7 @@ export const FormWrapper = styled.div`
     left: 30vw;
     height: auto;
     flex-direction: column;
-    background-color: #F2F7F4;
+    background-color: #f2f7f4;
     border: 2px solid #cee0d0;
   }
 `;
@@ -95,7 +99,7 @@ export const Input = styled.input`
     text-align: left;
   }
 
-   @media (max-width: 903px) {
+  @media (max-width: 903px) {
     font-size: 4vw;
     padding: 2vw;
     color: #010a03; /* Black font color for mobile */
@@ -109,7 +113,7 @@ export const Button = styled.button`
   width: 6.823vw;
   height: 4vh;
   font-family: Poppins, sans-serif;
-  font-size: .781vw;
+  font-size: 0.781vw;
   font-weight: 600;
   color: #f2f7f4;
   background: #1dbf38;
@@ -172,7 +176,7 @@ export const PlayButtonWrapper = styled.div`
   width: 13vw;
   height: 2.292vw;
   padding: 4px, 24px, 4px, 24px;
-  border-radius: .625vw;
+  border-radius: 0.625vw;
   border: 0.2vw solid #cee0d0;
   background: #ffffff33;
   position: absolute;
@@ -193,9 +197,9 @@ export const PlayButtonWrapper = styled.div`
 `;
 
 export const PlayButtonIcon = styled.img`
-  width: .833vw;
-  height: .833vw;
-  margin-right: .97vw;
+  width: 0.833vw;
+  height: 0.833vw;
+  margin-right: 0.97vw;
   margin-left: 0.699vw;
 
   @media (max-width: 903px) {
@@ -207,7 +211,7 @@ export const PlayButtonIcon = styled.img`
 
 export const PlayButtonText = styled.span`
   font-family: Poppins, sans-serif;
-  font-size: .899vw;
+  font-size: 0.899vw;
   font-weight: 600;
   line-height: 20;
   color: #f2f7f4;
@@ -223,7 +227,7 @@ export const SectionWrapper = styled.section`
   align-items: center;
   padding: 60px 0;
   background-color: #f2f7f4;
-  
+
   @media (max-width: 903px) {
     flex-direction: column;
     padding: 30px 0;
@@ -236,7 +240,7 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   max-width: 45%;
   padding-right: 20px;
-  
+
   @media (max-width: 903px) {
     max-width: 100%;
     text-align: center;
@@ -249,7 +253,7 @@ export const Title2 = styled.h2`
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #010A03;
+  color: #010a03;
   margin-bottom: -8px;
 `;
 
@@ -258,7 +262,7 @@ export const Description = styled.p`
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #010A03;
+  color: #010a03;
   margin-bottom: 15px;
   max-width: 49vw;
 `;
@@ -266,18 +270,19 @@ export const Description = styled.p`
 export const GetMunEButton = styled.button`
   padding: 10px 20px;
   font-family: Poppins, sans-serif;
-  font-size: .938rem;
+  font-size: 0.938rem;
   font-weight: 700;
-  color: #F2F7F4;
-  background-color: #1DBF38;
+  color: #f2f7f4;
+  background-color: #1dbf38;
   border: none;
   border-radius: 12px;
   width: 7vw;
-  box-shadow: 1px 2px 6px rgba(64, 213, 88, 0.26),
+  box-shadow:
+    1px 2px 6px rgba(64, 213, 88, 0.26),
     3px 10px 10px rgba(64, 213, 88, 0.21),
     6px 22px 14px rgba(64, 213, 88, 0.14),
     11px 39px 16px rgba(64, 213, 88, 0.05),
-    17px 61px 18px rgba(64, 213, 88, 0.0);
+    17px 61px 18px rgba(64, 213, 88, 0);
   cursor: pointer;
 
   @media (max-width: 903px) {
@@ -288,7 +293,7 @@ export const GetMunEButton = styled.button`
 export const ImageWrapper = styled.div`
   position: relative;
   max-width: 50%;
-  
+
   @media (max-width: 903px) {
     max-width: 100%;
     margin-bottom: 30px;
@@ -304,15 +309,14 @@ export const PhoneImage = styled.img`
 export const FloatingImage = styled.img`
   position: absolute;
   border-radius: 12px;
-  
   &.image1 {
     top: 30%;
-    left: -15%;
+    left: -10%;
     width: 45%;
   }
 
   &.image2 {
-    top: 8%;
+    top: 10%;
     right: -10%;
     width: 37%;
   }
@@ -325,18 +329,21 @@ export const FloatingImage = styled.img`
 `;
 
 export const FeatureList = styled.ul`
+  position: absolute;
   list-style: none;
   padding: 10px;
   margin: 0;
-  background-color: #F2F7F4; /* Add background color */
-  border: 2px solid #CEE0D0; /* Add thin border */
+  background-color: #f2f7f4; /* Add background color */
+  border: 2px solid #cee0d0; /* Add thin border */
   border-radius: 24px; /* Optional: Add border radius */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-  position: relative; /* Ensure relative positioning for left adjustment */
-  left: -27vw; /* Move to the left */
-  top: 9vh;
-  max-width: 18vw;
+  left: 35%; /* Move to the left */
+  bottom: -5vh;
+  display: flex;
+  width: 22rem;
   height: 233px;
+  flex-direction: column;
+  padding: 1% 1.5%;
 `;
 
 export const FeatureItem = styled.li`
@@ -365,14 +372,13 @@ export const FeatureIcon = styled.div<{ bgColor: string }>`
     width: 18px;
     height: 18px;
   }
-  
 `;
 
 export const FeatureText = styled.div`
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #010A03 65%;
+  color: #010a03 65%;
   margin-bottom: 15px;
 
   .feature-title {
@@ -391,7 +397,7 @@ export const LearnTogetherSection = styled.section`
   position: relative;
   overflow: hidden; /* Ensure the content is clipped */
   margin-top: 60px;
-  
+
   @media (max-width: 903px) {
     flex-direction: column;
     padding: 20px;
@@ -403,19 +409,19 @@ export const LearnTogetherContent = styled.div`
   left: 9%;
   top: 13.253vw;
   max-width: 21.563vw;
-  max-height:33.5vh;
-  background: #F2F7F4 95%;
+  max-height: 33.5vh;
+  background: #f2f7f4 95%;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  
+
   @media (max-width: 903px) {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
-    background: #F2F7F4 95%;
+    background: #f2f7f4 95%;
     margin-bottom: 20px;
   }
 `;
@@ -425,7 +431,7 @@ export const LearnTogetherTitle = styled.h2`
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #010A03;
+  color: #010a03;
   margin-bottom: 10px;
 `;
 
@@ -434,7 +440,7 @@ export const LearnTogetherDescription = styled.p`
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #010A03;
+  color: #010a03;
   margin-bottom: 20px;
 `;
 
@@ -446,10 +452,10 @@ export const ButtonContainer = styled.div`
 export const StartLessonButton = styled.button`
   padding: 10px 20px;
   font-family: Poppins, sans-serif;
-  font-size: .938rem;
+  font-size: 0.938rem;
   font-weight: 700;
-  color: #F2F7F4;
-  background-color: #19A530;
+  color: #f2f7f4;
+  background-color: #19a530;
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -461,9 +467,9 @@ export const LearnMoreButton = styled.button`
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #010A03;
-  background-color: #F2F7F4;
-  border: 2px solid #CEE0D0;
+  color: #010a03;
+  background-color: #f2f7f4;
+  border: 2px solid #cee0d0;
   border-radius: 12px;
   cursor: pointer;
   max-height: 4.567vh;

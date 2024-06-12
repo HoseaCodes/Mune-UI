@@ -172,6 +172,7 @@
 
 .hero-button .overlay {
   background: rgba(100, 100, 100, 0.5);
+  border: none;
   z-index: -2;
 }
 
