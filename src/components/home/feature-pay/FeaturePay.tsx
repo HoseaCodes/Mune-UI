@@ -21,7 +21,7 @@ import '../../../styles/FeaturePay.css';
 
 export default function FeaturePay() {
   return (
-    <div className="pay-section">
+    <section className="pay-section">
       <ImageWrapper>
         <div className="iphone">
           <div className="iphone-img-wrap">
@@ -88,6 +88,6 @@ export default function FeaturePay() {
           <GetMunEButton>Get Mun-e</GetMunEButton>
         </ContentWrapper>
       </div>
-    </div>
+    </section>
   );
 }

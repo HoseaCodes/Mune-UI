@@ -387,7 +387,7 @@ export const FeatureText = styled.div`
   }
 `;
 
-export const LearnTogetherSection = styled.section`
+export const LearnTogetherSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -397,6 +397,7 @@ export const LearnTogetherSection = styled.section`
   position: relative;
   overflow: hidden; /* Ensure the content is clipped */
   margin-top: 60px;
+  width: 80vw;
 
   @media (max-width: 903px) {
     flex-direction: column;
@@ -408,8 +409,9 @@ export const LearnTogetherContent = styled.div`
   position: absolute;
   left: 9%;
   top: 13.253vw;
-  max-width: 21.563vw;
-  max-height: 33.5vh;
+  height: 42.5vh;
+  max-width: 32.563vw;
+  max-height: 53.5vh;
   background: #f2f7f4 95%;
   padding: 20px;
   border-radius: 12px;
@@ -428,7 +430,7 @@ export const LearnTogetherContent = styled.div`
 
 export const LearnTogetherTitle = styled.h2`
   font-family: Poppins, sans-serif;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
   color: #010a03;
@@ -437,11 +439,11 @@ export const LearnTogetherTitle = styled.h2`
 
 export const LearnTogetherDescription = styled.p`
   font-family: Poppins, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.7rem;
   font-weight: 400;
   line-height: 1.5;
   color: #010a03;
-  margin-bottom: 20px;
+  margin-bottom: 10%;
 `;
 
 export const ButtonContainer = styled.div`
