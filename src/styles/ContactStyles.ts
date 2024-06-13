@@ -26,14 +26,64 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  color: black;
+  font-size: 2.85rem;
+  font-weight: 700;
+  font: Poppins;
+  color: #010A03;
+  position: absolute;
+  top: 23vh;
+  left: 31%;
+  width: 18vw;
+  height: 9vh;
+  transform: translateX(-85%);
   text-align: left;
+
+  @media (max-width: 768px) {
+    left: 10%;
+    transform: none;
+    text-align: left;
+    width: 220px;
+    height: 123px;
+    top: 121px;
+    gap: 0px;
+    opacity: 0px;
+    font: Poppins;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 41px;
+    letter-spacing: -1px;
+    text-align: center;
+
+  }
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: -1%;
+  transform: translateY(38%);
+  margin-left: -1.4%;
+
+  @media (max-width: 768px) {
+    width: 272px;
+    height: 209px;
+    top: 268px;
+    left: 196px;
+    gap: 0px;
+    border-radius: 24px 0px 0px 0px;
+    border: 2px 0px 0px 0px solid #CEE0D0;
+    opacity: 0px;
+    angle: -180 deg;
+    transform: translateY(38%);
+
+
+
+  }
 `;
 
 export const FormWrapper = styled.div`
-  background-color: ${colors.primary};
+  background-color: #1AAE33;
   padding: 24px;
   border-radius: 24px;
   display: flex;
@@ -43,6 +93,19 @@ export const FormWrapper = styled.div`
   max-width: 521px;
   height: 389px;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    width: 272px;
+    height: 421px;
+    top: 525px;
+    left: 24px;
+    gap: 8px;
+    border-radius: 24px 0px 0px 0px;
+    opacity: 0px;
+    margin-top: 830px;
+    margin-right: 190px;
+    transform: translateX(38%);
+  }
 `;
 
 export const Input = styled.input`
@@ -73,25 +136,29 @@ export const TextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   padding: ${spacing.small} ${spacing.large};
-  background-color: white;
-  color: ${colors.primary};
-  border: none;
+  background-color: #F2F7F4;
+  color: #010A03;
+  border: 2px solid #CEE0D0;
   border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
   cursor: pointer;
+  width: 106px;
+  height: 44px;
 
   &:hover {
     background-color: ${colors.secondary};
-    color: white;
+    color: #F2F7F4;
   }
 `;
 
 export const TeamImages = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  margin-left: 880px;
+  margin-top: -45px;
+  margin-left: 50vw;
   align-self: flex-end;
+  height: auto;
+  // transform: translateY(10%);
 `;
 
 export const TeamImage = styled.img`
@@ -117,13 +184,18 @@ export const FAQSection = styled.section`
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
+  transform: translateX(0%);
 `;
 
 export const FAQTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  font: poppins;
   margin-bottom: 40px;
+  color: #010A03;
+  width: 98px;
+  height: 56px;
 `;
 
 export const FAQGrid = styled.div`
@@ -135,16 +207,25 @@ export const FAQGrid = styled.div`
 `;
 
 export const FAQItem = styled.div`
-  background-color: ${colors.primary};
-  color: white;
-  padding: 20px;
-  border-radius: 20px;
+  background-color: #19A530;
+  color: #F2F7F4;
+  padding: 24px;
+  border-radius: 24px;
   margin: 10px;
   flex: 1;
-  max-width: 245px;
-  font-family: sf-pro;
+  max-width: 366px;
+  font-family: poppins;
   height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex: none;
+    width: 300px;
+  }
 `;
+
 
 export const Question = styled.div`
   font-size: 17px;
@@ -154,6 +235,7 @@ export const Question = styled.div`
   align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
+  margin-left: 35px;
   width: 240px;
   height: 32px;
   line-height: 22px;
@@ -166,6 +248,7 @@ export const Answer = styled.div`
   height: 95px;
   weight: 400;
   size: 13px;
+  margin-left: 35px;
   line-height: 18px;
   letter: -0.08px;
   display: none;
@@ -176,7 +259,8 @@ export const Answer = styled.div`
 
 export const Separator = styled.div`
   height: 1px;
-  background-color: white;
-  margin: 10px 0;
-  width: 80%;
+  background-color: #F2F7F4;
+  margin-left: 35px;
+  margin-bottom: 10px;
+  width: 70%;
 `;

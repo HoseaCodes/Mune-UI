@@ -18,6 +18,7 @@ import {
   Question,
   Answer,
   Separator,
+  StyledImage
 } from '../styles/ContactStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -26,6 +27,7 @@ import { faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
+import connectTeam from '../assets/connect-team.png'; // Replace with actual image path
 
 const Contact: React.FC = () => {
   const [activeIndexes, setActiveIndexes] = useState<{ [key: number]: number | null }>({});
@@ -88,7 +90,8 @@ const Contact: React.FC = () => {
       <ContactWrapper>
         <MainContent>
           <Section>
-            <Title>Connect with Our Team</Title>
+            <Title>Connect with Our Team.</Title>
+            <StyledImage src={connectTeam} alt="Connect With Our Team" />
             <FormWrapper>
               <Input type="text" placeholder="Name" />
               <Input type="email" placeholder="Email" />
@@ -100,7 +103,7 @@ const Contact: React.FC = () => {
             <TeamImage src={MarquesZahir} alt="Marques Zahir" />
             <TeamImage src={CaseyBass} alt="Casey Bass" />
             <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
-            <ReplyText>Hang Tight, We'll Reply Soon</ReplyText>
+            <ReplyText>Hang Tight, We'll Reply Shortly</ReplyText>
           </TeamImages>
           <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
