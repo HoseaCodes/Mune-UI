@@ -7,7 +7,7 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: #F2F7F4;
+  background-color: #f2f7f4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
@@ -58,7 +58,7 @@ export const NavLinks = styled.div`
 
 export const NavLink = styled(Link)`
   margin: 0 ${spacing.medium};
-  color: #010A03;
+  color: #010a03;
   text-decoration: none;
   font-weight: ${typography.fontWeight.bold};
   position: relative;
@@ -70,7 +70,7 @@ export const NavLink = styled(Link)`
     right: 0;
     bottom: -8px; // adjust this value as needed
     height: 1.5px; // thickness of the underline
-    background-color: #1AAE33;
+    background-color: #1aae33;
   }
 
   @media (max-width: 768px) {
@@ -81,7 +81,7 @@ export const NavLink = styled(Link)`
 export const Button = styled(Link)`
   padding: ${spacing.small} ${spacing.large};
   background-color: ${colors.primary};
-  color: #F2F7F4;
+  color: #f2f7f4;
   text-decoration: none;
   border-radius: 12px;
   margin-left: ${spacing.large};
@@ -101,7 +101,7 @@ export const Button = styled(Link)`
 
   &:hover {
     background-color: ${colors.primary};
-    color: #F2F7F4;
+    color: #f2f7f4;
     box-shadow: 0 0 10px 0 rgba(26, 174, 51, 1);
   }
 `;
@@ -110,7 +110,7 @@ export const HamburgerMenu = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
-  background-color: #19A530;
+  background-color: #19a530;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -125,7 +125,7 @@ export const HamburgerMenu = styled.div`
 export const Bar = styled.div`
   width: 15px;
   height: 2px;
-  background-color: #F2F7F4;
+  background-color: #f2f7f4;
   margin: 2px 0;
 `;
 
@@ -135,13 +135,14 @@ export const Sidebar = styled.div<{ isOpen: boolean }>`
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #19A530;
+  background-color: #19a530;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${({ isOpen }) =>
+    isOpen ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
 
@@ -154,7 +155,7 @@ export const Sidebar = styled.div<{ isOpen: boolean }>`
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 2px; /* Make underline thicker */
-      text-decoration-color: #1AAE33;
+      text-decoration-color: #1aae33;
     }
   }
 
@@ -202,7 +203,7 @@ export const SocialLinks = styled.div`
     font-size: 1.5rem;
 
     &:hover {
-      color: #1AAE33;
+      color: #1aae33;
     }
   }
 `;

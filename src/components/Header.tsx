@@ -70,9 +70,7 @@ const Header: React.FC = () => {
             <Bar />
             <Bar />
           </HamburgerMenu>
-          <Sidebar
-            isOpen={sidebarOpen}
-          >
+          <Sidebar isOpen={sidebarOpen}>
             <SidebarHeader>
               <SidebarLogo src={sidebarLogo} alt="Logo" />
             </SidebarHeader>
@@ -81,18 +79,41 @@ const Header: React.FC = () => {
               <Bar />
               <Bar />
             </CloseButton>
-            <NavLink to="/" onClick={toggleSidebar}>Home</NavLink>
-            <NavLink to="/about"onClick={toggleSidebar}>About</NavLink>
-            <NavLink to="/contact"onClick={toggleSidebar}>Contact</NavLink>
-            <NavLink to="/subscribe"onClick={toggleSidebar}>Subscribe</NavLink>
+            <NavLink to="/" onClick={toggleSidebar}>
+              Home
+            </NavLink>
+            <NavLink to="/about" onClick={toggleSidebar}>
+              About
+            </NavLink>
+            <NavLink to="/contact" onClick={toggleSidebar}>
+              Contact
+            </NavLink>
+            <NavLink
+              to="/subscribe"
+              onClick={toggleSidebar}
+            >
+              Subscribe
+            </NavLink>
             <SocialLinks>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTiktok />
               </a>
             </SocialLinks>
