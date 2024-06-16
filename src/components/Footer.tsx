@@ -23,6 +23,7 @@ import {
 } from '../styles/FooterStyles';
 import logo from '../assets/logo1.png';
 import phoneIcon from '../assets/phone-icon.png';
+import phoneIcon2 from '../assets/phone-icon2.png';
 import googlePlayLogo from '../assets/google-play-logo.png'; // Add Google Play image
 import appStoreLogo from '../assets/app-store-logo.png'; // Add App Store image
 import {
@@ -43,6 +44,7 @@ const Footer: React.FC = () => {
             type="text"
             placeholder="Enter your mobile number"
           />
+          <PhoneIcon src={phoneIcon2} alt="Phone" />
           <SubmitButton type="submit">
             Get Mun-e
           </SubmitButton>
@@ -71,17 +73,27 @@ const Footer: React.FC = () => {
         </FooterSection>
         <LegalSection>
           <FooterTitle>Legal</FooterTitle>
-          <FooterLink href="/terms">Terms of use</FooterLink>
-          <FooterLink href="/privacy">Privacy Policy</FooterLink>
-          <FooterLink href="/security">Security Policy</FooterLink>
-          <FooterLink href="/cookie-settings">Cookie Settings</FooterLink>
+          <FooterLink href="/terms">
+            Terms of use
+          </FooterLink>
+          <FooterLink href="/privacy">
+            Privacy Policy
+          </FooterLink>
+          <FooterLink href="/security">
+            Security Policy
+          </FooterLink>
+          <FooterLink href="/cookie-settings">
+            Cookie Settings
+          </FooterLink>
         </LegalSection>
         <NavigationSection>
           <FooterTitle>Navigation</FooterTitle>
           <FooterLink href="/">Home</FooterLink>
           <FooterLink href="/about">About</FooterLink>
           <FooterLink href="/contact">Contact</FooterLink>
-          <FooterLink href="/subscribe">Subscribe</FooterLink>
+          <FooterLink href="/subscribe">
+            Subscribe
+          </FooterLink>
         </NavigationSection>
         <SubscribeSection>
           <FooterTitle>Subscribe</FooterTitle>

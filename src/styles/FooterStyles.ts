@@ -1,17 +1,21 @@
 import styled from 'styled-components';
-import { colors, spacing, typography } from './';
+import { colors, typography } from './';
 
 export const FooterWrapper = styled.footer`
   background-color: ${colors.primary};
   color: white;
-  padding: ${spacing.large};
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
   position: relative;
-  min-height: 500px;
+  min-height: 31.25rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -19,46 +23,88 @@ export const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: ${spacing.large};
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const FooterLogo = styled.img`
-  width: 191px;
-  height: 90px;
-  margin-bottom: 50px;
+  width: 11.94rem;
+  height: 5.63rem;
+  margin-bottom: 3.13rem;
+
+  @media (max-width: 768px) {
+    width: 6rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
 `;
 
 export const PhoneIcon = styled.img`
-  width: 24px;
-  margin-right: ${spacing.small};
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 1rem;
+    margin-right: 0.25rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.6rem;
+  }
 `;
 
 export const FooterTopText = styled.h3`
   font-size: 3rem;
   font-weight: ${typography.fontWeight.bold};
   text-align: center;
-  margin-bottom: ${spacing.medium};
+  margin-bottom: 1.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    align-self: flex-start;
+  }
 `;
 
 export const AppComingSoon = styled.p`
   font-size: 1.5rem;
   font-weight: ${typography.fontWeight.bold};
   text-align: left;
-  margin-top: -2rem;
+  margin-top: -1.25rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
 `;
 
 export const FooterSectionContainer = styled.div`
   display: flex;
-  justify-content: space-between; /* Changed to space-between to reduce space */
+  justify-content: space-between;
   width: 100%;
-  padding-right: ${spacing.large};
-  gap: ${spacing.small};
+  padding-right: 2rem;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+    gap: 0.5rem;
+  }
 `;
 
 export const FooterSection = styled.div`
   flex: 1;
-  margin: 0 0 0 200px; /* Reduced margin */
+  margin: 0 1rem;
 
   &:first-child {
     flex: 2;
@@ -67,88 +113,98 @@ export const FooterSection = styled.div`
     align-items: flex-start;
   }
 
-  @media (max-width: 903px) {
+  @media (max-width: 768px) {
     flex: none;
-    margin-bottom: ${spacing.medium};
+    margin-bottom: 2rem;
+    margin-left: 0;
+    text-align: left;
+    align-items: flex-start;
   }
 `;
 
 export const FooterTitle = styled.h4`
-  font-size: ${typography.fontSize};
+  font-size: 1rem;
   font-weight: ${typography.fontWeight.bold};
-  margin-bottom: ${spacing.small};
-  color: #F2F7F4;
+  margin-bottom: 0.5rem;
+  color: #f2f7f4;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    display: none;
+  }
 `;
 
 export const FooterLink = styled.a`
-  color: #F2F7F4;
+  color: #f2f7f4;
   text-decoration: none;
-  margin-bottom: ${spacing.large};
-  
+  margin-bottom: 1rem;
   display: block;
+
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
   }
 `;
 
 export const LegalSection = styled.div`
-  flex: 1;
-  margin-left: 38vw;
-  
-  @media (max-width: 903px) {
-    flex: none;
-    margin-bottom: ${spacing.medium};
+  margin-right: 1vw;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    display: none;
   }
 `;
 
 export const NavigationSection = styled.div`
-  flex: 1;
-  margin-left: 5vw; /* Reduced margin */
+  // margin-left: -10vw;
 
-  @media (max-width: 903px) {
+  @media (max-width: 768px) {
     flex: none;
-    margin-bottom: ${spacing.medium};
+    margin-bottom: 1rem;
+    margin-left: 0;
   }
 `;
 
 export const SubscribeSection = styled.div`
-  flex: 1;
-  margin-left: 5% ; /* Reduced margin */
+  margin-left: 1vw;
 
-  @media (max-width: 903px) {
+  @media (max-width: 768px) {
     flex: none;
-    margin-bottom: ${spacing.medium};
+    margin-bottom: 1rem;
+    margin-left: 0;
   }
 `;
 
 export const StoreLinks = styled.div`
   display: flex;
   gap: 1vw;
-  margin-top: ${spacing.small};
+  margin-top: 1rem;
 
-  @media (max-width: 903px) {
+  @media (max-width: 768px) {
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    top: 75vh;
-    left: 25vw;
-    transform: translateX(-50%);
   }
 `;
 
 export const StoreButton = styled.a`
   display: flex;
   align-items: center;
-  padding: 4px;
-  border: 2px solid #010A03;
-  border-radius: 10px;
+  padding: 0.5rem;
+  border: 0.125rem solid #010a03;
+  border-radius: 0.625rem;
   text-decoration: none;
   color: #010a03;
   background-color: #f2f7f4;
 
   img {
-    height: 20px;
-    margin-right: 10px;
+    height: 1.25rem;
+    margin-right: 0.625rem;
   }
 
   div {
@@ -156,8 +212,8 @@ export const StoreButton = styled.a`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-size: 10px;
-    width: 81px;
+    font-size: 0.625rem;
+    width: 5.5rem;
 
     div {
       &:first-child {
@@ -169,44 +225,77 @@ export const StoreButton = styled.a`
 
 export const SubscribeLinks = styled.div`
   display: flex;
-  gap: ${spacing.small};
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
 `;
 
 export const SubscribeLink = styled.a`
-  color: #F2F7F4;
+  color: #f2f7f4;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Form = styled.form`
   display: flex;
   align-items: center;
-  border: 3px solid #CEE0D0;
-  border-radius: 16px;
+  border: 0.2rem solid #cee0d0;
+  border-radius: 1rem;
   overflow: hidden;
-  margin-bottom: ${spacing.large};
-  background-color: #F2F7F4;
+  margin-bottom: 2rem;
+  background-color: #f2f7f4;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    align-self: flex-start;
+    border: 0.2rem solid #010a03;
+    height: 2rem;
+  }
 `;
 
 export const Input = styled.input`
-  padding: ${spacing.small};
+  padding: 0.5rem;
   border: none;
   outline: none;
-  font-size: ${typography.fontSize};
-  width: 300px;
-  border-radius: 30px 0 0 30px;
-  margin: ${spacing.small};
-  background-color: #F2F7F4;
-  color: #010A03;
+  font-size: 1rem;
+  width: 20rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+  margin: 0.5rem;
+  background-color: #f2f7f4;
+  color: #010a03;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    margin: 0.5rem 0;
+    padding-top: 0.1rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+  }
 `;
 
 export const SubmitButton = styled.button`
-  padding: ${spacing.small} ${spacing.large};
+  padding: 0.5rem 1rem;
   background-color: ${colors.primary};
-  color: #F2F7F4;
+  color: #f2f7f4;
   border: none;
   font-weight: ${typography.fontWeight.bold};
   cursor: pointer;
-  border-radius: 13px;
-  margin-right: ${spacing.small};
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
