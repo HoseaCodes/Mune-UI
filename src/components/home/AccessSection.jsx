@@ -14,7 +14,7 @@ const AccessSection = () => {
                         <div className='space-y-4 md:mt-3 md:max-w-[509px]'>
                             <div className="text-[22px] md:text-4xl font-bold">Exclusive Early Access</div>
                             <div className="primary-text-white w-[250px] md:w-full">
-                                Get early access to cutting-edge financial tools and features designed just for you.                            </div>
+                                Get early access to cutting-edge financial tools and features designed just for you.</div>
                             <div>
                                 <button className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'>Get Mun-e</button>
                             </div>
