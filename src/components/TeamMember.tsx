@@ -2,7 +2,6 @@ import React from 'react';
 
 interface TeamMemberProps {
   name: string;
-  //   lastName: string;
   school: string;
   role: string;
   image: string;
