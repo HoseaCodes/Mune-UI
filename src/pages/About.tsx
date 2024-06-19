@@ -1,161 +1,59 @@
 import React from 'react';
-import {
-  AboutWrapper,
-  MainContent,
-  Section,
-  TextContent,
-  Title,
-  Paragraph,
-  GetStartedButton,
-  Image,
-  TeamSection,
-  TeamTitle,
-  TeamGrid,
-  TeamMember,
-  TeamImage,
-  TeamName,
-  Bio,
-  MissionSection,
-  MissionImage,
-  MissionText,
-  MissionTitle,
-  MissionParagraph,
-  MissionButton,
-} from '../styles/AboutStyles';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import aboutImage from '../assets/about-image.png';
-import missionImage from '../assets/mission-image.png';
-import MarquesZahir from '../assets/Marques-Zahir.png';
-import CaseyBass from '../assets/Casey-Bass.png';
-import AshleyLewis from '../assets/Ashley-Lewis.png';
-import teamMember4 from '../assets/team-member4.png'; // Replace with actual image path
-import teamMember5 from '../assets/team-member5.png'; // Replace with actual image path
+import ashley from '../assets/Ashley-S.png';
+import bryan from '../assets/Bryan.png';
+import arrow from '../assets/arrow.png';
+import mainImage from '../assets/pinkshirt.png';
+import NotificationBubble from '../components/NotificationBubbleCard';
+import WhiteMuneButton from '../components/WhiteMuneButton';
+import MeetTheTeam from '../components/MeetTheTeam';
+import MissionSection from '../components/Mission';
 
-const About: React.FC = () => {
+const AboutSection: React.FC = () => {
   return (
-    <>
-      <Header />
-      <AboutWrapper>
-        <MainContent>
-          <Section>
-            <TextContent>
-              <Title>
-                Send It. Save It. Earn It. Learn It.
-              </Title>
-              <Paragraph>
-                Experience the ultimate blend of convenience
-                and knowledge. Our app lets you send money
-                effortlessly, save smartly, and learn
-                essential financial skills along the way.
-                Simplify your financial life while boosting
-                your money know-how with every transaction.
-              </Paragraph>
-              <GetStartedButton>Get Started</GetStartedButton>
-            </TextContent>
-            <Image src={aboutImage} alt="About Us" />
-          </Section>
-
-          <TeamSection>
-            <TeamTitle>Meet the Team</TeamTitle>
-            <TeamGrid>
-              <TeamMember>
-                <TeamImage
-                  src={MarquesZahir}
-                  alt="Marques Zahir"
-                />
-                <TeamName>Marques Zahir</TeamName>
-                <Bio className="bio">
-                  <strong>Marques Zahir, CEO</strong>
-                  <br />
-                  <em>School</em>
-                  <br />
-                  Lorem ipsum dolor sit amet consectetur.
-                  Pellentesque lectus lorem enim lacinia non
-                  ipsum.
-                </Bio>
-              </TeamMember>
-              <TeamMember>
-                <TeamImage src={CaseyBass} alt="Casey Bass" />
-                <TeamName>Casey Bass</TeamName>
-                <Bio className="bio">
-                  <strong>Casey Bass, CTO</strong>
-                  <br />
-                  <em>School</em>
-                  <br />
-                  Lorem ipsum dolor sit amet consectetur.
-                  Pellentesque lectus lorem enim lacinia non
-                  ipsum.
-                </Bio>
-              </TeamMember>
-              <TeamMember>
-                <TeamImage
-                  src={AshleyLewis}
-                  alt="Ashley Lewis"
-                />
-                <TeamName>Ashley Lewis</TeamName>
-                <Bio className="bio">
-                  <strong>Ashley Lewis, CFO</strong>
-                  <br />
-                  <em>School</em>
-                  <br />
-                  Lorem ipsum dolor sit amet consectetur.
-                  Pellentesque lectus lorem enim lacinia non
-                  ipsum.
-                </Bio>
-              </TeamMember>
-              <TeamMember>
-                <TeamImage
-                  src={teamMember4}
-                  alt="First Last"
-                />
-                <TeamName>First Last</TeamName>
-                <Bio className="bio">
-                  First Last, COO. School: Lorem ipsum dolor
-                  sit amet consectetur. Pellentesque lectus
-                  lorem enim lacinia non ipsum.
-                </Bio>
-              </TeamMember>
-              <TeamMember>
-                <TeamImage
-                  src={teamMember5}
-                  alt="First Last"
-                />
-                <TeamName>First Last</TeamName>
-                <Bio className="bio">
-                  First Last, CMO. School: Lorem ipsum dolor
-                  sit amet consectetur. Pellentesque lectus
-                  lorem enim lacinia non ipsum.
-                </Bio>
-              </TeamMember>
-            </TeamGrid>
-          </TeamSection>
-
-          <MissionSection>
-            <MissionImage
-              src={missionImage}
-              alt="Our Mission"
-            />
-            <MissionText>
-              <MissionTitle>
-                Our Mission: Elevate Your Finances
-              </MissionTitle>
-              <MissionParagraph>
-                Our mission is simple: help you get your money
-                right and your knowledge tight. We're here to
-                make financial literacy easy and accessible,
-                so you can flex your financial skills and
-                secure your bag for the{' '}
-                <strong>future</strong>.
-              </MissionParagraph>
-              <MissionButton>Get Started</MissionButton>
-            </MissionText>
-          </MissionSection>
-        </MainContent>
-      </AboutWrapper>
-      <Footer />
-    </>
+    <div>
+      <div className="bg-green-500 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8 sm:py-16 md:py-20 rounded-[48px] border-2 max-w-full lg:max-w-[1184px] lg:h-[660.92px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[157px]">
+        <div className="w-full lg:w-1/2 flex flex-col items-start space-y-4 sm:space-y-6">
+          <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+            Send It. Save It. <br /> Earn it. Learn It.
+          </h1>
+          <p className="text-white text-base sm:text-lg">
+            Experience convenience and knowledge with our
+            app. Simplify your financial life and boost your
+            money know-how.
+          </p>
+          <WhiteMuneButton text="Get Mun-e" />
+        </div>
+        <div className="relative w-full lg:w-1/2 mt-6 lg:mt-0">
+          <img
+            src={mainImage}
+            alt="Main"
+            className="rounded-lg w-full lg:w-[99%] h-auto mx-auto"
+          />
+          <NotificationBubble
+            image={bryan}
+            name="Bryan Just"
+            message="Completed a lesson!"
+            extraInfo="+25xp"
+            position="top-right"
+          />
+          <NotificationBubble
+            image={ashley}
+            name="Ashley S."
+            amount="+$250"
+            position="bottom-left"
+          />
+          <NotificationBubble
+            image={arrow}
+            name="Profile"
+            message="Almost there! Goal is 75% complete."
+            position="bottom-right"
+          />
+        </div>
+      </div>
+      <MeetTheTeam />
+      <MissionSection />
+    </div>
   );
 };
 
-export default About;
+export default AboutSection;
