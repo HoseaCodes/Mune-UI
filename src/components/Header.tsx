@@ -4,7 +4,6 @@ import {
   HeaderWrapper,
   HeaderLogo,
   Nav,
-  NavLinks,
   NavLink,
   Button,
   HamburgerMenu,
