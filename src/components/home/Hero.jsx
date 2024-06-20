@@ -6,6 +6,8 @@ import PauseIcon from '../../assets/icons/pause.png';
 import WhatsappIcon from '../../assets/icons/whatsapp.svg';
 import heroVideo from '../../assets/videos/hero.mp4';
 import heroImage from '../../assets/images/hero.png';
+import GoogleIcon from '../GoogleIcon';
+import AppleIcon from '../AppleIcon';
 
 const Hero = () => {
   const [isVideoPlaying, setIsVideoPlaying] =
@@ -111,12 +113,8 @@ const Hero = () => {
       </div>
       <div className="flex justify-center items-center mt-6">
         <div className="md:hidden flex gap-3 items-center">
-          <a href="#/">
-            <img src={GooglePlay} alt="Google Play" />
-          </a>
-          <a href="#/">
-            <img src={AppStore} alt="App Store" />
-          </a>
+          <GoogleIcon />
+          <AppleIcon />
         </div>
       </div>
     </div>

@@ -11,7 +11,6 @@ import {
   Input,
   SubmitButton,
   StoreLinks,
-  StoreButton,
   SubscribeLinks,
   FooterContent,
   FooterTopText,
@@ -24,13 +23,13 @@ import {
 } from '../styles/FooterStyles';
 import logo from '../assets/logo1.png';
 import phoneIcon2 from '../assets/phone-icon2.png';
-import googlePlayLogo from '../assets/google-play-logo.png'; // Add Google Play image
-import appStoreLogo from '../assets/app-store-logo.png'; // Add App Store image
 import {
   FaFacebook,
   FaInstagram,
   FaTiktok,
 } from 'react-icons/fa';
+import AppleIcon from './AppleIcon';
+import GoogleIcon from './GoogleIcon';
 
 const Footer: React.FC = () => {
   return (
@@ -55,20 +54,8 @@ const Footer: React.FC = () => {
           <FooterLogo src={logo} alt="Logo" />
           <AppComingSoon>App Coming Soon!</AppComingSoon>
           <StoreLinks>
-            <StoreButton href="https://play.google.com/store">
-              <img src={googlePlayLogo} alt="Google Play" />
-              <div>
-                <div>GET IT ON</div>
-                <div>Google Play</div>
-              </div>
-            </StoreButton>
-            <StoreButton href="https://www.apple.com/app-store">
-              <img src={appStoreLogo} alt="App Store" />
-              <div>
-                <div>Download on the</div>
-                <div>App Store</div>
-              </div>
-            </StoreButton>
+            <GoogleIcon />
+            <AppleIcon />
           </StoreLinks>
         </FooterSection>
         <LegalSection>
