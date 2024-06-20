@@ -56,12 +56,12 @@ const Header: React.FC = () => {
         <HeaderLogo src={headerlogo} alt="Logo" />
       </Link>
       <Nav>
-        <NavLinks className="nav-links">
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/subscribe">Subscribe</NavLink>
-          <Button to="/get-started">Get Mun-e</Button>
-        </NavLinks>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/subscribe">Subscribe</NavLink>
+        <Button to="/get-started">Get Mun-e</Button>
+        {/* <NavLink to="/pricing">Pricing</NavLink> */}
       </Nav>
       {isMobile && (
         <>

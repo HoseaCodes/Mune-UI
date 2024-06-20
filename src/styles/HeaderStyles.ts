@@ -7,8 +7,6 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
-  background-color: #f2f7f4;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     padding: 20px;
@@ -24,6 +22,10 @@ export const HeaderLogo = styled.img`
   @media (max-width: 768px) {
     margin-left: 10px;
   }
+`;
+
+export const Logo = styled.img`
+  height: 40px; /* Adjust the height as needed */
 `;
 
 export const Nav = styled.nav`
