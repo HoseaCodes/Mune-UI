@@ -2,7 +2,7 @@ import React from 'react';
 import {
   FooterWrapper,
   FooterLogo,
-  FooterTitle,
+  // FooterTitle,
   FooterLink,
   SubscribeLink,
   AppComingSoon,
@@ -20,9 +20,9 @@ import {
   SubscribeSection,
   FooterSectionContainer,
   FooterSection,
+  FooterTitle,
 } from '../styles/FooterStyles';
 import logo from '../assets/logo1.png';
-import phoneIcon from '../assets/phone-icon.png';
 import phoneIcon2 from '../assets/phone-icon2.png';
 import googlePlayLogo from '../assets/google-play-logo.png'; // Add Google Play image
 import appStoreLogo from '../assets/app-store-logo.png'; // Add App Store image
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
     <FooterWrapper>
       <FooterContent>
         <FooterTopText>
-          Don't Sleep! Sign Up Now.
+          Don&apos;t Sleep! Sign Up Now.
         </FooterTopText>
         <Form>
           <Input
