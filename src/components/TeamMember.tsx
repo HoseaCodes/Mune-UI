@@ -22,12 +22,13 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   const [firstName, lastName] = name.split(' ');
   return (
     <div
-      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'}`}
+      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'} ${isActive ? 'mb-40' : ''}`}
       onClick={onClick}
       style={{
         width: '115px',
         height: '186.5px',
         padding: '12px 0 0 0',
+        // marginBottom: '300px',
         gap: '16.5px',
         borderRadius: '15px',
         border: '2px solid transparent',
@@ -48,7 +49,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       </p>
       {isActive && (
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 mt-6 bg-#F2F7F3 p-6 rounded-lg shadow-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-full max-w-[1136px] h-auto md:h-[200px]"
+          className="absolute left-1/2 transform -translate-x-1/2 mt-6 p-6 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-full max-w-[1136px] h-auto md:h-[200px]"
           style={{
             marginTop: '260px',
             marginLeft: '320px',

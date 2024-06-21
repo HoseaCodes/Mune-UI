@@ -21,7 +21,7 @@ const MeetTheTeam: React.FC = () => {
   return (
     <div className="bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16">
       <h2
-        className="text-3xl lg:text-4xl font-bold text-left mb-8 ml-48"
+        className="text-3xl lg:text-4xl font-bold text-left mb-8 ml-72"
         style={{ fontSize: '48px' }}
       >
         Meet the Team

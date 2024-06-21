@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
     <>
       <Header />
       <div>
-        <div className="bg-green-500 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8 sm:py-16 md:py-20 rounded-[48px] border-2 max-w-full lg:max-w-[1184px] lg:h-[660.92px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[157px]">
+        <div className="bg-green-500 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8 sm:py-16 md:py-20 rounded-[48px] border-2 max-w-full lg:max-w-[1184px] lg:h-[660.92px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[37px]">
           <div className="w-full lg:w-1/2 flex flex-col items-start space-y-4 sm:space-y-6">
             <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
               Send It. Save It. <br /> Earn it. Learn It.

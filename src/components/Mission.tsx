@@ -1,5 +1,5 @@
 import React from 'react';
-import missionImage from '../assets/mission-image.png'; // Make sure to import the correct image
+import missionImage from '../assets/black-couple.png'; // Make sure to import the correct image
 import GreenMuneButton from '../components/GreenMuneButton';
 
 const MissionSection: React.FC = () => {
@@ -11,7 +11,7 @@ const MissionSection: React.FC = () => {
           alt="Mission"
           className="max-w-full lg:max-w-[4184px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[157px] rounded-[48px] border-2 border-[#CEE0D0]"
         />
-        <div className="absolute inset-0 flex flex-col justify-center pl-[826px] pr-[48px] pt-[81.02px] pb-[81.98px]">
+        <div className="absolute inset-0 flex flex-col justify-center pl-[996px] pr-[48px] pt-[81.02px] pb-[81.98px]">
           <div className="bg-white p-6 rounded-lg shadow-lg w-[510px]">
             <h2 className="text-black font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
               Our Mission: <br /> Elevate Your Finances
@@ -25,7 +25,7 @@ const MissionSection: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <GreenMuneButton text="Get Mun-e" />
-              <button className="bg-transparent text-#010A03 font-bold py-2 px-6 rounded-lg border-2 border-green-200">
+              <button className="bg-transparent text-[#010A03] font-bold py-2 px-6 rounded-lg border-2 border-green-200">
                 Learn More
               </button>
             </div>
