@@ -22,7 +22,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   const [firstName, lastName] = name.split(' ');
   return (
     <div
-      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'} ${isActive ? 'mb-40' : ''}`}
+      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'} ${isActive ? 'mb-80' : ''}`}
       onClick={onClick}
       style={{
         width: '115px',
