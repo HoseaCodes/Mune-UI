@@ -4,6 +4,7 @@ import {
   TitleSection,
   TextWrapper,
   Title,
+  GreenMuneButton,
   Paragraph,
   FormWrapper,
   PhoneIcon2,
@@ -30,7 +31,7 @@ import {
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import phoneIcon2 from '../assets/phone-icon2.png';
-import subscribeImage from '../assets/subscribe-image.png'; // Replace with actual image path
+import subscribeImage from '../assets/student.png'; // Replace with actual image path
 import lessonImage1 from '../assets/lesson-image1.png'; // Replace with actual image path
 import lessonImage2 from '../assets/lesson-image2.png'; // Replace with actual image path
 import lessonImage3 from '../assets/lesson-image3.png'; // Replace with actual image path
@@ -50,11 +51,7 @@ const Subscribe: React.FC = () => {
               <Paragraph>
                 Stay ahead in your financial journey by subscribing to updates on our newest educational videos and resources!
               </Paragraph>
-              <FormWrapper>
-                <PhoneIcon2 src={phoneIcon2} alt="Phone" />
-                <Input type="text" placeholder="Enter your mobile number" />
-                <SubmitButton>Subscribe</SubmitButton>
-              </FormWrapper>
+              <GreenMuneButton to="/get-started">Get Mun-e</GreenMuneButton>
             </TextWrapper>
             <SubscribeImage src={subscribeImage} alt="Subscribe" />
           </TitleSection>

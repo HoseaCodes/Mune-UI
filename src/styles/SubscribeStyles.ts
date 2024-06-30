@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors, typography, spacing } from './';
+import { Link } from 'react-router-dom';
 
 export const SubscribeWrapper = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ export const TextWrapper = styled.div`
   flex: 1;
   text-align: left;
   margin-right: 20px;
+  margin-top: -113px;
 `;
 
 export const Title = styled.h1`
@@ -48,6 +50,35 @@ export const Paragraph = styled.p`
   text-align: left;
   color: black;
   margin-bottom: 24px;
+`;
+
+export const GreenMuneButton = styled(Link)`
+  padding: ${spacing.small} ${spacing.medium};
+  background-color: #19a530;
+  color: #f2f7f4;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-left: ${spacing.xsmall};
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 6.0rem;
+  white-space: nowrap;
+  box-shadow: 0 0 10px 0 rgba(26, 174, 51, 0.8);
+
+  @media (max-width: 768px) {
+    margin: ${spacing.small} 0 0 0;
+    align-self: flex-end;
+    margin-left: 550px; /* Add margin-right to push the button to the right */
+    text-align: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: ${colors.primary};
+    color: #f2f7f4;
+    box-shadow: 0 0 10px 0 rgba(26, 174, 51, 1);
+  }
 `;
 
 export const FormWrapper = styled.div`
