@@ -12,44 +12,75 @@ export const SubscribeWrapper = styled.div`
 
 export const TitleSection = styled.section`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 24px 0;
   
+  @media (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const TextWrapper = styled.div`
-  flex: 1;
-  text-align: left;
-  margin-right: 20px;
-  margin-top: -113px;
+  text-align: center;
+  margin-top: -6rem;
+
+  @media (min-width: 769px) {
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 `;
 
 export const Title = styled.h1`
+  font-family: Poppins, sans-serif;
   width: 486.96px;
   height: 46px;
   font: sf-pro;
-  font-size: 38px;
+  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 46px;
+  line-height: 2.5rem;
+  letter-spacing: -0.0625rem;
   text-align: left;
-  color: black;
+  color: #010a03;
   margin-bottom: 24px;
+
+  @media (min-width: 769px) {
+    white-space: pre-wrap; /* This will enable the text to break */
+  }
+
+   @media (max-width: 769px) {
+    width: 40.58rem;
+    height: 2.825rem;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    text-align: left;
+  }
 `;
 
 export const Paragraph = styled.p`
+  font-family: Poppins, sans-serif;
   width: 486.96px;
   height: 84px;
-  font: sf-pro;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.26px;
+  line-height: 1.8rem;
+  letter-spacing: -0.01625rem;
   text-align: left;
-  color: black;
+  color: #010a03;
   margin-bottom: 24px;
+
+  @media (min-width: 769px) {
+    width: 30.58rem;
+    height: 5.25rem;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+    text-align: left;
+  }
 `;
 
 export const GreenMuneButton = styled(Link)`
@@ -65,13 +96,15 @@ export const GreenMuneButton = styled(Link)`
   width: 6.0rem;
   white-space: nowrap;
   box-shadow: 0 0 10px 0 rgba(26, 174, 51, 0.8);
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
     margin: ${spacing.small} 0 0 0;
-    align-self: flex-end;
-    margin-left: 550px; /* Add margin-right to push the button to the right */
+    // margin-left: 550px; /* Add margin-right to push the button to the right */
+    margin-left: .5rem; /* Add margin-right to push the button to the right */
     text-align: center;
     justify-content: center;
+    align-self: flex-start;
   }
 
   &:hover {
