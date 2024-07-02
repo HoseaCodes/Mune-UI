@@ -47,7 +47,7 @@ const Subscribe: React.FC = () => {
         <SubscribeWrapper>
           <TitleSection>
             <TextWrapper>
-              <Title>Elevate Your Financial IQ</Title>
+              <Title>Elevate Your Financial IQ.</Title>
               <Paragraph>
                 Stay ahead in your financial journey by subscribing to updates on our newest educational videos and resources!
               </Paragraph>
