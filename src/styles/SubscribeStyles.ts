@@ -192,7 +192,16 @@ export const LessonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 40px 0;
+  margin: -10rem -6rem 0 0;
+
+  @media (max-width: 769px) {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows wrapping on larger screens */
+  overflow-x: visible; /* Makes sure horizontal scroll is only for mobile */
+  margin: -8rem 0 0 6rem;
+  }
 `;
 
 export const LessonCard = styled.div`
@@ -203,7 +212,16 @@ export const LessonCard = styled.div`
   background-color: ${colors.primary};
   color: white;
   text-align: left;
-  margin: 10px;
+  margin: 0 6rem 0 0;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    margin: 7rem 1rem;
+  }
+
+  @media (min-width: 769px) {
+    margin-right: 6rem;
+  }
 `;
 
 export const LessonTitle = styled.h2`
@@ -322,7 +340,7 @@ export const StayTunedInput = styled.input`
 export const TrendingSection = styled.section`
   width: 1256px;
   text-align: left;
-  margin-top: 5px;
+  margin: 0 1rem 0 0;
   padding: 0px, 24px, 0px, 24px
 `;
 
@@ -339,9 +357,20 @@ export const TrendingWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const TrendingCard = styled(LessonCard)`
+export const TrendingCard = styled.div`
   max-width: 246px;
   height: 300px;
+  width: 272px;
+  padding: 16px;
+  border-radius: 24px;
+  background-color: ${colors.primary};
+  color: white;
+  text-align: left;
+  margin: 0 2.2rem 0 0;
+
+  @media (max-width: 768px) {
+    margin-right: 10px; /* Adjust margin for better spacing on mobile */
+  }
 `;
 
 export const TrendingImage = styled.img`
