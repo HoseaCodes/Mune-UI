@@ -6,6 +6,7 @@ interface ButtonProps {
   to?: string;
   onClick?: () => void;
   className?: string;
+  textColor: string;
 }
 
 export const GreenButton: React.FC<ButtonProps> = ({ text, to, onClick, className }) => (
@@ -20,13 +21,13 @@ export const GreenButton: React.FC<ButtonProps> = ({ text, to, onClick, classNam
   )
 );
 
-export const WhiteButton: React.FC<ButtonProps> = ({ text, to, onClick, className }) => (
+export const WhiteButton: React.FC<ButtonProps> = ({ text, to, onClick, className, textColor }) => (
   to ? (
-    <Link to={to} className={`bg-[#f2f7f4] text-[#19a530] font-bold py-2 px-6 rounded-lg shadow-lg ${className}`}>
+    <Link to={to} className={`bg-[#f2f7f4] ${textColor} font-bold py-2 px-6 rounded-lg shadow-lg ${className}`}>
       {text}
     </Link>
   ) : (
-    <button onClick={onClick} className={`bg-[#f2f7f4] text-[#19a530] font-bold py-2 px-6 rounded-lg shadow-lg ${className}`}>
+    <button onClick={onClick} className={`bg-[#f2f7f4] ${textColor} font-bold py-2 px-6 rounded-lg shadow-lg ${className}`}>
       {text}
     </button>
   )

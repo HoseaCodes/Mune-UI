@@ -6,9 +6,9 @@ import TrendingCard from '../components/TrendingCard';
 import { GreenButton } from '../components/Button';
 import phoneIcon2 from '../assets/phone-icon2.png';
 import subscribeImage from '../assets/student.png'; // Replace with actual image path
-import lessonImage1 from '../assets/lesson-image1.png'; // Replace with actual image path
-import lessonImage2 from '../assets/lesson-image2.png'; // Replace with actual image path
-import lessonImage3 from '../assets/lesson-image3.png'; // Replace with actual image path
+import lessonImage1 from '../assets/pinkjacketvideo.png'; // Replace with actual image path
+import lessonImage2 from '../assets/jeanshirt.png'; // Replace with actual image path
+import lessonImage3 from '../assets/throwingmune.png'; // Replace with actual image path
 import trendingImage1 from '../assets/trending-image1.png'; // Replace with actual image path
 import trendingImage2 from '../assets/trending-image2.png'; // Replace with actual image path
 import trendingImage3 from '../assets/trending-image3.png'; // Replace with actual image path
@@ -28,7 +28,7 @@ const Subscribe: React.FC = () => {
             <p className="font-poppins text-lg font-normal leading-relaxed text-center text-[#010a03] mb-8 md:mb-4 md:w-[30.58rem] md:text-xl md:leading-relaxed md:text-left">
               Stay ahead in your financial journey by subscribing to updates on our newest educational videos and resources!
             </p>
-            <div className="mb-10 md:mb-0 md:self-start">
+            <div className="mb-10 md:mb-0 md:self-start md:justify-center">
               <GreenButton text="Get Mun-e" />
             </div>
           </div>
@@ -46,25 +46,31 @@ const Subscribe: React.FC = () => {
               description="Learn the fundamentals of creating and maintaining a budget to keep your finances on track."
               buttonText="Start Lesson"
               image={lessonImage1}
+              bgColor='bg-custom-green'
+              buttonTextColor='text-custom-green'
             />
             <LessonCard
               title="Credit Scores 101: Building/Maintaining Good Credit"
               description="Understand what a credit score is, how it's calculated, tips for improving and maintaining a good score."
               buttonText="Start Lesson"
               image={lessonImage2}
+              bgColor='bg-custom-purple'
+              buttonTextColor='text-custom-purple'
             />
             <LessonCard
               title="Investing for Beginners: Growing Your Wealth"
               description="Get introduced to the basics of investing, different types of investments, and how to start investing wisely."
               buttonText="Start Lesson"
               image={lessonImage3}
+              bgColor='bg-custom-blue'
+              buttonTextColor='text-custom-blue'
             />
           </div>
         </div>
 
         <div className="w-full max-w-5xl text-left mt-16 mb-8">
           <h2 className="text-2xl font-bold mb-5">Trending</h2>
-          <div className="flex overflow-x-scroll scroll-smooth space-x-5 scrollbar-hide md:overflow-x-visible md:flex-wrap">
+          <div className="flex overflow-x-scroll scroll-smooth space-x-3 scrollbar-hide md:overflow-x-visible md:flex-wrap">
             <TrendingCard
               title="Growing Your Wealth"
               image={trendingImage1}
