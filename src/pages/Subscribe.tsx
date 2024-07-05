@@ -14,27 +14,6 @@ import trendingImage2 from '../assets/trending-image2.png'; // Replace with actu
 import trendingImage3 from '../assets/trending-image3.png'; // Replace with actual image path
 import trendingImage4 from '../assets/trending-image4.png'; // Replace with actual image path
 import { Link } from 'react-router-dom';
-
-const lessons = [
-  {
-    title: 'Budgeting Basics: How to Manage Your Money',
-    description: 'Learn the fundamentals of creating and maintaining a budget to keep your finances on track.',
-    buttonText: 'Start Lesson',
-    image: lessonImage1,
-  },
-  {
-    title: 'Credit Scores 101: Building/Maintaining Good Credit',
-    description: 'Understand what a credit score is, how it\'s calculated, tips for improving and maintaining a good score.',
-    buttonText: 'Start Lesson',
-    image: lessonImage2,
-  },
-  {
-    title: 'Investing for Beginners: Growing Your Wealth',
-    description: 'Get introduced to the basics of investing, different types of investments, and how to start investing wisely.',
-    buttonText: 'Start Lesson',
-    image: lessonImage3,
-  },
-];
   
 const Subscribe: React.FC = () => {
   return (
@@ -42,32 +21,50 @@ const Subscribe: React.FC = () => {
       <Header />
       <div className="flex flex-col items-center min-h-screen p-5">
         <section className="flex flex-col items-center justify-center w-full max-w-5xl py-6 md:flex-row md:justify-between">
-          <div className="text-center md:text-left md:mr-5 -mt-24">
-            <h1 className="font-poppins w-[486.96px] h-11 text-3xl font-bold leading-[2.5rem] text-left text-[#010a03] ml-40 mt-20 md:mt-0 md:w-[40.58rem] md:h-[2.825rem] md:text-[1.375rem] md:leading-[1.75rem] md:ml-0 md:text-left whitespace-pre-wrap md:whitespace-normal">
+          <div className="text-center md:text-left md:mr-5 mt-10 md:mt-[-4rem]">
+            <h1 className="font-poppins text-3xl font-bold leading-tight text-center text-[#010a03] mb-6 md:mb-0 md:w-[40.58rem] md:text-5xl md:leading-tight md:text-left md:font-poppins">
               Elevate Your Financial IQ.
             </h1>
-            <p className="font-poppins w-[486.96px] h-[84px] text-[1.4rem] font-normal leading-[1.8rem] text-left text-[#010a03] mb-8 ml-40 mt-6 md:ml-0 md:mt-0 md:w-[24.58rem] md:h-[5.25rem] md:text-[1.375rem] md:leading-[1.75rem] md:text-left">
+            <p className="font-poppins text-lg font-normal leading-relaxed text-center text-[#010a03] mb-8 md:mb-4 md:w-[30.58rem] md:text-xl md:leading-relaxed md:text-left">
               Stay ahead in your financial journey by subscribing to updates on our newest educational videos and resources!
             </p>
-            <div className="mb-5 md:mb-0 md:self-start">
+            <div className="mb-10 md:mb-0 md:self-start">
               <GreenButton text="Get Mun-e" />
             </div>
           </div>
           <img
             src={subscribeImage}
             alt="Subscribe"
-            className="w-1/2 h-auto rounded-lg"
+            className="w-full max-w-md h-full rounded-lg"
           />
         </section>
-        <div className="flex overflow-x-auto space-x-4 scrollbar-hide snap-x snap-mandatory">
-          {lessons.map((lesson, index) => (
-            <LessonCard key={index} {...lesson} />
-          ))}
+         {/* LessonCards Section */}
+         <div className="w-full max-w-5xl text-left mt-16 mb-8">
+          <div className="flex overflow-x-scroll scroll-smooth space-x-5 scrollbar-hide md:overflow-x-visible md:flex-wrap">
+            <LessonCard
+              title="Budgeting Basics: How to Manage Your Money"
+              description="Learn the fundamentals of creating and maintaining a budget to keep your finances on track."
+              buttonText="Start Lesson"
+              image={lessonImage1}
+            />
+            <LessonCard
+              title="Credit Scores 101: Building/Maintaining Good Credit"
+              description="Understand what a credit score is, how it's calculated, tips for improving and maintaining a good score."
+              buttonText="Start Lesson"
+              image={lessonImage2}
+            />
+            <LessonCard
+              title="Investing for Beginners: Growing Your Wealth"
+              description="Get introduced to the basics of investing, different types of investments, and how to start investing wisely."
+              buttonText="Start Lesson"
+              image={lessonImage3}
+            />
+          </div>
         </div>
-      
+
         <div className="w-full max-w-5xl text-left mt-16 mb-8">
           <h2 className="text-2xl font-bold mb-5">Trending</h2>
-          <div className="flex justify-around flex-wrap md:flex-nowrap md:justify-start overflow-x-auto scrollbar-hide">
+          <div className="flex overflow-x-scroll scroll-smooth space-x-5 scrollbar-hide md:overflow-x-visible md:flex-wrap">
             <TrendingCard
               title="Growing Your Wealth"
               image={trendingImage1}
