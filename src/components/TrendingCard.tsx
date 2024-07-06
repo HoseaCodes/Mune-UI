@@ -6,7 +6,10 @@ interface TrendingCardProps {
   image: string;
 }
 
-const TrendingCard: React.FC<TrendingCardProps> = ({ title, image }) => {
+const TrendingCard: React.FC<TrendingCardProps> = ({
+  title,
+  image,
+}) => {
   return (
     <div className="w-[246px] h-[325px] w-[272px] p-4 rounded-3xl bg-green-600 text-white text-left mb-10 md:mb-0 flex-shrink-0">
       <h2 className="w-[240px] h-[84px] font-poppins text-xl font-bold leading-7 text-white mb-2.5">

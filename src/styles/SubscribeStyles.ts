@@ -18,7 +18,7 @@ export const TitleSection = styled.section`
   width: 100%;
   max-width: 1200px;
   padding: 24px 0;
-  
+
   @media (max-width: 769px) {
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,7 @@ export const Title = styled.h1`
     margin: 6rem 0 3rem 4rem;
   }
 
-   @media (min-width: 769px) {
+  @media (min-width: 769px) {
     width: 40.58rem;
     height: 2.825rem;
     font-size: 1.375rem;
@@ -116,7 +116,7 @@ export const GreenMuneButton = styled(Link)`
   display: flex;
   align-items: center;
   height: 100%;
-  width: 6.0rem;
+  width: 6rem;
   white-space: nowrap;
   box-shadow: 0 0 10px 0 rgba(26, 174, 51, 0.8);
   margin-bottom: 20px;
@@ -195,12 +195,12 @@ export const LessonWrapper = styled.div`
   margin: -10rem -6rem 0 0;
 
   @media (max-width: 769px) {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap; /* Allows wrapping on larger screens */
-  overflow-x: visible; /* Makes sure horizontal scroll is only for mobile */
-  margin: -8rem 0 0 6rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows wrapping on larger screens */
+    overflow-x: visible; /* Makes sure horizontal scroll is only for mobile */
+    margin: -8rem 0 0 6rem;
   }
 `;
 
@@ -341,7 +341,7 @@ export const TrendingSection = styled.section`
   width: 1256px;
   text-align: left;
   margin: 0 1rem 0 0;
-  padding: 0px, 24px, 0px, 24px
+  padding: 0px, 24px, 0px, 24px;
 `;
 
 export const TrendingTitle = styled.h2`

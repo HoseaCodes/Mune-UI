@@ -22,18 +22,29 @@ import {
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronRight,
+  faChevronUp,
+} from '@fortawesome/free-solid-svg-icons';
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
 
 const Contact: React.FC = () => {
-  const [activeIndexes, setActiveIndexes] = useState<{ [key: number]: number | null }>({});
+  const [activeIndexes, setActiveIndexes] = useState<{
+    [key: number]: number | null;
+  }>({});
 
-  const handleToggle = (itemIndex: number, questionIndex: number) => {
+  const handleToggle = (
+    itemIndex: number,
+    questionIndex: number
+  ) => {
     setActiveIndexes((prev) => ({
       ...prev,
-      [itemIndex]: prev[itemIndex] === questionIndex ? null : questionIndex,
+      [itemIndex]:
+        prev[itemIndex] === questionIndex
+          ? null
+          : questionIndex,
     }));
   };
 
@@ -97,33 +108,66 @@ const Contact: React.FC = () => {
             </FormWrapper>
           </Section>
           <TeamImages>
-            <TeamImage src={MarquesZahir} alt="Marques Zahir" />
+            <TeamImage
+              src={MarquesZahir}
+              alt="Marques Zahir"
+            />
             <TeamImage src={CaseyBass} alt="Casey Bass" />
-            <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
-            <ReplyText>Hang Tight, We'll Reply Soon</ReplyText>
+            <TeamImage
+              src={AshleyLewis}
+              alt="Ashley Lewis"
+            />
+            <ReplyText>
+              Hang Tight, We'll Reply Soon
+            </ReplyText>
           </TeamImages>
           <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
             <FAQGrid>
               {faqData.map((item, itemIndex) => (
                 <FAQItem key={itemIndex}>
-                  {item.questions.map((question, questionIndex) => (
-                    <div key={questionIndex}>
-                      <Question
-                        className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}
-                        onClick={() => handleToggle(itemIndex, questionIndex)}
-                      >
-                        {question}{' '}
-                        <FontAwesomeIcon
-                          icon={activeIndexes[itemIndex] === questionIndex ? faChevronUp : faChevronRight}
-                        />
-                      </Question>
-                      <Answer className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}>
-                        {item.answers[questionIndex]}
-                      </Answer>
-                      {activeIndexes[itemIndex] !== questionIndex && <Separator />}
-                    </div>
-                  ))}
+                  {item.questions.map(
+                    (question, questionIndex) => (
+                      <div key={questionIndex}>
+                        <Question
+                          className={
+                            activeIndexes[itemIndex] ===
+                            questionIndex
+                              ? 'active'
+                              : ''
+                          }
+                          onClick={() =>
+                            handleToggle(
+                              itemIndex,
+                              questionIndex
+                            )
+                          }
+                        >
+                          {question}{' '}
+                          <FontAwesomeIcon
+                            icon={
+                              activeIndexes[itemIndex] ===
+                              questionIndex
+                                ? faChevronUp
+                                : faChevronRight
+                            }
+                          />
+                        </Question>
+                        <Answer
+                          className={
+                            activeIndexes[itemIndex] ===
+                            questionIndex
+                              ? 'active'
+                              : ''
+                          }
+                        >
+                          {item.answers[questionIndex]}
+                        </Answer>
+                        {activeIndexes[itemIndex] !==
+                          questionIndex && <Separator />}
+                      </div>
+                    )
+                  )}
                 </FAQItem>
               ))}
             </FAQGrid>
