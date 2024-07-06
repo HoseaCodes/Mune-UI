@@ -6,7 +6,7 @@ interface ButtonProps {
   to?: string;
   onClick?: () => void;
   className?: string;
-  textColor: string;
+  textColor?: string;
 }
 
 export const GreenButton: React.FC<ButtonProps> = ({
