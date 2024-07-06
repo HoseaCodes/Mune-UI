@@ -17,7 +17,6 @@ export const TitleSection = styled.section`
   width: 100%;
   max-width: 1200px;
   padding: 24px 0;
-  
 `;
 
 export const TextWrapper = styled.div`

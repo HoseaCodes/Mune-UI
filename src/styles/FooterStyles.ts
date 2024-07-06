@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, typography } from './';
+import { colors, spacing, typography } from './';
 
 export const FooterWrapper = styled.footer`
   background-color: ${colors.primary};
@@ -12,17 +12,6 @@ export const FooterWrapper = styled.footer`
   border-top-right-radius: 1.25rem;
   position: relative;
   min-height: 31.25rem;
-
-export const FooterLogo = styled.img`
-  width: 100px;
-  margin-bottom: ${spacing.medium};
-`;
-
-export const FooterTitle = styled.h4`
-  font-size: 2rem;
-  font-weight: ${typography.fontWeight.bold};
-  text-align: left;
-  margin-bottom: ${spacing.medium};
 `;
 
 export const FooterFormContainer = styled.div`

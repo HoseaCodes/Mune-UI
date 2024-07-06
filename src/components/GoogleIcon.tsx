@@ -1,5 +1,5 @@
-import React from 'react'
-import GooglePlay from '../assets/images/google-play.svg'
+import React from 'react';
+import GooglePlay from '../assets/images/google-play.svg';
 
 export default function GoogleIcon() {
   return (
