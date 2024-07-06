@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LessonCard from '../components/LessonCard';
 import TrendingCard from '../components/TrendingCard';
+import StayTunedSection from '../components/StayTuned';
 import { GreenButton } from '../components/Button';
 import phoneIcon2 from '../assets/phone-icon2.png';
 import subscribeImage from '../assets/student.png'; // Replace with actual image path
@@ -67,6 +68,7 @@ const Subscribe: React.FC = () => {
             />
           </div>
         </div>
+        <StayTunedSection />
 
         <div className="w-full max-w-5xl text-left mt-16 mb-8">
           <h2 className="text-2xl font-bold mb-5">Trending</h2>
