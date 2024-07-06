@@ -1,128 +1,104 @@
 import React from 'react';
-import {
-  SubscribeWrapper,
-  TitleSection,
-  TextWrapper,
-  Title,
-  Paragraph,
-  FormWrapper,
-  PhoneIcon2,
-  Input,
-  SubmitButton,
-  LessonWrapper,
-  LessonCard,
-  LessonTitle,
-  LessonDescription,
-  LessonButton,
-  LessonImage,
-  SubscribeImage,
-  StayTunedSection,
-  StayTunedTitle,
-  StayTunedText,
-  StayTunedFormWrapper,
-  StayTunedInput,
-  TrendingSection,
-  TrendingTitle,
-  TrendingWrapper,
-  TrendingCard,
-  TrendingImage,
-} from '../styles/SubscribeStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import LessonCard from '../components/LessonCard';
+import TrendingCard from '../components/TrendingCard';
+import StayTunedSection from '../components/StayTuned';
+import { GreenButton } from '../components/Button';
 import phoneIcon2 from '../assets/phone-icon2.png';
-import subscribeImage from '../assets/subscribe-image.png'; // Replace with actual image path
-import lessonImage1 from '../assets/lesson-image1.png'; // Replace with actual image path
-import lessonImage2 from '../assets/lesson-image2.png'; // Replace with actual image path
-import lessonImage3 from '../assets/lesson-image3.png'; // Replace with actual image path
-import trendingImage1 from '../assets/trending-image1.png'; // Replace with actual image path
-import trendingImage2 from '../assets/trending-image2.png'; // Replace with actual image path
-import trendingImage3 from '../assets/trending-image3.png'; // Replace with actual image path
-import trendingImage4 from '../assets/trending-image4.png'; // Replace with actual image path
+import subscribeImage from '../assets/student.png'; // Replace with actual image path
+import lessonImage1 from '../assets/pinkjacketvideo.png'; // Replace with actual image path
+import lessonImage2 from '../assets/jeanshirt.png'; // Replace with actual image path
+import lessonImage3 from '../assets/throwingmune.png'; // Replace with actual image path
+import trendingImage1 from '../assets/munefan.png'; // Replace with actual image path
+import trendingImage2 from '../assets/openstore.png'; // Replace with actual image path
+import trendingImage3 from '../assets/pinkjacketsmile.png'; // Replace with actual image path
+import trendingImage4 from '../assets/familymune.png'; // Replace with actual image path
+import { Link } from 'react-router-dom';
 
 const Subscribe: React.FC = () => {
-    return (
-      <>
-        <Header />
-        <SubscribeWrapper>
-          <TitleSection>
-            <TextWrapper>
-              <Title>Elevate Your Financial IQ</Title>
-              <Paragraph>
-                Stay ahead in your financial journey by subscribing to updates on our newest educational videos and resources!
-              </Paragraph>
-              <FormWrapper>
-                <PhoneIcon2 src={phoneIcon2} alt="Phone" />
-                <Input type="text" placeholder="Enter your mobile number" />
-                <SubmitButton>Subscribe</SubmitButton>
-              </FormWrapper>
-            </TextWrapper>
-            <SubscribeImage src={subscribeImage} alt="Subscribe" />
-          </TitleSection>
-          <LessonWrapper>
-            <LessonCard>
-              <LessonTitle>Budgeting Basics: How to Manage Your Money</LessonTitle>
-              <LessonDescription>
-                Learn the fundamentals of creating and maintaining a budget to keep your finances on track.
-              </LessonDescription>
-              <LessonButton>Start Lesson</LessonButton>
-              <LessonImage src={lessonImage1} alt="Lesson 1" />
-            </LessonCard>
-            <LessonCard>
-              <LessonTitle>Credit Scores 101: Building/Maintaining Good Credit</LessonTitle>
-              <LessonDescription>
-                Understand what a credit score is, how it's calculated, tips for improving and maintaining a good score.
-              </LessonDescription>
-              <LessonButton>Start Lesson</LessonButton>
-              <LessonImage src={lessonImage2} alt="Lesson 2" />
-            </LessonCard>
-            <LessonCard>
-              <LessonTitle>Investing for Beginners: Growing Your Wealth</LessonTitle>
-              <LessonDescription>
-                Get introduced to the basics of investing, different types of investments, and how to start investing wisely.
-              </LessonDescription>
-              <LessonButton>Start Lesson</LessonButton>
-              <LessonImage src={lessonImage3} alt="Lesson 3" />
-            </LessonCard>
-          </LessonWrapper>
-          <StayTunedSection>
-            <StayTunedTitle>Stay Tuned for New Lessons!</StayTunedTitle>
-            <StayTunedText>Enter your mobile number for updates on new educational videos!</StayTunedText>
-            <StayTunedFormWrapper>
-              <PhoneIcon2 src={phoneIcon2} alt="Phone" />
-              <StayTunedInput type="text" placeholder="Enter your mobile number" />
-              {/* <SubmitButton>Subscribe</SubmitButton> */}
-            </StayTunedFormWrapper>
-          </StayTunedSection>
-          <TrendingSection>
-            <TrendingTitle>Trending</TrendingTitle>
-            <TrendingWrapper>
-              <TrendingCard>
-                <LessonTitle>Growing Your Wealth</LessonTitle>
-                <TrendingImage src={trendingImage1} alt="Trending 1" />
-                <LessonButton>Start Lesson</LessonButton>
-              </TrendingCard>
-              <TrendingCard>
-                <LessonTitle>Strategies to Pay Off Loans</LessonTitle>
-                <TrendingImage src={trendingImage2} alt="Trending 2" />
-                <LessonButton>Start Lesson</LessonButton>
-              </TrendingCard>
-              <TrendingCard>
-                <LessonTitle>How to Build an Emergency Fund</LessonTitle>
-                <TrendingImage src={trendingImage3} alt="Trending 3" />
-                <LessonButton>Start Lesson</LessonButton>
-              </TrendingCard>
-              <TrendingCard>
-                <LessonTitle>How to Manage Your Money</LessonTitle>
-                <TrendingImage src={trendingImage4} alt="Trending 4" />
-                <LessonButton>Start Lesson</LessonButton>
-              </TrendingCard>
-            </TrendingWrapper>
-          </TrendingSection>
-        </SubscribeWrapper>
-        <Footer />
-      </>
-    );
-  };
-  
-  export default Subscribe;
-  
+  return (
+    <>
+      <Header />
+      <div className="flex flex-col items-center min-h-screen p-5">
+        <section className="flex flex-col items-center justify-center w-full max-w-5xl py-6 md:flex-row md:justify-between">
+          <div className="text-center md:text-left md:mr-5 mt-10 md:mt-[-4rem]">
+            <h1 className="font-poppins text-3xl font-bold leading-tight text-center text-[#010a03] mb-6 md:mb-0 md:w-[40.58rem] md:text-5xl md:leading-tight md:text-left md:font-poppins">
+              Elevate Your Financial IQ.
+            </h1>
+            <p className="font-poppins text-lg font-normal leading-relaxed text-center text-[#010a03] mb-8 md:mb-4 md:w-[30.58rem] md:text-xl md:leading-relaxed md:text-left">
+              Stay ahead in your financial journey by
+              subscribing to updates on our newest
+              educational videos and resources!
+            </p>
+            <div className="mb-10 md:mb-0 md:self-start md:justify-center">
+              <GreenButton text="Get Mun-e" />
+            </div>
+          </div>
+          <img
+            src={subscribeImage}
+            alt="Subscribe"
+            className="w-full max-w-md h-full rounded-lg"
+          />
+        </section>
+        {/* LessonCards Section */}
+        <div className="w-full max-w-5xl text-left mt-16 mb-8">
+          <div className="flex overflow-x-scroll scroll-smooth space-x-5 scrollbar-hide md:overflow-x-visible md:flex-nowrap">
+            <LessonCard
+              title="Budgeting Basics: How to Manage Your Money"
+              description="Learn the fundamentals of creating and maintaining a budget to keep your finances on track."
+              buttonText="Start Lesson"
+              image={lessonImage1}
+              bgColor="bg-custom-green"
+              buttonTextColor="text-custom-green"
+            />
+            <LessonCard
+              title="Credit Scores 101: Building/Maintaining Good Credit"
+              description="Understand what a credit score is, how it's calculated, tips for improving and maintaining a good score."
+              buttonText="Start Lesson"
+              image={lessonImage2}
+              bgColor="bg-custom-purple"
+              buttonTextColor="text-custom-purple"
+            />
+            <LessonCard
+              title="Investing for Beginners: Growing Your Wealth"
+              description="Get introduced to the basics of investing, different types of investments, and how to start investing wisely."
+              buttonText="Start Lesson"
+              image={lessonImage3}
+              bgColor="bg-custom-blue"
+              buttonTextColor="text-custom-blue"
+            />
+          </div>
+        </div>
+        <StayTunedSection />
+
+        <div className="w-full max-w-5xl text-left mt-16 mb-8">
+          <h2 className="text-2xl font-bold mb-5">
+            Trending
+          </h2>
+          <div className="flex overflow-x-scroll scroll-smooth space-x-3 scrollbar-hide md:overflow-x-visible md:flex-nowrap">
+            <TrendingCard
+              title="Growing Your Wealth"
+              image={trendingImage1}
+            />
+            <TrendingCard
+              title="Strategies to Pay Off Loans"
+              image={trendingImage2}
+            />
+            <TrendingCard
+              title="How to Build an Emergency Fund"
+              image={trendingImage3}
+            />
+            <TrendingCard
+              title="How to Manage Your Money"
+              image={trendingImage4}
+            />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Subscribe;

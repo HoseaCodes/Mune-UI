@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <UsersSection />
       <UnlockSection />
       <AccessSection />
-    </Layout>      
+    </Layout>
   );
 };
 

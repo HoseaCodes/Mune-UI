@@ -1,5 +1,5 @@
-import React from 'react'
-import AppStore from '../assets/images/app-store.svg'
+import React from 'react';
+import AppStore from '../assets/images/app-store.svg';
 
 export default function AppleIcon() {
   return (

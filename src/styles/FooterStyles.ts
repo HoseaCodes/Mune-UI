@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, typography } from './';
+import { colors, spacing, typography } from './';
 
 export const FooterWrapper = styled.footer`
   background-color: ${colors.primary};
@@ -12,7 +12,50 @@ export const FooterWrapper = styled.footer`
   border-top-right-radius: 1.25rem;
   position: relative;
   min-height: 31.25rem;
+`;
 
+export const FooterFormContainer = styled.div`
+  background-color: white;
+  border-radius: 80px;
+  padding: 20px;
+  margin-bottom: ${spacing.large};
+  width: 100%;
+  max-width: 559px;
+  max-height: 92px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 10px;
+`;
+
+export const FooterFormWrapper = styled.div`
+  padding: 7px;
+  box-shadow: 0 0 0 2px black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 479px;
+  max-height: 37px;
+  border-radius: 24px;
+`;
+
+export const FooterForm = styled.form`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 30px;
+`;
+
+export const FooterInput = styled.input`
+  padding: ${spacing.small};
+  border: none;
+  outline: none;
+  font-size: ${typography.fontSize};
+  flex: 1;
+  border-radius: 30px 0 0 30px;
+  margin: 0 ${spacing.small};
+  &::placeholder {
+    color: black;
   @media (max-width: 768px) {
     padding: 1rem;
   }
