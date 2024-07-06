@@ -1,63 +1,156 @@
 import React from 'react';
-import {
-  FooterWrapper,
-  FooterLogo,
-  FooterTitle,
-  FooterLink,
-  SubscribeLink,
-  SubscribeIcons,
-  NavLinks,
-  AppComingSoon,
-  PhoneIcon,
-  FooterInput,
-  FooterFormContainer,
-  FooterForm,
-  FooterFormWrapper,
-  FooterSubmitButton,
-} from '../styles/FooterStyles';
-import logo from '../assets/logo.png';
-import phoneIcon from '../assets/phone-icon.png';
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-} from 'react-icons/fa';
+import Logo from '../assets/logo/logo-white.svg';
+import FbIcon from '../assets/icons/fb.svg';
+import InstaIcon from '../assets/icons/insta.svg';
+import TiktokIcon from '../assets/icons/tiktok.svg';
+import WhatsappIcon from '../assets/icons/whatsapp.svg';
+import AppleIcon from './AppleIcon';
+import GoogleIcon from './GoogleIcon';
 
-const Footer = () => (
-  <FooterWrapper>
-    <FooterLogo src={logo} alt="Logo" />
-    <FooterTitle>Don&#39;t Sleep! Sign Up Now.</FooterTitle>
-    <FooterFormContainer>
-      <FooterFormWrapper>
-        <PhoneIcon src={phoneIcon} alt="Phone" />
-        <FooterForm>
-          <FooterInput
-            type="text"
-            placeholder="Enter your mobile number"
+const Footer: React.FC = () => {
+  return (
+    <footer className="md:h-[673px] rounded-tl-[32px] md:rounded-tl-[48px] mt-[120px] rounded-tr-[32px] md:rounded-tr-[48px] p-10">
+      <img
+        src={Logo}
+        className="md:hidden block w-[85px]"
+        alt="logo"
+      />
+      <div className="flex justify-center items-center flex-col gap-8 pt-10 md:pt-24">
+        <div className="text-stone-100 text-[34px] text-center leading-9 md:text-5xl font-bold">
+          Don’t Sleep! &nbsp;
+          <br className="block md:hidden" />
+          Sign Up Now.
+        </div>
+        <form className="hidden md:block">
+          <div className="border-2 border-neutral-300 bg-stone-100 flex justify-between items-center w-[412px] rounded-[14px] h-12">
+            <input
+              className=" appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Enter your mobile number"
+            />
+            <button className="button-three w-[131px] h-[32px] text-[12px] me-2 text-stone-100 font-semibold rounded-xl">
+              Get Mun-e
+            </button>
+          </div>
+        </form>
+        <form className="w-[240px] md:hidden">
+          <div className="border-2 bg-white px-2 border-neutral-300 flex justify-start gap-2 items-center rounded-[12px] h-[44px]">
+            <img src={WhatsappIcon} alt="" />
+            <input
+              className="appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded  text-black leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Enter your mobile number"
+            />
+          </div>
+        </form>
+      </div>
+      <div className="md:grid grid-cols-2 mt-8 md:mt-28">
+        <div className="flex flex-col gap-8 justify-start">
+          <img
+            src={Logo}
+            className="hidden md:block w-[190px]"
+            alt="logo"
           />
-          <FooterSubmitButton>CTA</FooterSubmitButton>
-        </FooterForm>
-      </FooterFormWrapper>
-    </FooterFormContainer>
-    <AppComingSoon>App Coming Soon!</AppComingSoon>
-    <NavLinks>
-      <FooterLink href="/">Home</FooterLink>
-      <FooterLink href="/about">About</FooterLink>
-      <FooterLink href="/contact">Contact</FooterLink>
-      <FooterLink href="/subscribe">Subscribe</FooterLink>
-    </NavLinks>
-    <SubscribeIcons>
-      <SubscribeLink href="https://facebook.com">
-        <FaFacebook />
-      </SubscribeLink>
-      <SubscribeLink href="https://instagram.com">
-        <FaInstagram />
-      </SubscribeLink>
-      <SubscribeLink href="https://tiktok.com">
-        <FaTiktok />
-      </SubscribeLink>
-    </SubscribeIcons>
-  </FooterWrapper>
-);
+          <div className="text-[22px] md:text-[28px] md:text-start text-center font-bold text-stone-100">
+            App Coming Soon!
+          </div>
+          <div className=" gap-3 items-center hidden md:flex">
+            <GoogleIcon />
+            <AppleIcon />
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 mt-9 md:mt-0 items-start md:items-end">
+          <div className="md:flex gap-12">
+            <div className="hidden md:flex flex-col gap-6">
+              <div className="text-[20px] text-stone-100 font-semibold">
+                Legal
+              </div>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Terms of use
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Security Policy
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Cookie Settings
+              </a>
+            </div>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <div className="text-[20px] hidden md:block text-stone-100 font-semibold">
+                Navigation
+              </div>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Home
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                About
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Contact
+              </a>
+              <a
+                href="#/"
+                className="text-[20px] text-stone-100 font-normal"
+              >
+                Subscribe
+              </a>
+            </div>
+            <div className="flex flex-col gap-6 mt-16 md:mt-0">
+              <div className="hidden md:flex text-[20px] text-stone-100 font-semibold">
+                Subscribe
+              </div>
+              <div className="flex items-center justify-start gap-3">
+                <a
+                  href="#/"
+                  className="text-[20px] text-stone-100 font-normal"
+                >
+                  <img src={FbIcon} alt="" />
+                </a>
+                <a
+                  href="#/"
+                  className="text-[20px] text-stone-100 font-normal"
+                >
+                  <img src={InstaIcon} alt="" />
+                </a>
+                <a
+                  href="#/"
+                  className="text-[20px] text-stone-100 font-normal"
+                >
+                  <img src={TiktokIcon} alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

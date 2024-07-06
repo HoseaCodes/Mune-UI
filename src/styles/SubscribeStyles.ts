@@ -12,134 +12,43 @@ export const SubscribeWrapper = styled.div`
 
 export const TitleSection = styled.section`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 24px 0;
-
-  @media (max-width: 769px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  @media (min-width: 769px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  
 `;
 
 export const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: -6rem;
-
-  @media (max-width: 769px) {
-    text-align: center;
-    margin-right: 0px;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 769px) {
-    text-align: left;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
+  flex: 1;
+  text-align: left;
+  margin-right: 20px;
 `;
 
 export const Title = styled.h1`
-  font-family: Poppins, sans-serif;
   width: 486.96px;
   height: 46px;
   font: sf-pro;
-  font-size: 2.4rem;
+  font-size: 38px;
   font-weight: 700;
-  line-height: 2.5rem;
-  letter-spacing: -0.0625rem;
+  line-height: 46px;
   text-align: left;
-  color: #010a03;
+  color: black;
   margin-bottom: 24px;
-
-  @media (max-width: 769px) {
-    white-space: pre-wrap; /* This will enable the text to break */
-    width: 220px;
-    font-size: 34px;
-    line-height: 41px;
-    margin: 6rem 0 3rem 4rem;
-  }
-
-  @media (min-width: 769px) {
-    width: 40.58rem;
-    height: 2.825rem;
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-    text-align: left;
-  }
 `;
 
 export const Paragraph = styled.p`
-  font-family: Poppins, sans-serif;
   width: 486.96px;
   height: 84px;
-  font-size: 1.4rem;
+  font: sf-pro;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.8rem;
-  letter-spacing: -0.01625rem;
+  line-height: 28px;
+  letter-spacing: -0.26px;
   text-align: left;
-  color: #010a03;
+  color: black;
   margin-bottom: 24px;
-
-  @media (max-width: 769px) {
-    width: 20.58rem;
-    height: 5.25rem;
-    font-size: 1.375rem;
-    line-height: 1.75rem;
-    text-align: center;
-  }
-
-  @media (min-width: 769px) {
-    width: 486.96px;
-    height: 84px;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    text-align: left;
-  }
-`;
-
-export const GreenMuneButton = styled(Link)`
-  padding: ${spacing.small} ${spacing.medium};
-  background-color: #19a530;
-  color: #f2f7f4;
-  text-decoration: none;
-  border-radius: 12px;
-  margin-left: ${spacing.xsmall};
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 6rem;
-  white-space: nowrap;
-  box-shadow: 0 0 10px 0 rgba(26, 174, 51, 0.8);
-  margin-bottom: 20px;
-
-  @media (max-width: 768px) {
-    margin: 3rem 0 2rem 6.4rem;
-    text-align: center;
-    justify-content: center;
-    align-self: flex-start;
-  }
-
-  @media (min-width: 769px) {
-    margin-bottom: 0;
-    height: auto;
-    padding: 8px 24px;
-    align-self: flex-start;
-  }
-
-  &:hover {
-    background-color: ${colors.primary};
-    color: #f2f7f4;
-    box-shadow: 0 0 10px 0 rgba(26, 174, 51, 1);
-  }
 `;
 
 export const FormWrapper = styled.div`
@@ -222,6 +131,7 @@ export const LessonCard = styled.div`
   @media (min-width: 769px) {
     margin-right: 6rem;
   }
+  margin: 10px;
 `;
 
 export const LessonTitle = styled.h2`

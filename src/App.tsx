@@ -10,6 +10,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Subscribe from './pages/Subscribe';
 import GlobalStyles from './styles/GlobalStyles';
+import './App.css';
 
 const App: React.FC = () => {
   return (
