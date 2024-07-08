@@ -51,7 +51,9 @@ const About: React.FC = () => {
                 Simplify your financial life while boosting
                 your money know-how with every transaction.
               </Paragraph>
-              <GetStartedButton>Get Started</GetStartedButton>
+              <GetStartedButton>
+                Get Started
+              </GetStartedButton>
             </TextContent>
             <Image src={aboutImage} alt="About Us" />
           </Section>
@@ -76,7 +78,10 @@ const About: React.FC = () => {
                 </Bio>
               </TeamMember>
               <TeamMember>
-                <TeamImage src={CaseyBass} alt="Casey Bass" />
+                <TeamImage
+                  src={CaseyBass}
+                  alt="Casey Bass"
+                />
                 <TeamName>Casey Bass</TeamName>
                 <Bio className="bio">
                   <strong>Casey Bass, CTO</strong>
@@ -141,11 +146,11 @@ const About: React.FC = () => {
                 Our Mission: Elevate Your Finances
               </MissionTitle>
               <MissionParagraph>
-                Our mission is simple: help you get your money
-                right and your knowledge tight. We're here to
-                make financial literacy easy and accessible,
-                so you can flex your financial skills and
-                secure your bag for the{' '}
+                Our mission is simple: help you get your
+                money right and your knowledge tight. We're
+                here to make financial literacy easy and
+                accessible, so you can flex your financial
+                skills and secure your bag for the{' '}
                 <strong>future</strong>.
               </MissionParagraph>
               <MissionButton>Get Started</MissionButton>

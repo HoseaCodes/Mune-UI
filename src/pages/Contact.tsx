@@ -18,25 +18,36 @@ import {
   Question,
   Answer,
   Separator,
-  StyledImage
+  StyledImage,
 } from '../styles/ContactStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronRight,
+  faChevronUp,
+} from '@fortawesome/free-solid-svg-icons';
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
 import connectTeam from '../assets/connect-team.png'; // Replace with actual image path
 
 const Contact: React.FC = () => {
-  const [activeIndexes, setActiveIndexes] = useState<{ [key: number]: number | null }>({});
+  const [activeIndexes, setActiveIndexes] = useState<{
+    [key: number]: number | null;
+  }>({});
   const faqGridRef = useRef<HTMLDivElement>(null);
 
-  const handleToggle = (itemIndex: number, questionIndex: number) => {
+  const handleToggle = (
+    itemIndex: number,
+    questionIndex: number
+  ) => {
     setActiveIndexes((prev) => ({
       ...prev,
-      [itemIndex]: prev[itemIndex] === questionIndex ? null : questionIndex,
+      [itemIndex]:
+        prev[itemIndex] === questionIndex
+          ? null
+          : questionIndex,
     }));
   };
 
@@ -74,15 +85,27 @@ const Contact: React.FC = () => {
     };
 
     faqGrid.addEventListener('mousedown', handleMouseDown);
-    faqGrid.addEventListener('mouseleave', handleMouseLeave);
+    faqGrid.addEventListener(
+      'mouseleave',
+      handleMouseLeave
+    );
     faqGrid.addEventListener('mouseup', handleMouseUp);
     faqGrid.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      faqGrid.removeEventListener('mousedown', handleMouseDown);
-      faqGrid.removeEventListener('mouseleave', handleMouseLeave);
+      faqGrid.removeEventListener(
+        'mousedown',
+        handleMouseDown
+      );
+      faqGrid.removeEventListener(
+        'mouseleave',
+        handleMouseLeave
+      );
       faqGrid.removeEventListener('mouseup', handleMouseUp);
-      faqGrid.removeEventListener('mousemove', handleMouseMove);
+      faqGrid.removeEventListener(
+        'mousemove',
+        handleMouseMove
+      );
     };
   }, []);
 
@@ -138,7 +161,10 @@ const Contact: React.FC = () => {
         <MainContent>
           <Section>
             <Title>Connect with Our Team.</Title>
-            <StyledImage src={connectTeam} alt="Connect With Our Team" />
+            <StyledImage
+              src={connectTeam}
+              alt="Connect With Our Team"
+            />
             <FormWrapper>
               <Input type="text" placeholder="Name" />
               <Input type="email" placeholder="Email" />
@@ -147,33 +173,66 @@ const Contact: React.FC = () => {
             </FormWrapper>
           </Section>
           <TeamImages>
-            <TeamImage src={MarquesZahir} alt="Marques Zahir" />
+            <TeamImage
+              src={MarquesZahir}
+              alt="Marques Zahir"
+            />
             <TeamImage src={CaseyBass} alt="Casey Bass" />
-            <TeamImage src={AshleyLewis} alt="Ashley Lewis" />
-            <ReplyText>Hang Tight, We'll Reply Shortly.</ReplyText>
+            <TeamImage
+              src={AshleyLewis}
+              alt="Ashley Lewis"
+            />
+            <ReplyText>
+              Hang Tight, We'll Reply Shortly.
+            </ReplyText>
           </TeamImages>
           <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
             <FAQGrid ref={faqGridRef}>
               {faqData.map((item, itemIndex) => (
                 <FAQItem key={itemIndex}>
-                  {item.questions.map((question, questionIndex) => (
-                    <div key={questionIndex}>
-                      <Question
-                        className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}
-                        onClick={() => handleToggle(itemIndex, questionIndex)}
-                      >
-                        {question}{' '}
-                        <FontAwesomeIcon
-                          icon={activeIndexes[itemIndex] === questionIndex ? faChevronUp : faChevronRight}
-                        />
-                      </Question>
-                      <Answer className={activeIndexes[itemIndex] === questionIndex ? 'active' : ''}>
-                        {item.answers[questionIndex]}
-                      </Answer>
-                      {activeIndexes[itemIndex] !== questionIndex && <Separator />}
-                    </div>
-                  ))}
+                  {item.questions.map(
+                    (question, questionIndex) => (
+                      <div key={questionIndex}>
+                        <Question
+                          className={
+                            activeIndexes[itemIndex] ===
+                            questionIndex
+                              ? 'active'
+                              : ''
+                          }
+                          onClick={() =>
+                            handleToggle(
+                              itemIndex,
+                              questionIndex
+                            )
+                          }
+                        >
+                          {question}{' '}
+                          <FontAwesomeIcon
+                            icon={
+                              activeIndexes[itemIndex] ===
+                              questionIndex
+                                ? faChevronUp
+                                : faChevronRight
+                            }
+                          />
+                        </Question>
+                        <Answer
+                          className={
+                            activeIndexes[itemIndex] ===
+                            questionIndex
+                              ? 'active'
+                              : ''
+                          }
+                        >
+                          {item.answers[questionIndex]}
+                        </Answer>
+                        {activeIndexes[itemIndex] !==
+                          questionIndex && <Separator />}
+                      </div>
+                    )
+                  )}
                 </FAQItem>
               ))}
             </FAQGrid>
