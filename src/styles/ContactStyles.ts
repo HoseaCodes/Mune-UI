@@ -34,8 +34,8 @@ export const Title = styled.h1`
   font-family: Poppins, sans-serif;
   color: #010a03;
   position: absolute;
-  top: 23vh;
-  left: 25%;
+  top: 34vh;
+  left: 33%;
   width: 18vw;
   height: 9vh;
   transform: translateX(-85%);
@@ -46,7 +46,7 @@ export const Title = styled.h1`
     transform: translateX(-50%);
     text-align: center;
     width: auto;
-    top: 70px;
+    top: 75px;
     font-size: 2rem;
   }
 `;
@@ -55,7 +55,7 @@ export const StyledImage = styled.img`
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin-top: -1%;
+  margin-top: 3%;
   transform: translateY(38%);
   margin-left: -1.4%;
 
@@ -164,7 +164,7 @@ export const TeamImages = styled.div`
   display: flex;
   align-items: center;
   margin-top: -45px;
-  margin-left: 50vw;
+  margin-left: 52vw;
   align-self: flex-end;
   height: auto;
 
