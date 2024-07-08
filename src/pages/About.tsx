@@ -16,19 +16,28 @@ const AboutSection: React.FC = () => {
       <Header />
       <div>
         <div className="bg-green-500 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8 md:px-12 py-8 sm:py-16 md:py-20 rounded-[48px] border-2 max-w-full lg:max-w-[1184px] lg:h-[660.92px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[37px]">
-        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start space-y-4 sm:space-y-6 text-center lg:text-left">
-          <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
-            <span className="block sm:hidden">Send It.<br /> Save It.<br /> Earn it.<br /> Learn It.</span>
-            <span className="hidden sm:block">Send It. Save It. Earn it. Learn It.</span>
-          </h1>
-          <p className="text-white text-base sm:text-lg">
-            Experience convenience and knowledge with our app. Simplify your financial life and boost your money know-how.
-          </p>
-          <div className="flex justify-center lg:justify-start w-full">
-            <WhiteMuneButton text="Get Mun-e" />
+          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start space-y-4 sm:space-y-6 text-center lg:text-left">
+            <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <span className="block sm:hidden">
+                Send It.
+                <br /> Save It.
+                <br /> Earn it.
+                <br /> Learn It.
+              </span>
+              <span className="hidden sm:block">
+                Send It. Save It. Earn it. Learn It.
+              </span>
+            </h1>
+            <p className="text-white text-base sm:text-lg">
+              Experience convenience and knowledge with our
+              app. Simplify your financial life and boost
+              your money know-how.
+            </p>
+            <div className="flex justify-center lg:justify-start w-full">
+              <WhiteMuneButton text="Get Mun-e" />
+            </div>
           </div>
-        </div>
-          <div className="relative w-full lg:w-1/2 mt-6 lg:mt-0">
+          <div className="relative w-full lg:w-1/2 mt-16 lg:mt-0">
             <img
               src={mainImage}
               alt="Main"

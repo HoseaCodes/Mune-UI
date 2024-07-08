@@ -17,8 +17,6 @@ import {
 } from '../styles/FooterStyles';
 import logo from '../assets/logo.png';
 import phoneIcon from '../assets/phone-icon.png';
-import googlePlay from '../assets/google-play.png'; // Add Google Play image
-import appStore from '../assets/app-store.png'; // Add App Store image
 import {
   FaFacebook,
   FaInstagram,
@@ -28,7 +26,7 @@ import {
 const Footer = () => (
   <FooterWrapper>
     <FooterLogo src={logo} alt="Logo" />
-    <FooterTitle>Don't Sleep! Sign Up Now.</FooterTitle>
+    <FooterTitle>Don&#39t Sleep! Sign Up Now.</FooterTitle>
     <FooterFormContainer>
       <FooterFormWrapper>
         <PhoneIcon src={phoneIcon} alt="Phone" />
