@@ -19,12 +19,12 @@ const MeetTheTeam: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left mb-8 ml-8 md:ml-16">
+    <div className=" bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left mb-8 ml-0 md:2 ml-20">
         Meet the Team
       </h2>
-      <div className="flex overflow-x-scroll scroll-smooth space-x-5 scrollbar-hide md:overflow-x-visible md:flex-wrap">
-        <div className="flex flex-nowrap space-x-5 md:space-x-28">
+      <div className="flex overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap">
+        <div className=" flex flex-nowrap space-x-5 md:space-x-28 md:ml-16">
           <TeamMember
             name="Marques Zahir"
             school="School"

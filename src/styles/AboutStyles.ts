@@ -187,6 +187,7 @@ export const MissionButton = styled.button`
   border: 2px solid ${colors.secondary};
   border-radius: 20px;
   font-weight: ${typography.fontWeight.bold};
+  width: 133px;
   cursor: pointer;
   &:hover {
     background-color: ${colors.secondary};
