@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PlayMockup from '../../assets/images/play-mockup.png';
 import PayMobileMockup from '../../assets/images/pay-mobile.png';
+import Modal from '../comingSoon/ComingSoonModal';
 
 const FeaturePay = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className="lg:mx-2 mx-3 mt-[80px] md:mt-[120px]">
       <div className="play-section max-w-7xl mx-auto ">
@@ -30,7 +36,10 @@ const FeaturePay = () => {
                 group expenses simple and stress-free.
               </div>
               <div className="hidden md:block">
-                <button className="button-three w-[131px] h-[44px] text-[15px] text-stone-100 font-semibold rounded-xl">
+                <button 
+                  className="button-three w-[131px] h-[44px] text-[15px] text-stone-100 font-semibold rounded-xl"
+                  onClick={openModal}
+                >
                   Get Mun-e
                 </button>
               </div>
@@ -38,6 +47,12 @@ const FeaturePay = () => {
           </div>
         </div>
       </div>
+      <Modal
+        title="App Coming Soon!"
+        description="Enter your mobile phone number to be notified when it's released."
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </div>
   );
 };

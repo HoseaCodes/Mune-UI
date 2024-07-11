@@ -67,7 +67,7 @@ const Header: React.FC = () => {
         <NavLink to="/subscribe">Subscribe</NavLink>
         <ModalButton 
           onClick={openModal}
-          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+          className="bg-custom-green text-custom-white px-4 py-2 rounded-lg hover:bg-green-500"
           >
             Get Mun-e
         </ModalButton>
