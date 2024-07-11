@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   ContactWrapper,
   MainContent,
@@ -18,6 +18,7 @@ import {
   Question,
   Answer,
   Separator,
+  StyledImage,
 } from '../styles/ContactStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -29,11 +30,13 @@ import {
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
+import connectTeam from '../assets/connect-team.png'; // Replace with actual image path
 
 const Contact: React.FC = () => {
   const [activeIndexes, setActiveIndexes] = useState<{
     [key: number]: number | null;
   }>({});
+  const faqGridRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = (
     itemIndex: number,
@@ -47,6 +50,64 @@ const Contact: React.FC = () => {
           : questionIndex,
     }));
   };
+
+  useEffect(() => {
+    const faqGrid = faqGridRef.current;
+    if (!faqGrid) return;
+
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
+
+    const handleMouseDown = (e: MouseEvent) => {
+      isDown = true;
+      faqGrid.classList.add('active');
+      startX = e.pageX - faqGrid.offsetLeft;
+      scrollLeft = faqGrid.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      faqGrid.classList.remove('active');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      faqGrid.classList.remove('active');
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - faqGrid.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      faqGrid.scrollLeft = scrollLeft - walk;
+    };
+
+    faqGrid.addEventListener('mousedown', handleMouseDown);
+    faqGrid.addEventListener(
+      'mouseleave',
+      handleMouseLeave
+    );
+    faqGrid.addEventListener('mouseup', handleMouseUp);
+    faqGrid.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      faqGrid.removeEventListener(
+        'mousedown',
+        handleMouseDown
+      );
+      faqGrid.removeEventListener(
+        'mouseleave',
+        handleMouseLeave
+      );
+      faqGrid.removeEventListener('mouseup', handleMouseUp);
+      faqGrid.removeEventListener(
+        'mousemove',
+        handleMouseMove
+      );
+    };
+  }, []);
 
   const faqData = [
     {
@@ -99,7 +160,11 @@ const Contact: React.FC = () => {
       <ContactWrapper>
         <MainContent>
           <Section>
-            <Title>Connect with Our Team</Title>
+            <Title>Connect with Our Team.</Title>
+            <StyledImage
+              src={connectTeam}
+              alt="Connect With Our Team"
+            />
             <FormWrapper>
               <Input type="text" placeholder="Name" />
               <Input type="email" placeholder="Email" />
@@ -118,12 +183,12 @@ const Contact: React.FC = () => {
               alt="Ashley Lewis"
             />
             <ReplyText>
-              Hang Tight, We'll Reply Soon
+              Hang Tight, We'll Reply Shortly.
             </ReplyText>
           </TeamImages>
           <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
-            <FAQGrid>
+            <FAQGrid ref={faqGridRef}>
               {faqData.map((item, itemIndex) => (
                 <FAQItem key={itemIndex}>
                   {item.questions.map(
