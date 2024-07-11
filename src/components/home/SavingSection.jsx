@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SavingMockup from '../../assets/images/saving-mockup.png'
 import SavingMobileMockup from '../../assets/images/saving-mobile-mockup.png'
 import FlagIcon from '../../assets/icons/flag.svg'
 import TableIcon from '../../assets/icons/table.svg'
 import TrophyIcon from '../../assets/icons/trophy.svg'
+import Modal from '../../components/comingSoon/ComingSoonModal'
 
 const SavingSection = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="lg:mx-2 mx-3 md:mt-[120px] mt-[80px]">
             <div className="saving-section px-6 py-10 md:max-w-[1184px] mx-auto rounded-3xl md:rounded-[48px]">
@@ -17,7 +24,12 @@ const SavingSection = () => {
                                 Use our interactive tools to set personal savings goals and track your progress with real-time updates.
                             </div>
                             <div className='hidden md:block pt-3'>
-                                <button className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'>Start Saving</button>
+                                <button 
+                                className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'
+                                onClick={openModal}
+                                >
+                                    Start Saving
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -26,7 +38,12 @@ const SavingSection = () => {
                         <img src={SavingMobileMockup} className='md:hidden block mt-4' alt="mockup" />
                     </div>
                     <div className='mt-10 md:hidden block'>
-                        <button className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'>Start Saving</button>
+                        <button 
+                            className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'
+                            onClick={openModal}
+                        >
+                            Start Saving
+                        </button>
                     </div>
                 </div>
             </div>
@@ -53,6 +70,12 @@ const SavingSection = () => {
                     </div>
                 </div>
             </div>
+            <Modal
+                title="App Coming Soon!"
+                description="Enter your mobile phone number to be notified when it's released."
+                isOpen={isModalOpen}
+                onClose={closeModal}
+            />
         </div>
     )
 }
