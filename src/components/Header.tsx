@@ -5,7 +5,7 @@ import {
   HeaderLogo,
   Nav,
   NavLink,
-  Button,
+  // Button,
   ModalButton,
   HamburgerMenu,
   Bar,
@@ -65,11 +65,11 @@ const Header: React.FC = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/subscribe">Subscribe</NavLink>
-        <ModalButton 
+        <ModalButton
           onClick={openModal}
           className="bg-custom-green text-custom-white px-4 py-2 rounded-lg hover:bg-green-500"
-          >
-            Get Mun-e
+        >
+          Get Mun-e
         </ModalButton>
         {/* <NavLink to="/pricing">Pricing</NavLink> */}
       </Nav>
