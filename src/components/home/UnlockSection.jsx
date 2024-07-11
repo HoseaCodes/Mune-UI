@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CardMockup from '../../assets/images/card.png'
+import Modal from '../comingSoon/ComingSoonModal';
 
 const UnlockSection = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="lg:mx-2 mx-3 mt-[80px] md:mt-[120px]">
             <div className="play-section md:max-w-[1184px] mx-auto">
@@ -16,12 +23,23 @@ const UnlockSection = () => {
                                 Enjoy exclusive perks and rewards as a thank you for being an early supporter.
                             </div>
                             <div className='pt-3'>
-                                <button className='button-three w-[131px] h-[44px] text-[15px] text-stone-100 font-semibold rounded-xl'>Get Mun-e</button>
+                                <button 
+                                className='button-three w-[131px] h-[44px] text-[15px] text-stone-100 font-semibold rounded-xl'
+                                onClick={openModal}
+                                >
+                                    Get Mun-e
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Modal
+                title="App Coming Soon!"
+                description="Enter your mobile phone number to be notified when it's released."
+                isOpen={isModalOpen}
+                onClose={closeModal}
+            />
         </div>
     )
 }

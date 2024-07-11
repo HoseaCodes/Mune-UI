@@ -4,7 +4,7 @@ import SavingMobileMockup from '../../assets/images/saving-mobile-mockup.png'
 import FlagIcon from '../../assets/icons/flag.svg'
 import TableIcon from '../../assets/icons/table.svg'
 import TrophyIcon from '../../assets/icons/trophy.svg'
-import Modal from '../../components/comingSoon/ComingSoonModal'
+import Modal from '../comingSoon/ComingSoonModal'
 
 const SavingSection = () => {
 

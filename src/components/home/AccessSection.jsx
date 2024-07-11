@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AccessImage from '../../assets/images/access-two.png'
 import CardIcon from '../../assets/icons/icon_card.svg'
 import HatIcon from '../../assets/icons/hat-graduation.svg'
 import PiggyIcon from '../../assets/icons/pig-icon.svg'
 import SheildIcon from '../../assets/icons/sheild-icon.svg'
+import Modal from '../comingSoon/ComingSoonModal';
 
 const AccessSection = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="lg:mx-2 mx-3 mt-[80px] md:mt-[120px]">
             <div className="access-section max-w-[1184px] mx-auto rounded-[22px] md:rounded-[48px]">
@@ -16,7 +23,12 @@ const AccessSection = () => {
                             <div className="primary-text-white w-[250px] md:w-full">
                                 Get early access to cutting-edge financial tools and features designed just for you.</div>
                             <div>
-                                <button className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'>Get Mun-e</button>
+                                <button 
+                                className='button-two text-[15px] md:text-base w-[133px] h-[44px] border-2 bg-stone-100 border-neutral-300 rounded-xl text-black font-semibold'
+                                onClick={openModal}
+                                >
+                                    Get Mun-e
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -47,6 +59,12 @@ const AccessSection = () => {
                     <div className='text-[13px] font-normal me-12'>Your transactions are protected with top-tier security protocols to keep your money safe.</div>
                 </div>
             </div>
+            <Modal
+                title="App Coming Soon!"
+                description="Enter your mobile phone number to be notified when it's released."
+                isOpen={isModalOpen}
+                onClose={closeModal}
+            />
         </div>
     )
 }
