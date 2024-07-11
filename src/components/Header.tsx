@@ -6,6 +6,7 @@ import {
   Nav,
   NavLink,
   Button,
+  ModalButton,
   HamburgerMenu,
   Bar,
   Sidebar,
@@ -21,11 +22,13 @@ import {
 } from 'react-icons/fa';
 import headerlogo from '../assets/headerlogo.png';
 import sidebarLogo from '../assets/sidebarlogo.png';
+import Modal from './comingSoon/ComingSoonModal';
 
 const Header: React.FC = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -49,6 +52,9 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <HeaderWrapper>
       <Link to="/">
@@ -59,7 +65,12 @@ const Header: React.FC = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/subscribe">Subscribe</NavLink>
-        <Button to="/get-started">Get Mun-e</Button>
+        <ModalButton 
+          onClick={openModal}
+          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+          >
+            Get Mun-e
+        </ModalButton>
         {/* <NavLink to="/pricing">Pricing</NavLink> */}
       </Nav>
       {isMobile && (
@@ -119,6 +130,12 @@ const Header: React.FC = () => {
           </Sidebar>
         </>
       )}
+      <Modal
+        title="App Coming Soon!"
+        description="Enter your mobile phone number to be notified when it's released."
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </HeaderWrapper>
   );
 };

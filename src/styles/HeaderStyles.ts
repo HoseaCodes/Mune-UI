@@ -107,6 +107,33 @@ export const Button = styled(Link)`
     box-shadow: 0 0 10px 0 rgba(26, 174, 51, 1);
   }
 `;
+export const ModalButton = styled.button`
+  padding: ${spacing.small} ${spacing.large};
+  background-color: ${colors.primary};
+  color: #f2f7f4;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-left: ${spacing.large};
+  display: flex;
+  align-items: center;
+  height: 100%;
+  white-space: nowrap;
+  box-shadow: 0 0 10px 0 rgba(26, 174, 51, 0.8);
+
+  @media (max-width: 768px) {
+    margin: ${spacing.small} 0 0 0;
+    align-self: flex-end;
+    margin-left: 550px; /* Add margin-right to push the button to the right */
+    text-align: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: ${colors.primary};
+    color: #f2f7f4;
+    box-shadow: 0 0 10px 0 rgba(26, 174, 51, 1);
+  }
+`;
 
 export const HamburgerMenu = styled.div`
   display: none;
