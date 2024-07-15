@@ -28,3 +28,6 @@ code {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
+.w-webkit-fill-available {
+  width: -webkit-fill-available;
+}
