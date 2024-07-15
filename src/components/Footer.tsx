@@ -97,25 +97,25 @@ const Footer: React.FC = () => {
                 Navigation
               </div>
               <a
-                href="#/"
+                href="/"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Home
               </a>
               <a
-                href="/"
+                href="/about"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 About
               </a>
               <a
-                href="/about"
+                href="/contact"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Contact
               </a>
               <a
-                href="/contact"
+                href="/subscribe"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Subscribe
@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center justify-start gap-3">
                 <a
-                  href="/subscribe"
+                  href="#/"
                   className="text-[20px] text-stone-100 font-normal"
                 >
                   <img src={FbIcon} alt="" />
