@@ -72,7 +72,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               <p className="text-gray-600 italic">{school}</p>
               <p className="text-gray-800 mt-2">{role}</p>
               <div className="flex flex-col md:flex-row w-full text-gray-800 mt-2">
-                <p className="flex-1">{isExpanded ? bio : truncatedBio}</p>
+                <div className="flex-1" dangerouslySetInnerHTML={{ __html: isExpanded ? bio : truncatedBio }}></div>
                 <button
                   onClick={handleToggleExpand}
                   aria-label={isExpanded ? 'Show less' : 'Show more'}

@@ -26,12 +26,9 @@ const MeetTheTeam: React.FC = () => {
             school="School"
             role="CEO"
             image={marques}
-            bio="Marques Zahir is the CEO and founder of Mun-e, a groundbreaking financial management app dedicated to financial wellness for Black and Brown communities.
-
-                Fueled by a desire to see economic equity for people of color, Marques identified a need for financial tools that resonated with the cultural experiences of Black and Brown users. Mun-e goes beyond traditional budgeting apps. It provides financial education that reflects the realities of these communities, dismantles myths surrounding wealth creation specific to their situations, and fosters a supportive online space for users to achieve financial goals together.
-
-                Before launching Mun-e, Marques thrived in the world of fintech startups and entrepreneurship. However, his true passion resided in closing the racial wealth gap.  He channeled his expertise to develop a platform that celebrates the financial journeys of Black and Brown users, while equipping them with the tools and knowledge to navigate the complexities of personal finance.
-                
+            bio="Marques Zahir is the CEO and founder of Mun-e, a groundbreaking financial management app dedicated to financial wellness for Black and Brown communities.<br /><br />
+                Fueled by a desire to see economic equity for people of color, Marques identified a need for financial tools that resonated with the cultural experiences of Black and Brown users. Mun-e goes beyond traditional budgeting apps. It provides financial education that reflects the realities of these communities, dismantles myths surrounding wealth creation specific to their situations, and fosters a supportive online space for users to achieve financial goals together.<br /><br />
+                Before launching Mun-e, Marques thrived in the world of fintech startups and entrepreneurship. However, his true passion resided in closing the racial wealth gap.  He channeled his expertise to develop a platform that celebrates the financial journeys of Black and Brown users, while equipping them with the tools and knowledge to navigate the complexities of personal finance.<br /><br />
                 Marques regularly contributes to financial literacy publications aimed at Black and Brown audiences. His dedication to financial justice extends far beyond the app; Marques actively works to dismantle systemic barriers that hinder wealth creation within these communities."
             isActive={activeIndex === 0}
             onClick={() => handleClick(0)}
