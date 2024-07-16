@@ -8,23 +8,19 @@ import dana from '../assets/Dana-Simone.png';
 import dominique from '../assets/Dominique-Hosea.png';
 
 const MeetTheTeam: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<
-    number | null
-  >(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleClick = (index: number) => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === index ? null : index
-    );
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <div className=" bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16">
+    <div className="bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left mb-8 ml-0 md:2 ml-20">
         Meet the Team
       </h2>
       <div className="flex overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap">
-        <div className=" flex flex-nowrap space-x-5 md:space-x-28 md:ml-16">
+        <div className="flex flex-nowrap space-x-5 md:space-x-28 md:ml-16">
           <TeamMember
             name="Marques Zahir"
             school="School"
