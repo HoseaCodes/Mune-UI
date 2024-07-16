@@ -56,9 +56,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         {lastName}
       </p>
       {isActive && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center z-50">
           <div
-            className="relative bg-white p-6 rounded-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 z-10 transition-all duration-300 ease-in-out w-full max-w-[90%] md:max-w-[1136px] h-auto"
+            className="relative bg-custom-white p-6 rounded-lg flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 z-10 transition-all duration-300 ease-in-out w-full max-w-[90%] md:max-w-[1136px] h-auto"
           >
             <img
               src={image}
@@ -87,7 +87,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               aria-label="Close"
               className="absolute top-2 right-2 text-gray-500"
             >
-              &times;
             </button>
           </div>
         </div>
