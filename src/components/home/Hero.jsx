@@ -47,7 +47,7 @@ const Hero = () => {
             <form className="hidden sm:block">
               <div className="border-2 border-neutral-300 flex justify-between items-center w-[412px] rounded-[14px] h-[60px]">
                 <input
-                  className="appearance-none placeholder:text-sm placeholder:text-stone-100 bg-transparent rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                  className="w-webkit-fill-available appearance-none placeholder:text-sm placeholder:text-stone-100 bg-transparent rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                   id="username"
                   type="text"
                   placeholder="Enter your mobile number"
@@ -73,7 +73,7 @@ const Hero = () => {
                     alt="WhatsApp Icon"
                   />
                   <input
-                    className="appearance-none placeholder:text-sm placeholder:text-black bg-transparent rounded text-black leading-tight focus:outline-none focus:shadow-outline"
+                    className="w-webkit-fill-available appearance-none placeholder:text-sm placeholder:text-black bg-transparent rounded text-black leading-tight focus:outline-none focus:shadow-outline"
                     id="username"
                     type="text"
                     placeholder="Enter your mobile number"

@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         <form className="hidden md:block">
           <div className="border-2 border-neutral-300 bg-stone-100 flex justify-between items-center w-[412px] rounded-[14px] h-12">
             <input
-              className=" appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
+              className="w-webkit-fill-available appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
               placeholder="Enter your mobile number"
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           <div className="border-2 bg-white px-2 border-neutral-300 flex justify-start gap-2 items-center rounded-[12px] h-[44px]">
             <img src={WhatsappIcon} alt="" />
             <input
-              className="appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded  text-black leading-tight focus:outline-none focus:shadow-outline"
+              className="w-webkit-fill-available appearance-none placeholder:text-sm placeholder:text-black  bg-transparent rounded  text-black leading-tight focus:outline-none focus:shadow-outline"
               id="username"
               type="text"
               placeholder="Enter your mobile number"
@@ -97,25 +97,25 @@ const Footer: React.FC = () => {
                 Navigation
               </div>
               <a
-                href="#/"
+                href="/"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Home
               </a>
               <a
-                href="#/"
+                href="/about"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 About
               </a>
               <a
-                href="#/"
+                href="/contact"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Contact
               </a>
               <a
-                href="#/"
+                href="/subscribe"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Subscribe
