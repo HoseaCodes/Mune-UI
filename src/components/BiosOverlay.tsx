@@ -6,9 +6,7 @@ interface BioOverlayProps {
   role: string;
   image: string;
   bio: string;
-  isExpanded: boolean;
   onClose: () => void;
-  onToggleExpand: () => void;
 }
 
 const BioOverlay: React.FC<BioOverlayProps> = ({
@@ -17,15 +15,11 @@ const BioOverlay: React.FC<BioOverlayProps> = ({
   role,
   image,
   bio,
-  isExpanded,
   onClose,
-  onToggleExpand,
 }) => {
-  const truncatedBio = bio.length > 80 ? `${bio.substring(0, 80)}...` : bio;
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50 p-4">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-[90%] md:max-w-[800px] mx-auto relative">
+    <div className="fixed inset-0 flex items-center justify-center bg-stone-950/75 z-50 p-4">
+      <div className="webkit-fill bg-white p-6 rounded-lg shadow-lg w-full max-w-[90%] md:max-w-[800px] mx-auto relative">
         <button onClick={onClose} className="absolute top-2 right-2 text-gray-500">
           &times;
         </button>
@@ -38,14 +32,7 @@ const BioOverlay: React.FC<BioOverlayProps> = ({
         <p className="text-gray-600 italic text-center">{school}</p>
         <p className="text-gray-800 mt-2 text-center">{role}</p>
         <div className="w-full text-gray-800 mt-2 text-center">
-          <p dangerouslySetInnerHTML={{ __html: isExpanded ? bio : truncatedBio }}></p>
-          <button
-            onClick={onToggleExpand}
-            aria-label={isExpanded ? 'Show less' : 'Show more'}
-            className="text-blue-500 mt-2"
-          >
-            {isExpanded ? 'Show Less' : 'Show More'}
-          </button>
+          <p dangerouslySetInnerHTML={{ __html: bio }}></p>
         </div>
       </div>
     </div>

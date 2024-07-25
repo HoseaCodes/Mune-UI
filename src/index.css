@@ -31,16 +31,3 @@ code {
 .w-webkit-fill-available {
   width: -webkit-fill-available;
 }
-
-.bio.collapsed {
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines to show */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-}
-
-.bio.expanded {
-  display: block;
-}
