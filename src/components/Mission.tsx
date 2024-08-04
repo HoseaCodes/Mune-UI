@@ -1,6 +1,7 @@
 import React from 'react';
 import missionImage from '../assets/black-couple.png'; // Make sure to import the correct image
 import GreenMuneButton from '../components/GreenMuneButton';
+import GlowButton from './button/Glow';
 
 const MissionSection: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const MissionSection: React.FC = () => {
             your bag for the future.
           </p>
           <div className="flex justify-center space-x-4">
-            <GreenMuneButton text="Get Mun-e" />
+            <GlowButton color='green'>Get Mun-e</GlowButton>
             <button className="bg-transparent text-[#010a03] font-bold py-2 px-6 rounded-lg border-2 border-custom-bgreen">
               Learn More
             </button>
