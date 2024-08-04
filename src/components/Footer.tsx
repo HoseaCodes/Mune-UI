@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               type="text"
               placeholder="Enter your mobile number"
             />
-            <button className="button-three w-[131px] h-[32px] text-[12px] me-2 text-stone-100 font-semibold rounded-xl">
+            <button className="button-three w-[131px] h-[32px] text-[12px] me-2 text-stone-100 font-semibold rounded-xl hover:shadow-green-500/50 shadow-green-500/80 shadow-md">
               Get Mun-e
             </button>
           </div>
