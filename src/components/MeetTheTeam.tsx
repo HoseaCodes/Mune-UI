@@ -25,7 +25,7 @@ const MeetTheTeam: React.FC = () => {
   };
 
   return (
-    <div className={`${isExpanded === activeIndex && "overflow-hidden"} bg-gray-100 py-12 px-4 sm:px-8 md:px-12 lg:px-16`}>
+    <div className={`${isExpanded === activeIndex && "overflow-hidden"} bg-gray-100 py-12 sm:px-8 md:px-12 lg:px-0 mx-auto max-w-[1184px]`}>
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left mb-8 ml-0 md:2 ml-20">
         Meet the Team
       </h2>
