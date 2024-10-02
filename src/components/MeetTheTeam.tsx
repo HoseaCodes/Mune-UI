@@ -35,13 +35,13 @@ const MeetTheTeam: React.FC = () => {
 
   return (
     <div
-      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 py-12 sm:px-8 md:px-12 lg:px-2 mx-auto max-w-[1184px]`}
+      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 py-12 sm:px-8 md:px-12 lg:px-2 mx-auto max-w-[1184px] flex flex-col gap-20`}
     >
-      <div className="flex justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 mt-8">
+      <div className="flex flex-col justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap gap-10">
+        <h2 className="w-full text-left text-2xl md:text-3xl lg:text-5xl font-bold">
           Meet the Team
         </h2>
-        <div className="flex flex-nowrap gap-[85px]">
+        <div className="flex flex-nowrap gap-[85px] w-full">
           {teamMembers.map((member, index) => (
             // COMPONENT: TEAM MEMBER CARD
             <TeamMember

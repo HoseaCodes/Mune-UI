@@ -20,6 +20,13 @@ export const teamMembers = [
       bio: 'Casey Bass is a senior leader who brings a unique foundation of business acumen, data management expertise, technical knowledge, and delivery leadership through his diverse consulting and industry background. Strong initiative, a passion for driving change in the business, and the ability to develop valuable relationships make him an asset within any organization. <p <br/><br/>Industry Experience: <br/>• Investment Management <br/>• Banking & Financial Services <br/>• Private Equity <br/>• Insurance</p>',
     },
     {
+      name:'Ashley Lewis',
+      school:'PLACEHOLDER',
+      role:'PLACEHOLDER',
+      image:marques,
+      bio:'Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit porttitor congue sociosqu tortor fusce. Quisque pellentesque nostra sit cursus, dignissim per. Risus dignissim mi egestas ipsum hendrerit natoque. Aenean lacinia dui parturient felis sagittis netus platea odio phasellus. Quisque habitasse commodo eget eu tortor pellentesque dignissim. Tempor cursus sagittis phasellus convallis duis et a tempor malesuada. In diam a conubia interdum; amet porta hac. Semper duis cras etiam cubilia bibendum congue per odio volutpat.',
+    },
+    {
       name: 'Darrias Thomas',
       school: 'School',
       role: 'CIO',
