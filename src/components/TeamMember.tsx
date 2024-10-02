@@ -10,30 +10,21 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   const [firstName, lastName] = name.split(' ');
 
   return (
-    <div
-      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'} ${isActive ? 'mb-10' : ''}`}
+    <button
+      className={`relative flex rounded-2xl w-[115px] h-[186.5px] gap-4 flex-col justify-between items-center p-3 transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'}`}
       onClick={onClick}
-      style={{
-        width: '115px',
-        height: '186.5px',
-        padding: '12px 0 0 0',
-        gap: '16.5px',
-        borderRadius: '15px',
-        border: '2px solid transparent',
-        borderTopColor: isActive ? '#CEE0D0' : 'transparent',
-      }}
     >
       <img
         src={image}
         alt={name}
-        className="w-24 h-24 rounded-full mb-2"
+        className="w-24 h-24 rounded-full border-2 border-custom-bgreen"
       />
-      <p className="text-center text-black font-bold">
+      <p className="text-center text-black font-bold font text-[1.375rem] leading-7">
         {firstName}
         <br />
         {lastName}
       </p>
-    </div>
+    </button>
   );
 };
 
