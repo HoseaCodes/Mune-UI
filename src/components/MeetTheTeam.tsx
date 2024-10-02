@@ -35,13 +35,13 @@ const MeetTheTeam: React.FC = () => {
 
   return (
     <div
-      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 py-12 sm:px-8 md:px-12 lg:px-2 mx-auto max-w-[1184px] flex flex-col gap-20`}
+      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 mx-auto max-w-[1184px] flex flex-col gap-20 my-32 px-6`}
     >
       <div className="flex flex-col justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap gap-10">
         <h2 className="w-full text-left text-2xl md:text-3xl lg:text-5xl font-bold">
           Meet the Team
         </h2>
-        <div className="flex flex-nowrap gap-[85px] w-full">
+        <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0">
           {teamMembers.map((member, index) => (
             // COMPONENT: TEAM MEMBER CARD
             <TeamMember
@@ -66,7 +66,7 @@ const MeetTheTeam: React.FC = () => {
       </div>
       {/* COMPONENT: ACTIVE TEAM MEMBER BIO */}
       {activeIndex !== null && (
-        <div className="mt-6 md:px-12 pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-ful h-auto">
+        <div className="pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-ful h-auto">
           <img
             src={teamMembers[activeIndex].image}
             alt={teamMembers[activeIndex].name}
