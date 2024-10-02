@@ -1,13 +1,14 @@
 import React from 'react';
 import missionImage from '../assets/black-couple.png'; // Make sure to import the correct image
 import GreenMuneButton from '../components/GreenMuneButton';
+import GlowButton from './button/Glow';
 
 const MissionSection: React.FC = () => {
   return (
     <div className="mb-36 mt-[-88px]">
       <div className="relative w-full">
         {/* Div for mobile and tablet screens */}
-        <div className="lg:hidden  p-6 rounded-lg max-w-[510px] mx-auto border-t-2 border-custom-bgreen mt-16">
+        <div className="lg:hidden p-6 rounded-lg max-w-[510px] mx-auto border-t-2 border-custom-bgreen mt-16">
           <h2 className="text-black font-bold text-2xl sm:text-3xl md:text-4xl leading-tight mb-4">
             Our Mission: <br /> Elevate Your Finances
           </h2>
@@ -19,7 +20,7 @@ const MissionSection: React.FC = () => {
             your bag for the future.
           </p>
           <div className="flex justify-center space-x-4">
-            <GreenMuneButton text="Get Mun-e" />
+            <GlowButton color='green'>Get Mun-e</GlowButton>
             <button className="bg-transparent text-[#010a03] font-bold py-2 px-6 rounded-lg border-2 border-custom-bgreen">
               Learn More
             </button>
