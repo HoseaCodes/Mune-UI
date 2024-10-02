@@ -17,7 +17,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       <img
         src={image}
         alt={name}
-        className="w-24 h-24 rounded-full border-2 border-custom-bgreen"
+        className="min-w-24 min-h-24 rounded-full border-2 border-custom-bgreen"
       />
       <p className="text-center text-black font-bold font text-[1.375rem] leading-7">
         {firstName}
