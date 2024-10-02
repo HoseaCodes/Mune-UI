@@ -82,7 +82,7 @@ const MeetTheTeam: React.FC = () => {
             <p className="text-gray-800 mt-2">
               {teamMembers[activeIndex].role}
             </p>
-            <div className="flex flex-start w-full text-gray-800 mt-2">
+            <div className="flex flex-start w-full text-gray-800 mt-2 max-w-[63ch]">
               <p>
                 {truncateAfterFirstSentence(
                   teamMembers[activeIndex].bio
