@@ -72,17 +72,15 @@ const MeetTheTeam: React.FC = () => {
             alt={teamMembers[activeIndex].name}
             className="w-40 h-40 rounded-full shadow-md hidden md:block"
           />
-          <div className="flex flex-col w-full">
-            <h3 className="text-black text-xl font-bold">
-              {teamMembers[activeIndex].name}
+          <div className="flex flex-col w-full gap-2">
+            <h3 className="text-black text-[1.75rem] font-bold">
+              {teamMembers[activeIndex].name},{' '}
+              {teamMembers[activeIndex].role}
             </h3>
-            <p className="text-gray-600 italic">
+            <p className="text-gray-800 text-[1.375rem] italic">
               {teamMembers[activeIndex].school}
             </p>
-            <p className="text-gray-800 mt-2">
-              {teamMembers[activeIndex].role}
-            </p>
-            <div className="flex flex-start w-full text-gray-800 mt-2 max-w-[63ch]">
+            <div className="flex flex-start w-full text-gray-800 max-w-[63ch]">
               <p>
                 {truncateAfterFirstSentence(
                   teamMembers[activeIndex].bio
