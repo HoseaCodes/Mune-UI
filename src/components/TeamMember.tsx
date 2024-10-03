@@ -6,7 +6,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   isActive,
   onClick,
 }) => {
-  const { name, image } = member;
+  const { name, image, role } = member;
   const [firstName, lastName] = name.split(' ');
 
   return (
@@ -16,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     >
       <img
         src={image}
-        alt={name}
+        alt={`headshot photo of ${name}, ${role} at Mun-e`}
         className="min-w-24 min-h-24 rounded-full border-2 border-custom-bgreen"
       />
       <p className="text-center text-black font-bold font text-[1.375rem] leading-7">

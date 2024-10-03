@@ -67,7 +67,7 @@ const MeetTheTeam: React.FC = () => {
         <div className="pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-ful h-auto">
           <img
             src={teamMembers[activeIndex].image}
-            alt={teamMembers[activeIndex].name}
+            alt={`headshot photo of ${teamMembers[activeIndex].name}, ${teamMembers[activeIndex].role} at Mun-e`}
             className="w-40 h-40 rounded-full shadow-md hidden md:block"
           />
           <div className="flex flex-col w-full gap-2">

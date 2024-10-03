@@ -25,7 +25,7 @@ const BioOverlay: React.FC<BioOverlayProps> = ({
         </button>
         <img
           src={image}
-          alt={name}
+          alt={`headshot photo of ${name}, ${role} at Mun-e`}
           className="block w-24 h-24 md:w-40 md:h-40 rounded-full shadow-md mb-4 mx-auto"
         />
         <h3 className="text-black text-xl font-bold text-center">{name}</h3>
