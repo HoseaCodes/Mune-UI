@@ -43,7 +43,6 @@ const MeetTheTeam: React.FC = () => {
         </h2>
         <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0 overflow-x-auto scrollbar-hide">
           {teamMembers.map((member, index) => (
-            // COMPONENT: TEAM MEMBER CARD
             <TeamMember
               key={index}
               member={member}
@@ -64,7 +63,6 @@ const MeetTheTeam: React.FC = () => {
           ))}
         </div>
       </div>
-      {/* COMPONENT: ACTIVE TEAM MEMBER BIO */}
       {activeIndex !== null && (
         <div className="pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-ful h-auto">
           <img
@@ -103,7 +101,6 @@ const MeetTheTeam: React.FC = () => {
       {activeIndex !== null &&
         isExpanded !== null &&
         activeIndex === isExpanded && (
-          // COMPONENT: MODAL FOR TEAM MEMBER BIO
           <BioOverlay
             name={teamMembers[activeIndex].name}
             school={teamMembers[activeIndex].school}
