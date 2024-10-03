@@ -4,14 +4,8 @@ import { MemberProps } from '../../interfaces/teamMembers';
 export const ExpandedTeamCard: React.FC<{
   teamMembers: MemberProps[];
   index: number;
-  fadeAnime: boolean;
   handleToggleExpand: (index: number) => void;
-}> = ({
-  teamMembers,
-  index,
-  fadeAnime,
-  handleToggleExpand,
-}) => {
+}> = ({ teamMembers, index, handleToggleExpand }) => {
   const truncateAfterFirstSentence = (
     paragraph: string
   ) => {
@@ -22,9 +16,7 @@ export const ExpandedTeamCard: React.FC<{
   };
 
   return (
-    <div
-      className={`pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 w-full h-auto ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
-    >
+    <div className="pe-4 rounded-lg flex items-start space-x-6 z-10 transition-all duration-300 ease-in-out w-ful h-auto">
       <img
         src={teamMembers[index].image}
         alt={`headshot photo of ${teamMembers[index].name}, ${teamMembers[index].role} at Mun-e`}
