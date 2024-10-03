@@ -20,7 +20,7 @@ const BioOverlay: React.FC<BioOverlayProps> = ({
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-stone-950/75 z-50 p-4">
       <div className="webkit-fill bg-white p-6 rounded-lg shadow-lg w-full max-w-[90%] md:max-w-[800px] mx-auto relative">
-        <button onClick={onClose} className="absolute top-2 right-2 text-gray-500">
+        <button onClick={onClose} type="button" aria-label="close" className="absolute top-2 right-2 text-gray-500">
           &times;
         </button>
         <img

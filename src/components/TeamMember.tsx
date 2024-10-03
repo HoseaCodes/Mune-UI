@@ -11,6 +11,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 
   return (
     <button
+      type="button"
+      aria-label="team member card"
       className={`relative flex rounded-2xl w-[115px] h-[186.5px] gap-4 flex-col justify-between items-center p-3 transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'}`}
       onClick={onClick}
     >

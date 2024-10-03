@@ -90,7 +90,8 @@ const MeetTheTeam: React.FC = () => {
               onClick={() =>
                 handleToggleExpand(activeIndex)
               }
-              aria-label={'Show more'}
+              type="button" 
+              aria-label="Show more"
               className="flex flex-start w-full text-blue-500 mt-2"
             >
               {'Show More'}
