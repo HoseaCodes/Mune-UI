@@ -5,7 +5,7 @@ import arrow from '../assets/arrow.png';
 import mainImage from '../assets/pinkshirt.png';
 import NotificationBubble from '../components/NotificationBubbleCard';
 import WhiteMuneButton from '../components/WhiteMuneButton';
-import MeetTheTeam from '../components/MeetTheTeam';
+import MeetTheTeam from '../components/meet-the-team/MeetTheTeam';
 import MissionSection from '../components/Mission';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -35,7 +35,9 @@ const AboutSection: React.FC = () => {
               your money know-how.
             </p>
             <div className="flex justify-center lg:justify-start w-full">
-              <GlowButton color='white'>Get Mun-e</GlowButton>
+              <GlowButton color="white">
+                Get Mun-e
+              </GlowButton>
             </div>
           </div>
           <div className="relative w-full lg:w-1/2 mt-16 lg:mt-0">

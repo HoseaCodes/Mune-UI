@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import TeamMember from './TeamMember';
-import BioOverlay from './BiosOverlay';
-import { teamMembers } from '../constants/bios';
+import TeamMember from '../TeamMember';
+import BioOverlay from '../BiosOverlay';
+import { teamMembers } from '../../constants/bios';
 
 const MeetTheTeam: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<
@@ -90,7 +90,7 @@ const MeetTheTeam: React.FC = () => {
               onClick={() =>
                 handleToggleExpand(activeIndex)
               }
-              type="button" 
+              type="button"
               aria-label="Show more"
               className="flex flex-start w-full text-blue-500 mt-2"
             >
