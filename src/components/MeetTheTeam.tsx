@@ -41,7 +41,7 @@ const MeetTheTeam: React.FC = () => {
         <h2 className="w-full text-left text-2xl md:text-3xl lg:text-5xl font-bold">
           Meet the Team
         </h2>
-        <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0">
+        <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0 overflow-x-auto scrollbar-hide">
           {teamMembers.map((member, index) => (
             // COMPONENT: TEAM MEMBER CARD
             <TeamMember
