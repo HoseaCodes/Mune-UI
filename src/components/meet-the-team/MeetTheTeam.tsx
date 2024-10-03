@@ -8,13 +8,18 @@ const MeetTheTeam: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<
     number | null
   >(null);
+  const [fadeAnime, setFadeAnime] = useState(false);
   const [isExpanded, setIsExpanded] = useState<
     number | null
   >(null);
 
   const handleMemberClick = (index: number) => {
-    setActiveIndex(index);
-    setIsExpanded(null); // Reset expanded state on member change
+    setFadeAnime(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setIsExpanded(null); // Reset expanded state on member change
+      setFadeAnime(false);
+    }, 300);
   };
 
   const handleToggleExpand = (index: number) => {
@@ -59,6 +64,7 @@ const MeetTheTeam: React.FC = () => {
         <ExpandedTeamCard
           teamMembers={teamMembers}
           index={activeIndex}
+          fadeAnime={fadeAnime}
           handleToggleExpand={handleToggleExpand}
         />
       )}
