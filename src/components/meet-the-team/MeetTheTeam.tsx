@@ -19,7 +19,7 @@ const MeetTheTeam: React.FC = () => {
       setActiveIndex(index);
       setIsExpanded(null); // Reset expanded state on member change
       setFadeAnime(false);
-    }, 300);
+    }, 100);
   };
 
   const handleToggleExpand = (index: number) => {
