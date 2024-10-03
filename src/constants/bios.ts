@@ -22,7 +22,7 @@ export const teamMembers = [
   },
   {
     name: 'Ashley Lewis',
-    school: 'PLACEHOLDER',
+    school: 'School',
     role: 'PLACEHOLDER',
     image: ashley,
     bio: 'Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit porttitor congue sociosqu tortor fusce. Quisque pellentesque nostra sit cursus, dignissim per. Risus dignissim mi egestas ipsum hendrerit natoque. Aenean lacinia dui parturient felis sagittis netus platea odio phasellus. Quisque habitasse commodo eget eu tortor pellentesque dignissim. Tempor cursus sagittis phasellus convallis duis et a tempor malesuada. In diam a conubia interdum; amet porta hac. Semper duis cras etiam cubilia bibendum congue per odio volutpat.',
