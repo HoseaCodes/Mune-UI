@@ -5,11 +5,7 @@ export const ExpandedTeamCard: React.FC<{
   teamMembers: MemberProps[];
   index: number;
   fadeAnime: boolean;
-}> = ({
-  teamMembers,
-  index,
-  fadeAnime,
-}) => {
+}> = ({ teamMembers, index, fadeAnime }) => {
   const truncateAfterFirstSentence = (
     paragraph: string
   ) => {
@@ -21,20 +17,20 @@ export const ExpandedTeamCard: React.FC<{
 
   return (
     <div
-      className={`flex tablet:flex-row flex-col items-center gap-6 tablet:gap-20 transition-opacity duration-300 ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
+      className={`flex tablet:flex-row flex-col items-center gap-6 tablet:gap-16 transition-opacity duration-300 ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
     >
       <img
         src={teamMembers[index].image}
         alt={`headshot photo of ${teamMembers[index].name}, ${teamMembers[index].role} at Mun-e`}
-        className="w-52 h-52 tablet:w-40 tablet:h-40 rounded-full shadow-md border-2 border-custom-bgreen"
+        className="w-52 h-52 rounded-full shadow-md border-2 border-custom-bgreen"
       />
       <div className="flex flex-col w-full gap-2">
         <div className="flex flex-col w-full tablet:gap-2">
-          <h3 className="text-black text-base tablet:text-[1.75rem] font-bold">
+          <h3 className="text-black text-base tablet:text-[1.5rem] laptop:text-[1.75rem] font-bold">
             {teamMembers[index].name},{' '}
             {teamMembers[index].role}
           </h3>
-          <p className="text-gray-800 text-base tablet:text-[1.375rem] italic">
+          <p className="text-gray-800 text-base laptop:text-[1.375rem] italic">
             {teamMembers[index].school}
           </p>
         </div>

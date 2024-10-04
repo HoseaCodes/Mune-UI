@@ -26,7 +26,7 @@ const MeetTheTeam: React.FC = () => {
       className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 tablet:mx-auto max-w-[1184px] flex flex-col gap-6 tablet:gap-20 laptop:my-32 tablet:my-24 mx-6 my-[120px]`}
     >
       <div className="flex flex-col justify-center gap-10">
-        <h2 className="text-2xl tablet:text-5xl text-center tablet:text-left font-bold">
+        <h2 className="text-2xl tablet:text-3xl laptop:text-5xl text-center tablet:text-left font-bold">
           Meet the Team
         </h2>
         <div className="flex flex-nowrap gap-6 tablet:gap-12 laptop:gap-[85px] w-full justify-around m-0 overflow-x-auto max-w-[1184px] scrollbar-hide">
