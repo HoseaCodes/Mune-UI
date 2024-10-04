@@ -28,7 +28,7 @@ export const ExpandedTeamCard: React.FC<{
       <img
         src={teamMembers[index].image}
         alt={`headshot photo of ${teamMembers[index].name}, ${teamMembers[index].role} at Mun-e`}
-        className="w-40 h-40 rounded-full shadow-md hidden md:block"
+        className="w-40 h-40 rounded-full shadow-md"
       />
       <div className="flex flex-col w-full gap-2">
         <h3 className="text-black text-[1.75rem] font-bold">

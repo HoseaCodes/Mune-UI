@@ -34,8 +34,8 @@ const MeetTheTeam: React.FC = () => {
     <div
       className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 mx-auto max-w-[1184px] flex flex-col gap-20 my-32 px-6`}
     >
-      <div className="flex flex-col justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide md:overflow-x-visible md:flex-wrap gap-10">
-        <h2 className="w-full text-left text-2xl md:text-3xl lg:text-5xl font-bold">
+      <div className="flex flex-col justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide gap-10">
+        <h2 className="w-full text-left text-5xl font-bold">
           Meet the Team
         </h2>
         <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0 overflow-x-auto scrollbar-hide">
