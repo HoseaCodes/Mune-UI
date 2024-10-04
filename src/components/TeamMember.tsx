@@ -13,15 +13,15 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     <button
       type="button"
       aria-label="team member card"
-      className={`relative flex rounded-2xl w-content h-[186.5px] gap-4 flex-col justify-between items-center p-3 transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'}`}
+      className={`relative flex rounded-2xl w-content h-full gap-3 tablet:gap-4 flex-col justify-between items-center p-3 transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'}`}
       onClick={onClick}
     >
       <img
         src={image}
         alt={`headshot photo of ${name}, ${role} at Mun-e`}
-        className="min-w-24 min-h-24 rounded-full border-2 border-custom-bgreen"
+        className="h-16 min-w-16 tablet:min-w-24 tablet:h-24 rounded-full border-2 border-custom-bgreen"
       />
-      <p className="text-center text-black font-bold font text-[1.375rem] leading-7">
+      <p className="text-center text-black tablet:font-bold font font-semibold text-base tablet:text-[1.375rem] leading-5 tablet:leading-7">
         {firstName}
         <br />
         {lastName}
