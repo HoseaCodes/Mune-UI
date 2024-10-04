@@ -29,7 +29,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
-import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
+import DanaSimone from '../assets/Dana-Simone.png'; // Replace with actual image path
 import connectTeam from '../assets/connect-team.png'; // Replace with actual image path
 
 const Contact: React.FC = () => {
@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
             />
             <TeamImage src={CaseyBass} alt="Casey Bass" />
             <TeamImage
-              src={AshleyLewis}
+              src={DanaSimone}
               alt="Ashley Lewis"
             />
             <ReplyText>
