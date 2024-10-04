@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import TeamMember from '../TeamMember';
-import BioOverlay from '../BiosOverlay';
 import { teamMembers } from '../../constants/bios';
 import { ExpandedTeamCard } from './ExpandedTeamCard';
 
@@ -20,14 +19,6 @@ const MeetTheTeam: React.FC = () => {
       setIsExpanded(null); // Reset expanded state on member change
       setFadeAnime(false);
     }, 100);
-  };
-
-  const handleToggleExpand = (index: number) => {
-    setIsExpanded(index === isExpanded ? null : index); // Toggle the expanded state
-  };
-
-  const handleClose = () => {
-    setIsExpanded(null);
   };
 
   return (
@@ -51,11 +42,6 @@ const MeetTheTeam: React.FC = () => {
                   teamMembers.indexOf(member)
                 )
               }
-              onToggleExpand={() =>
-                handleToggleExpand(
-                  teamMembers.indexOf(member)
-                )
-              }
             />
           ))}
         </div>
@@ -65,21 +51,8 @@ const MeetTheTeam: React.FC = () => {
           teamMembers={teamMembers}
           index={activeIndex}
           fadeAnime={fadeAnime}
-          handleToggleExpand={handleToggleExpand}
         />
       )}
-      {activeIndex !== null &&
-        isExpanded !== null &&
-        activeIndex === isExpanded && (
-          <BioOverlay
-            name={teamMembers[activeIndex].name}
-            school={teamMembers[activeIndex].school}
-            role={teamMembers[activeIndex].role}
-            image={teamMembers[activeIndex].image}
-            bio={teamMembers[activeIndex].bio}
-            onClose={handleClose}
-          />
-        )}
     </div>
   );
 };

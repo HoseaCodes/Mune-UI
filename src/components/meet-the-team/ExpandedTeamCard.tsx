@@ -5,12 +5,10 @@ export const ExpandedTeamCard: React.FC<{
   teamMembers: MemberProps[];
   index: number;
   fadeAnime: boolean;
-  handleToggleExpand: (index: number) => void;
 }> = ({
   teamMembers,
   index,
   fadeAnime,
-  handleToggleExpand,
 }) => {
   const truncateAfterFirstSentence = (
     paragraph: string
@@ -47,14 +45,6 @@ export const ExpandedTeamCard: React.FC<{
             )}
           </p>
         </div>
-        <button
-          onClick={() => handleToggleExpand(index)}
-          type="button"
-          aria-label="Show more"
-          className="flex flex-start w-full text-sm tablet:text-base text-blue-500 mt-2"
-        >
-          {'Show More'}
-        </button>
       </div>
     </div>
   );
