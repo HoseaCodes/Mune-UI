@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 const MessageTextArea: React.FC<{
   val: string;
-  handleChange: () => void;
+  handleChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 }> = ({ val, handleChange }) => (
   <div>
     <textarea
@@ -12,7 +14,7 @@ const MessageTextArea: React.FC<{
       onChange={handleChange}
       required
       rows={6}
-      className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-indigo-500 rounded-xl focus:border-indigo-500 sm:text-sm"
+      className="block w-full px-6 py-3 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-slate-400 rounded-xl focus:border-slate-400 text-black sm:text-sm placeholder-[#010A0399] font-semibold"
       placeholder="Message"
     />
   </div>

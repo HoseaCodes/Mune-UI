@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 const TextField: React.FC<{
   type: string;
   name: string;
   val: string;
   placeholder: string;
-  handleChange: () => void;
+  handleChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 }> = ({ type, name, val, placeholder, handleChange }) => (
   <div>
     <input
@@ -15,7 +17,7 @@ const TextField: React.FC<{
       value={val}
       onChange={handleChange}
       required
-      className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      className="block w-full px-6 py-3 bg-white border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-slate-400 focus:border-slate-400 text-black sm:text-sm placeholder-[#010A0399] font-semibold font-sf-pro"
       placeholder={placeholder}
     />
   </div>

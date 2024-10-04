@@ -9,11 +9,11 @@ import MessageTextArea from './MessageTextArea';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<{
     email: string;
-    fullName: string;
+    name: string;
     message: string;
   }>({
     email: '',
-    fullName: '',
+    name: '',
     message: '',
   });
 
@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add submission logic here...
-    setFormData({ email: '', fullName: '', message: '' });
+    setFormData({ email: '', name: '', message: '' });
   };
 
   return (
@@ -39,26 +39,26 @@ const ContactForm: React.FC = () => {
       className="space-y-6 max-w-md mx-auto bg-[#1AAE33] px-4 py-8 rounded-[48px]"
     >
       <TextField
+        type="name"
+        name="name"
+        val={formData.name}
+        placeholder="Name"
+        handleChange={handleChange}
+      />
+      <TextField
         type="email"
         name="email"
         val={formData.email}
         placeholder="Email"
-        handleChange={() => handleChange}
-      />
-      <TextField
-        type="name"
-        name="name"
-        val={formData.fullName}
-        placeholder="Name"
-        handleChange={() => handleChange}
+        handleChange={handleChange}
       />
       <MessageTextArea
         val={formData.message}
-        handleChange={() => handleChange}
+        handleChange={handleChange}
       />
       <button
         type="submit"
-        className="w-content flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="w-content flex justify-center py-2 px-4 border-2 border-[#CEE0D0] rounded-xl shadow-sm text-sm bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 text-black font-semibold"
       >
         Submit
       </button>
