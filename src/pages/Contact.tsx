@@ -30,7 +30,7 @@ import {
 import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual image path
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
-import connectTeam from '../assets/connect-team.png'; // Replace with actual image path
+import connectTeam from '../assets/connect-team.webp'; // Replace with actual image path
 import faqData from '../constants/faq';
 
 const Contact: React.FC = () => {
@@ -115,20 +115,24 @@ const Contact: React.FC = () => {
       <Header />
       <ContactWrapper>
         <MainContent>
-          <Section>
-            <Title>Connect with Our Team.</Title>
-            <StyledImage
-              src={connectTeam}
-              alt="Connect With Our Team"
-            />
-            <FormWrapper>
-              <Input type="text" placeholder="Name" />
-              <Input type="email" placeholder="Email" />
-              <TextArea placeholder="Message" />
-              <SubmitButton>Submit</SubmitButton>
-            </FormWrapper>
-          </Section>
-          <TeamImages>
+          <div className="flex gap-20 flex-nowrap">
+            <div className="w-full flex flex-col gap-6">
+              <h1 className="font-bold text-5xl text-black leading-[55px] p-6">
+                Connect with
+                <br />
+                Our Team.
+              </h1>
+              <img
+                src={connectTeam}
+                alt={'mun-e team'}
+                className="w-full rounded-[48px]"
+              />
+            </div>
+            <div className="bg-[#19a530] w-full rounded-[48px]">
+              TEST
+            </div>
+          </div>
+          {/* <TeamImages>
             <TeamImage
               src={MarquesZahir}
               alt="Marques Zahir"
@@ -141,7 +145,7 @@ const Contact: React.FC = () => {
             <ReplyText>
               Hang Tight, We'll Reply Shortly.
             </ReplyText>
-          </TeamImages>
+          </TeamImages> */}
           <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
             <FAQGrid ref={faqGridRef}>
