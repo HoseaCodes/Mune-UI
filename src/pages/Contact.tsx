@@ -13,7 +13,7 @@ import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image p
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
 import connectTeam from '../assets/connect-team.webp'; // Replace with actual image path
 import FAQ from '../components/contact/FAQ';
-import ContactForm from '../components/contact/ContactForm';
+import ContactForm from '../components/contact/contact-form/ContactForm';
 
 const Contact: React.FC = () => (
   <>
