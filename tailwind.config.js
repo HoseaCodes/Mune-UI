@@ -5,16 +5,9 @@ module.exports = {
     extend: {
       screens: {
         mobile: '320px',
-        // => @media (min-width: 320px) { ... }
-
         tablet: '600px',
-        // => @media (min-width: 600px) { ... }
-
         laptop: '900px',
-        // => @media (min-width: 900px) { ... }
-
         desktop: '1280px',
-        // => @media (min-width: 1280px) { ... }
       },
       boxShadow: {
         glow: '0 0 10px rgba(26, 174, 51, 0.8)', // Customize this as needed
