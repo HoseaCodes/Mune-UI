@@ -4,7 +4,10 @@ import { colors, spacing, typography } from './';
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   min-height: 100vh;
+  width: 100%;
+  max-width: 1186px;
 `;
 
 export const MainContent = styled.main`
@@ -174,7 +177,7 @@ export const TeamImages = styled.div`
     justify-content: center;
 
     &:hover img:nth-child(1) {
-    transform: translateX(-3px);
+      transform: translateX(-3px);
     }
 
     &:hover img:nth-child(2) {
