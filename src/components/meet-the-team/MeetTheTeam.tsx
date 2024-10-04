@@ -32,13 +32,13 @@ const MeetTheTeam: React.FC = () => {
 
   return (
     <div
-      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 mx-auto max-w-[1184px] flex flex-col gap-20 my-32 px-6`}
+      className={`${isExpanded === activeIndex && 'overflow-hidden'} bg-gray-100 tablet:mx-auto max-w-[1184px] flex flex-col gap-20 my-32 mobile:mx-6`}
     >
-      <div className="flex flex-col justify-center overflow-x-scroll scroll-smooth space-x-2 scrollbar-hide gap-10">
-        <h2 className="w-full text-left text-5xl font-bold">
+      <div className="flex flex-col justify-center gap-10">
+        <h2 className="text-5xl font-bold">
           Meet the Team
         </h2>
-        <div className="flex flex-nowrap gap-[85px] w-full justify-between m-0 overflow-x-auto scrollbar-hide">
+        <div className="flex flex-nowrap mobile:gap-6 tablet:gap-12 laptop:gap-[85px] w-full justify-around m-0 overflow-x-auto max-w-[1184px] scrollbar-hide">
           {teamMembers.map((member, index) => (
             <TeamMember
               key={index}

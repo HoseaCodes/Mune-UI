@@ -23,7 +23,7 @@ export const ExpandedTeamCard: React.FC<{
 
   return (
     <div
-      className={`pe-4 rounded-lg flex items-start space-x-6 z-10 transition-opacity duration-300 w-full h-auto ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
+      className={`flex gap-20 transition-opacity duration-300 ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
     >
       <img
         src={teamMembers[index].image}
