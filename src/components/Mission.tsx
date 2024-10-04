@@ -5,7 +5,7 @@ import GlowButton from './button/Glow';
 
 const MissionSection: React.FC = () => {
   return (
-    <div className="mb-36 mt-[-88px]">
+    <div className="mb-36">
       <div className="relative w-full">
         {/* Div for mobile and tablet screens */}
         <div className="lg:hidden p-6 rounded-lg max-w-[510px] mx-auto border-t-2 border-custom-bgreen mt-16">
@@ -30,7 +30,7 @@ const MissionSection: React.FC = () => {
         <img
           src={missionImage}
           alt="Mission"
-          className="max-w-full lg:max-w-[4184px] mx-auto mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[157px] rounded-[48px] border-2 border-custom-bgreen"
+          className="max-w-full lg:max-w-[4184px] mx-auto mt-[40px] rounded-[48px] border-2 border-custom-bgreen"
         />
         {/* Div for larger screens */}
         <div className="hidden lg:flex absolute inset-0 items-center justify-center">
