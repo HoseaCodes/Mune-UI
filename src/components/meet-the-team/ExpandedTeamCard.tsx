@@ -8,7 +8,7 @@ export const ExpandedTeamCard: React.FC<{
   fadeAnime: boolean;
 }> = ({ teamMembers, index, fadeAnime }) => (
   <div
-    className={`flex tablet:flex-row flex-col items-center gap-6 tablet:gap-16 transition-opacity duration-300 ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
+    className={`tablet:mx-6 laptop:mx-12 mx-7 flex tablet:flex-row flex-col items-center gap-6 tablet:gap-16 transition-opacity duration-300 ${fadeAnime ? 'opacity-0' : 'opacity-100'}`}
   >
     <img
       src={teamMembers[index].image}

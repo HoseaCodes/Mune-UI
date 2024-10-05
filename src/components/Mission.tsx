@@ -5,7 +5,7 @@ import GlowButton from './button/Glow';
 
 const MissionSection: React.FC = () => {
   return (
-    <div className="mb-36">
+    <div className="mb-36 tablet:mx-6 laptop:mx-12">
       <div className="relative w-full">
         {/* Div for mobile and tablet screens */}
         <div className="lg:hidden p-6 rounded-lg max-w-[510px] mx-auto border-t-2 border-custom-bgreen mt-16">
