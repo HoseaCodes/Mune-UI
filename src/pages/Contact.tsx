@@ -11,8 +11,8 @@ import MarquesZahir from '../assets/Marques-Zahir.png'; // Replace with actual i
 import CaseyBass from '../assets/Casey-Bass.png'; // Replace with actual image path
 import AshleyLewis from '../assets/Ashley-Lewis.png'; // Replace with actual image path
 import connectTeam from '../assets/connect-team.webp'; // Replace with actual image path
-import FAQ from '../components/contact/FAQ';
 import ContactForm from '../components/contact/contact-form/ContactForm';
+import FAQSection from '../components/contact/faq-section/FAQSection';
 
 const Contact: React.FC = () => (
   <>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => (
             </div>
           </div>
         </div>
-        <FAQ />
+        <FAQSection />
       </MainContent>
     </ContactWrapper>
     <Footer />
