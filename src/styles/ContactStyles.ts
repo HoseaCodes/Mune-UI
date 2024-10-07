@@ -165,17 +165,11 @@ export const SubmitButton = styled.button`
 
 export const TeamImages = styled.div`
   display: flex;
-  align-items: center;
-  margin-top: -5rem;
-  margin-left: 57rem;
-  align-self: flex-end;
-  height: auto;
+  flex-shrink: 0;
+  width: max-content;
+  margin-right: 20px;
 
   @media (max-width: 768px) {
-    margin-top: 5px;
-    margin-left: 0;
-    justify-content: center;
-
     &:hover img:nth-child(1) {
       transform: translateX(-3px);
     }
@@ -210,24 +204,6 @@ export const TeamImage = styled.img`
   margin-right: -20px;
   position: relative;
   transition: transform 0.3s ease;
-
-  @media (max-width: 768px) {
-    margin-right: -23px;
-    left: 45px;
-  }
-`;
-
-export const ReplyText = styled.p`
-  font-size: 1rem;
-  color: black;
-  font-weight: ${typography.fontWeight.bold};
-  margin-left: 20px;
-
-  @media (max-width: 768px) {
-    margin-left: 5rem;
-    text-align: left;
-    width: 35vw;
-  }
 `;
 
 export const FAQSection = styled.section`

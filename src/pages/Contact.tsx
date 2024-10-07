@@ -4,7 +4,6 @@ import {
   MainContent,
   TeamImages,
   TeamImage,
-  ReplyText,
 } from '../styles/ContactStyles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -22,7 +21,7 @@ const Contact: React.FC = () => (
       <MainContent>
         <div className="flex gap-20 flex-nowrap">
           <div className="w-full flex flex-col gap-6">
-            <h1 className="font-bold text-5xl text-black leading-[55px] p-6">
+            <h1 className="font-bold text-5xl text-black leading-[55px] p-6 w-full whitespace-nowrap">
               Connect with
               <br />
               Our Team.
@@ -33,24 +32,29 @@ const Contact: React.FC = () => (
               className="w-full rounded-[48px]"
             />
           </div>
-          <div className="w-full">
+          <div className="w-full flex flex-col flex-nowrap items-end gap-6">
             <ContactForm />
+            <div className="flex items-center w-full">
+              <TeamImages>
+                <TeamImage
+                  src={MarquesZahir}
+                  alt="Marques Zahir"
+                />
+                <TeamImage
+                  src={CaseyBass}
+                  alt="Casey Bass"
+                />
+                <TeamImage
+                  src={AshleyLewis}
+                  alt="Ashley Lewis"
+                />
+              </TeamImages>
+              <p className="text-base font-semibold text-black shrink ml-4">
+                Hang Tight, We'll Reply Shortly.
+              </p>
+            </div>
           </div>
         </div>
-        <TeamImages>
-            <TeamImage
-              src={MarquesZahir}
-              alt="Marques Zahir"
-            />
-            <TeamImage src={CaseyBass} alt="Casey Bass" />
-            <TeamImage
-              src={AshleyLewis}
-              alt="Ashley Lewis"
-            />
-            <ReplyText>
-              Hang Tight, We'll Reply Shortly.
-            </ReplyText>
-          </TeamImages>
         <FAQ />
       </MainContent>
     </ContactWrapper>
