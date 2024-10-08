@@ -14,7 +14,7 @@ const MessageTextArea: React.FC<{
       onChange={handleChange}
       required
       rows={6}
-      className="block w-full px-6 py-3 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-slate-400 rounded-xl focus:border-slate-400 text-black sm:text-sm placeholder-[#010A0399] font-semibold"
+      className="block w-full px-6 py-3 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-slate-400 rounded-3xl laptop:rounded-xl focus:border-slate-400 text-black sm:text-sm placeholder-[#010A0399] font-semibold"
       placeholder="Message"
     />
   </div>

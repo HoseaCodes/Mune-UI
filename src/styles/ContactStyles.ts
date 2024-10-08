@@ -190,16 +190,6 @@ export const TeamImages = styled.div`
   }
 `;
 
-export const TeamImage = styled.img`
-  width: 67.5px;
-  height: 67.5px;
-  border-radius: 33.75px;
-  border: 2.82px solid #f2f7f4;
-  margin-right: -20px;
-  position: relative;
-  transition: transform 0.3s ease;
-`;
-
 export const FAQSection = styled.section`
   max-width: 1200px;
   margin: 40px auto;
