@@ -9,7 +9,6 @@ export interface MemberProps {
 export interface TeamMemberProps {
     member: MemberProps;
     isActive: boolean;
-    onToggleExpand: () => void;
     onClick: () => void;
 }
   
