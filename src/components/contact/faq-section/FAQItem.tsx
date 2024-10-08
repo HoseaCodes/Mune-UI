@@ -17,7 +17,7 @@ const FAQItem: React.FC<{
 
   return (
     <div
-      className={`${isFirstItem && 'ml-6 laptop:m-0'} bg-[#19A530] p-4 tablet:p-16 rounded-3xl text-white shrink-0 divide-y`}
+      className={`${isFirstItem && 'ml-6 laptop:m-0'} bg-[#19A530] p-4 laptop:p-16 pb-24 rounded-3xl text-white shrink-0 divide-y`}
     >
       {item.map((item, index) => (
         <FAQRow

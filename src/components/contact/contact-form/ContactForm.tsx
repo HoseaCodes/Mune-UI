@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
       />
       <button
         type="submit"
-        className="w-content flex justify-center py-2 px-4 border-2 border-[#CEE0D0] rounded-xl shadow-sm text-sm bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 text-black font-semibold"
+        className="w-content flex justify-center py-3 px-6 border-2 border-[#CEE0D0] rounded-xl shadow-sm text-base bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-400 text-black font-semibold"
       >
         Submit
       </button>
