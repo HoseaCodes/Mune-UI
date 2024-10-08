@@ -5,15 +5,19 @@ const FAQRow: React.FC<{
   isExpanded: boolean;
   onToggle: () => void;
 }> = ({ item, isExpanded, onToggle }) => (
-  <div className="max-w-[240px]">
+  <div
+    className={`max-w-[240px] flex flex-col py-2 ${isExpanded ? 'gap-6' : 'gap-1'}`}
+  >
     <div
-      className="flex items-center gap-2 border-green-400 cursor-pointer"
+      className="flex items-center justify-between gap-2 border-green-400 cursor-pointer"
       onClick={onToggle}
     >
-      <span>{item.question}</span>
+      <span className="text-[17px] font-semibold leading-[22px] tracking-[-0.43px] text-left">
+        {item.question}
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={`h-5 w-5 transition-transform duration-[750ms] ${isExpanded ? 'rotate-180' : ''}`}
+        className={`h-6 w-6 min-w-6 transition-transform duration-[750ms] ${isExpanded ? '' : '-rotate-90'}`}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -27,13 +31,15 @@ const FAQRow: React.FC<{
       </svg>
     </div>
     <div
-      className={`pl-4 py-2 text-sm overflow-hidden transition-all duration-[750ms] ease-in-out ${
+      className={`text-sm overflow-hidden transition-all duration-[750ms] ease-in-out ${
         isExpanded
           ? 'max-h-40 opacity-100'
           : 'max-h-0 opacity-0'
       }`}
     >
-      {item.answer}
+      <p className="text-[13px] font-normal leading-[18px]">
+        {item.answer}
+      </p>
     </div>
   </div>
 );
