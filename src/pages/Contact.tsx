@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
     <>
       <Header />
       <ContactWrapper>
-        <div className="flex flex-col items-center max-w-[1186px] w-full gap-24 laptop:gap-32 mx-auto">
+        <div className="flex flex-col items-center max-w-[1186px] w-full tablet:gap-24 laptop:gap-32 mx-auto">
           <div className="flex tablet:flex-row flex-col gap-12 tablet:gap-4 laptop:gap-20 flex-nowrap px-6">
             <div className="w-full flex flex-col gap-6">
               <h1 className="font-bold text-5xl text-black leading-[55px] p-6 w-full tablet:max-w-[15ch] text-center laptop:text-left">

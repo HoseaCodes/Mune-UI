@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import FAQRow from './FAQRow';
 
 const FAQItem: React.FC<{
+  isFirstItem: boolean;
   item: { question: string; answer: string }[];
-}> = ({ item }) => {
+}> = ({ isFirstItem, item }) => {
   const [expandedIndex, setExpandedIndex] = useState<
     number | null
   >(null);
@@ -15,7 +16,9 @@ const FAQItem: React.FC<{
   };
 
   return (
-    <div className="bg-[#19A530] p-16 rounded-3xl text-white shrink-0 divide-y">
+    <div
+      className={`${isFirstItem && 'ml-6 laptop:m-0'} bg-[#19A530] p-4 tablet:p-16 rounded-3xl text-white shrink-0 divide-y`}
+    >
       {item.map((item, index) => (
         <FAQRow
           key={index}
