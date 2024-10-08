@@ -5,9 +5,9 @@ const FAQRow: React.FC<{
   isExpanded: boolean;
   onToggle: () => void;
 }> = ({ item, isExpanded, onToggle }) => (
-  <div>
+  <div className="max-w-[240px]">
     <div
-      className="flex justify-between items-center py-2 border-t border-green-400 cursor-pointer"
+      className="flex items-center gap-2 border-green-400 cursor-pointer"
       onClick={onToggle}
     >
       <span>{item.question}</span>
