@@ -32,10 +32,10 @@ const Contact: React.FC = () => {
     <>
       <Header />
       <ContactWrapper>
-        <div className="flex flex-col items-center max-w-[1186px] w-full gap-32 mx-auto">
-          <div className="flex gap-4 laptop:gap-20 flex-nowrap px-6">
+        <div className="flex flex-col items-center max-w-[1186px] w-full gap-24 laptop:gap-32 mx-auto">
+          <div className="flex tablet:flex-row flex-col gap-12 tablet:gap-4 laptop:gap-20 flex-nowrap px-6">
             <div className="w-full flex flex-col gap-6">
-              <h1 className="font-bold text-5xl text-black leading-[55px] p-6 w-full max-w-[14ch] text-center laptop:text-left">
+              <h1 className="font-bold text-5xl text-black leading-[55px] p-6 w-full tablet:max-w-[15ch] text-center laptop:text-left">
                 Connect with Our Team.
               </h1>
               <img
@@ -44,9 +44,9 @@ const Contact: React.FC = () => {
                 className="w-full rounded-2xl laptop:rounded-[48px]"
               />
             </div>
-            <div className="w-full flex flex-col flex-nowrap items-end gap-6">
+            <div className="w-full flex flex-col flex-nowrap tablet:items-end gap-6">
               <ContactForm />
-              <div className="flex items-center w-full">
+              <div className="flex items-center justify-center tablet:justify-start w-full">
                 <TeamImages>
                   {teamImages.map(({ src, alt }) => (
                     <img

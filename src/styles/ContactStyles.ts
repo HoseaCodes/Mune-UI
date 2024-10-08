@@ -5,7 +5,6 @@ export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100vh;
   width: 100%;
   max-width: 1186px;
 `;
