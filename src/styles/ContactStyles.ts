@@ -10,12 +10,6 @@ export const ContactWrapper = styled.div`
   max-width: 1186px;
 `;
 
-export const MainContent = styled.main`
-  flex: 1;
-  padding: 20px;
-  background-color: #f2f7f4;
-`;
-
 export const Section = styled.section`
   max-width: 1200px;
   max-height: 832px;

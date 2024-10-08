@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ContactWrapper,
-  MainContent,
   TeamImages,
   TeamImage,
 } from '../styles/ContactStyles';
@@ -18,7 +17,7 @@ const Contact: React.FC = () => (
   <>
     <Header />
     <ContactWrapper>
-      <MainContent>
+      <div className="flex flex-col items-center max-w-[1186px] w-full gap-32 mx-auto">
         <div className="flex gap-20 flex-nowrap">
           <div className="w-full flex flex-col gap-6">
             <h1 className="font-bold text-5xl text-black leading-[55px] p-6 w-full whitespace-nowrap">
@@ -56,7 +55,7 @@ const Contact: React.FC = () => (
           </div>
         </div>
         <FAQSection />
-      </MainContent>
+      </div>
     </ContactWrapper>
     <Footer />
   </>

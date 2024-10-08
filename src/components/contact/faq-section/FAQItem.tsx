@@ -15,7 +15,7 @@ const FAQItem: React.FC<{
   };
 
   return (
-    <div className="bg-[#19A530] p-16 rounded-3xl mb-4 text-white shrink-0 divide-y">
+    <div className="bg-[#19A530] p-16 rounded-3xl text-white shrink-0 divide-y">
       {item.map((item, index) => (
         <FAQRow
           key={index}
