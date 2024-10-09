@@ -4,13 +4,9 @@ import { colors, spacing, typography } from './';
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-`;
-
-export const MainContent = styled.main`
-  flex: 1;
-  padding: 20px;
-  background-color: #f2f7f4;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1186px;
 `;
 
 export const Section = styled.section`
@@ -162,19 +158,13 @@ export const SubmitButton = styled.button`
 
 export const TeamImages = styled.div`
   display: flex;
-  align-items: center;
-  margin-top: -5rem;
-  margin-left: 57rem;
-  align-self: flex-end;
-  height: auto;
+  flex-shrink: 0;
+  width: max-content;
+  margin-right: 20px;
 
   @media (max-width: 768px) {
-    margin-top: 5px;
-    margin-left: 0;
-    justify-content: center;
-
     &:hover img:nth-child(1) {
-    transform: translateX(-3px);
+      transform: translateX(-3px);
     }
 
     &:hover img:nth-child(2) {
@@ -196,34 +186,6 @@ export const TeamImages = styled.div`
 
   &:hover img:nth-child(3) {
     transform: translateX(3px);
-  }
-`;
-
-export const TeamImage = styled.img`
-  width: 67.5px;
-  height: 67.5px;
-  border-radius: 33.75px;
-  border: 2.82px solid #f2f7f4;
-  margin-right: -20px;
-  position: relative;
-  transition: transform 0.3s ease;
-
-  @media (max-width: 768px) {
-    margin-right: -23px;
-    left: 45px;
-  }
-`;
-
-export const ReplyText = styled.p`
-  font-size: 1rem;
-  color: black;
-  font-weight: ${typography.fontWeight.bold};
-  margin-left: 20px;
-
-  @media (max-width: 768px) {
-    margin-left: 5rem;
-    text-align: left;
-    width: 35vw;
   }
 `;
 
