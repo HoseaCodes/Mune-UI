@@ -45,7 +45,7 @@ const Hero = () => {
               Make Mun-e Moves.
             </div>
             <form className="hidden sm:block">
-              <div className="border-2 border-neutral-300 flex justify-between items-center w-[412px] rounded-[14px] h-[60px]">
+              <div className="border-2 border-[#CEE0D0] flex justify-between items-center w-[412px] rounded-[14px] h-[60px]">
                 <input
                   className="w-webkit-fill-available appearance-none placeholder:text-sm placeholder:text-stone-100 bg-transparent rounded py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                   id="username"
