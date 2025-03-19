@@ -47,16 +47,16 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [activeIndexes, setActiveIndexes] = useState<{[key: number]: number | null}>({});
-    const faqGridRef = useRef<HTMLDivElement>(null);
+  const faqGridRef = useRef<HTMLDivElement>(null);
   
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { name, value } = e.target;
-      console.log(`Input changed: ${name} = ${value}`);
-      setFormData(prev => ({
-        ...prev,
-        [name]: value
-      }));
-    };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    console.log(`Input changed: ${name} = ${value}`);
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const submitToHubSpot = async (data: FormData) => {
     const portalId = '48431061';
@@ -303,7 +303,7 @@ const Contact: React.FC = () => {
               Hang Tight, We'll Reply Shortly.
             </ReplyText>
           </TeamImages>
-          <FAQSection>
+          {/* <FAQSection>
             <FAQTitle>FAQ</FAQTitle>
             <FAQGrid ref={faqGridRef}>
               {faqData.map((item, itemIndex) => (
@@ -330,7 +330,7 @@ const Contact: React.FC = () => {
                 </FAQItem>
               ))}
             </FAQGrid>
-          </FAQSection>
+          </FAQSection> */}
         </MainContent>
       </ContactWrapper>
     </Layout>

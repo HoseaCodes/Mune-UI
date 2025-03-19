@@ -11,7 +11,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
 
   return (
     <div
-      className={`relative flex flex-col items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'} ${isActive ? 'mb-10' : ''}`}
+      className={`relative flex flex-col items-center rounded-lg cursor-pointer transition-all duration-300 ease-in-out ${
+        isActive ? 'bg-[#CEE0D0]' : 'bg-[#F2F7F3]'
+      } ${isActive ? 'mb-10' : ''}`}
       onClick={onClick}
       style={{
         width: '115px',
@@ -23,11 +25,22 @@ const TeamMember: React.FC<TeamMemberProps> = ({
         borderTopColor: isActive ? '#CEE0D0' : 'transparent',
       }}
     >
-      <img
-        src={image}
-        alt={name}
-        className="w-24 h-24 rounded-full mb-2"
-      />
+      <div 
+        className="w-24 h-24 rounded-full mb-2 overflow-hidden bg-gray-100"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div 
+          className="rounded-full w-full h-full bg-center bg-no-repeat bg-cover"
+          style={{ 
+            backgroundImage: `url(${image})`,
+            backgroundPosition: 'center',
+          }}
+        />
+      </div>
       <p className="text-center text-black font-bold">
         {firstName}
         <br />

@@ -28,13 +28,14 @@ const AboutSection: React.FC = () => {
                 Send It. Save It. Earn it. Learn It.
               </span>
             </h1>
-            <p className="text-white text-base sm:text-lg">
-              COMING SOON: Experience convenience and knowledge with our
-              app. Simplify your financial life and boost
-              your money know-how.
+            <p className="text-white text-base sm:text-lg pr-4">
+              COMING SOON: Experience convenience and knowledge with our app. 
+              Simplify your financial life and boost your money know-how. 
+              Subscribe to our newsletter and join the list to get notified when 
+              the app launches!
             </p>
             <div className="flex justify-center lg:justify-start w-full">
-              <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='white'>Get Mun-e</GlowButton>
+              <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='white'>Subscribe</GlowButton>
             </div>
           </div>
           <div className="relative w-full lg:w-1/2 mt-16 lg:mt-0">

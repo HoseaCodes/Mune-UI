@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
         )}
         <p className="text-[#F2F7F4] text-[16px] max-w-6xl text-left md:text-xl font-normal">
           By submitting this information, you agree to receive marketing emails from 
-          Goldman Sachs and accept our <u>privacy policy</u>. You can opt-out at any time.
+          Goldman Sachs and accept our <a href='/privacy'><u>privacy policy</u></a>. You can opt-out at any time.
         </p>
         <form className="w-[275px] md:hidden" 
           onSubmit={(e) => {
@@ -178,25 +178,25 @@ const Footer: React.FC = () => {
                 Legal
               </div>
               <a
-                href="#/"
+                href="/terms"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Terms of use
               </a>
               <a
-                href="#/"
+                href="/privacy"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Privacy Policy
               </a>
               <a
-                href="#/"
+                href="/security"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Security Policy
               </a>
               <a
-                href="#/"
+                href="/cookies"
                 className="text-[20px] text-stone-100 font-normal"
               >
                 Cookie Settings

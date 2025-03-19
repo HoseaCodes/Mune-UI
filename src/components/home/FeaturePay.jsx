@@ -32,7 +32,7 @@ const FeaturePay = ({ setIsModalOpen, isModalOpen }) => {
                 group expenses simple and stress-free.
               </div>
               <div className="hidden md:block">
-                <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='green'>Get Mun-e</GlowButton>
+                <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='green'>Subscribe</GlowButton>
               </div>
             </div>
           </div>
