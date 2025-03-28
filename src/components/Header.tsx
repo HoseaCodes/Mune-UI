@@ -19,8 +19,8 @@ import {
   FaInstagram,
   FaTiktok,
 } from 'react-icons/fa';
-import headerlogo from '../assets/headerlogo.png';
-import sidebarLogo from '../assets/sidebarlogo.png';
+import headerlogo from '../assets/logo-v2.png';
+import sidebarLogo from '../assets/logo-white-v2.png';
 
 interface HeaderProps {
   onClick: () => void;

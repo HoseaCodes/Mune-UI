@@ -15,7 +15,8 @@ const UnlockSection = ({ isModalOpen, setIsModalOpen }) => {
                         <div className='space-y-4'>
                             <div className="text-[22px] md:text-4xl font-bold">Unlock Special Perks</div>
                             <div className="primary-text w-full md:w-[525px]">
-                                Enjoy exclusive perks and rewards as a thank you for being an early supporter.
+                                COMING SOON: Enjoy exclusive perks and rewards as a
+                                thank you for being an early supporter.
                             </div>
                             <div className='pt-3'>
                                 <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='green'>Get Mun-e</GlowButton>

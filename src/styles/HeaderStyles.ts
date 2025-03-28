@@ -16,7 +16,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderLogo = styled.img`
-  height: 60px;
+  height: 30px;
   margin-left: ${spacing.large};
   width: auto;
   border-radius: 4px;
@@ -180,6 +180,7 @@ export const SidebarHeader = styled.div`
 
 export const SidebarLogo = styled.img`
   margin-left: 0;
+  height: 30px;
 `;
 
 export const CloseButton = styled.div`

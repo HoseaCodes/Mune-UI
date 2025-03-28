@@ -10,7 +10,9 @@ const FeatureLearn = ({ isModalOpen, setIsModalOpen }) => {
                 <div className='md:w-[510px] ms-10 space-y-8 border-2 border-[#CEE0D0] rounded-3xl p-6 bg-white'>
                     <div className="text-4xl font-bold">Learn Together</div>
                     <div className="secondary-text">
-                        Grow with friends using Mun-e’s lessons on budgeting, investing, and saving. Our app makes elevating your financial IQ together fun.
+                        COMING SOON: Grow with friends using Mun-e’s lessons
+                        on budgeting, investing, and saving. Our app makes elevating
+                        your financial IQ together fun.
                     </div>
                     <div className='flex gap-4 hidden'>
                         <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='green'>Start a Lesson</GlowButton>
@@ -23,7 +25,9 @@ const FeatureLearn = ({ isModalOpen, setIsModalOpen }) => {
                 <div className=' md:space-y-8 space-y-6 border-2 border-[#CEE0D0] rounded-3xl p-6 bg-white'>
                     <div className="text-[22px] font-bold">Learn Together</div>
                     <div className="secondary-text">
-                        Grow with friends using Mun-e’s lessons on budgeting, investing, and saving. Our app makes elevating your financial IQ together fun.
+                        COMING SOON: Grow with friends using Mun-e’s lessons on
+                        budgeting, investing, and saving. Our app makes elevating
+                        your financial IQ together fun.
                     </div>
                     <div className='flex md:flex-row flex-col md:gap-4 gap-3 hidden'>
                         <button onClick={() => setIsModalOpen(!isModalOpen)} className='button-one text-stone-100 font-semibold h-11 w-[131px] rounded-xl text-[15px]'>Start a Lesson</button>

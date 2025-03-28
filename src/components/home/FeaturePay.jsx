@@ -27,9 +27,9 @@ const FeaturePay = ({ setIsModalOpen, isModalOpen }) => {
                 Pay Friends
               </div>
               <div className="primary-text w-full md:w-[525px]">
-                Split bills and share costs effortlessly.
-                Mun-e lets you settle up instantly, keeping
-                group expenses simple and stress-free.
+                COMING SOON: Split bills and share costs effortlessly.
+                Mun-e lets you settle up instantly, keeping group expenses
+                simple and stress-free.
               </div>
               <div className="hidden md:block">
                 <GlowButton onClick={() => setIsModalOpen(!isModalOpen)} color='green'>Subscribe</GlowButton>
