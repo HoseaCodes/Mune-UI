@@ -29,7 +29,6 @@ const App: React.FC = () => {
         <Route path='/security' element={<Security />} />
         <Route path='/cookies' element={<Cookies />} />
         {/* <Route path="/subscribe" element={<Subscribe />} /> */}
-        {/* Add other routes here */}
       </Routes>
     </Router>
   );
