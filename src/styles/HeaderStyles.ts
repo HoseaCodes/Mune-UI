@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { colors, spacing, typography } from './';
+import { Button } from './HomeStyles';
 
 export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  background-color: #f2f7f4;
 
   @media (max-width: 768px) {
     padding: 20px;
@@ -14,7 +16,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderLogo = styled.img`
-  height: 60px;
+  height: 30px;
   margin-left: ${spacing.large};
   width: auto;
   border-radius: 4px;
@@ -70,8 +72,8 @@ export const NavLink = styled(Link)`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -8px; // adjust this value as needed
-    height: 1.5px; // thickness of the underline
+    bottom: -3px; // adjust this value as needed
+    height: .5px; // thickness of the underline
     background-color: #1aae33;
   }
 
@@ -80,7 +82,7 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Button = styled(Link)`
+export const GlowButton = styled(Button)`
   padding: ${spacing.small} ${spacing.large};
   background-color: ${colors.primary};
   color: #f2f7f4;
@@ -149,15 +151,15 @@ export const Sidebar = styled.div<{ isOpen: boolean }>`
   z-index: 1000;
 
   a {
-    color: #fffff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.5rem;
     margin: 10px 0;
 
     &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px; /* Make underline thicker */
-      text-decoration-color: #1aae33;
+      // text-decoration: underline;
+      // text-decoration-thickness: 2px; /* Make underline thicker */
+      // text-decoration-color: #1aae33;
     }
   }
 
@@ -178,6 +180,7 @@ export const SidebarHeader = styled.div`
 
 export const SidebarLogo = styled.img`
   margin-left: 0;
+  height: 30px;
 `;
 
 export const CloseButton = styled.div`
