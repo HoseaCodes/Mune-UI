@@ -5,7 +5,7 @@ import {
   HeaderLogo,
   Nav,
   NavLink,
-  GlowButton as Button,
+  // GlowButton as Button,
   HamburgerMenu,
   Bar,
   Sidebar,
@@ -59,11 +59,16 @@ const Header: React.FC<HeaderProps> = ({ onClick }) => {
         <HeaderLogo src={headerlogo} alt="Logo" />
       </Link>
       <Nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        {/* <NavLink to="/">Home</NavLink> */}
+        <NavLink to="/about">About Us</NavLink>
+        {/* <NavLink to="/contact">Contact</NavLink> */}
         {/* <NavLink to="/subscribe">Subscribe</NavLink> */}
-        <Button onClick={onClick} >Get Mun-e</Button>
+        {/* <Button onClick={onClick} >Get early access</Button> */}
+        <button className="bg-emerald-500 hover:bg-emerald-600 text-white 
+        px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-lg 
+        hover:shadow-xl transform hover:-translate-y-0.5" onClick={onClick} >
+          Get early access
+        </button>
         {/* <NavLink to="/pricing">Pricing</NavLink> */}
       </Nav>
       {isMobile && (
