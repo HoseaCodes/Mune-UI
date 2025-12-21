@@ -5,7 +5,7 @@ import {
   HeaderLogo,
   Nav,
   NavLink,
-  Button,
+  // GlowButton as Button,
   HamburgerMenu,
   Bar,
   Sidebar,
@@ -19,10 +19,14 @@ import {
   FaInstagram,
   FaTiktok,
 } from 'react-icons/fa';
-import headerlogo from '../assets/headerlogo.png';
-import sidebarLogo from '../assets/sidebarlogo.png';
+import headerlogo from '../assets/logo-v2.png';
+import sidebarLogo from '../assets/logo-white-v2.png';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onClick }) => {
   // const [isOpen, setIsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -55,11 +59,16 @@ const Header: React.FC = () => {
         <HeaderLogo src={headerlogo} alt="Logo" />
       </Link>
       <Nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/subscribe">Subscribe</NavLink>
-        <Button to="/get-started">Get Mun-e</Button>
+        {/* <NavLink to="/">Home</NavLink> */}
+        <NavLink to="/about">About Us</NavLink>
+        {/* <NavLink to="/contact">Contact</NavLink> */}
+        {/* <NavLink to="/subscribe">Subscribe</NavLink> */}
+        {/* <Button onClick={onClick} >Get early access</Button> */}
+        <button className="bg-emerald-500 hover:bg-emerald-600 text-white 
+        px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-lg 
+        hover:shadow-xl transform hover:-translate-y-0.5" onClick={onClick} >
+          Get early access
+        </button>
         {/* <NavLink to="/pricing">Pricing</NavLink> */}
       </Nav>
       {isMobile && (
@@ -87,12 +96,12 @@ const Header: React.FC = () => {
             <NavLink to="/contact" onClick={toggleSidebar}>
               Contact
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/subscribe"
               onClick={toggleSidebar}
             >
               Subscribe
-            </NavLink>
+            </NavLink> */}
             <SocialLinks>
               <a
                 href="https://facebook.com"
